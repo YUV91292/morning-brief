@@ -2,3 +2,4 @@ anthropic>=0.97.0
 requests>=2.33.0
 Jinja2>=3.1.6
 pytz>=2024.1
+json-repair>=0.30.0
