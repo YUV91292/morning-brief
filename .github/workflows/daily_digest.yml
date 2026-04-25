@@ -1,0 +1,119 @@
+name: Daily Morning Global Brief
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      no_deliver:
+        description: "Skip WhatsApp/SMS/email delivery"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate digest
+        env:
+          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
+          TWILIO_ACCOUNT_SID:   ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN:    ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_WHATSAPP_FROM: ${{ secrets.TWILIO_WHATSAPP_FROM }}
+          RECIPIENT_WHATSAPP:   ${{ secrets.RECIPIENT_WHATSAPP }}
+          PAGES_BASE_URL:       ${{ secrets.PAGES_BASE_URL }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.no_deliver }}" = "true" ]; then ARGS="--no-deliver"; fi
+          python generate_digest.py $ARGS
+
+      - name: Publish to GitHub Pages
+        run: |
+          git config user.name  "Morning Brief Bot"
+          git config user.email "brief-bot@users.noreply.github.com"
+          git fetch origin gh-pages 2>/dev/null || true
+          git worktree add /tmp/gh-pages gh-pages 2>/dev/null || {
+            git worktree add /tmp/gh-pages --orphan gh-pages
+          }
+          cp output/morning-global-brief-*.html /tmp/gh-pages/
+          cd /tmp/gh-pages
+          python3 - <<'PYEOF'
+          import os, glob, re
+          files = sorted(glob.glob("morning-global-brief-*.html"), reverse=True)
+          items = ""
+          for f in files:
+              m = re.search(r"(\d{4}-\d{2}-\d{2})", f)
+              label = m.group(1) if m else f
+              items += f'<li><a href="{f}">{label}</a></li>\n'
+          html = f"""<!DOCTYPE html>
+          <html><head><meta charset="UTF-8"/>
+          <meta name="viewport" content="width=device-width,initial-scale=1"/>
+          <title>Morning Global Brief</title>
+          <style>
+            body{{font-family:-apple-system,sans-serif;max-width:480px;margin:40px auto;padding:0 20px;}}
+            h1{{font-size:22px;margin-bottom:4px;}}
+            p{{color:#666;font-size:13px;margin-bottom:24px;}}
+            ul{{list-style:none;padding:0;}}
+            li{{border-bottom:1px solid #eee;padding:12px 0;}}
+            a{{color:#8b1c1c;font-size:16px;text-decoration:none;}}
+          </style></head>
+          <body>
+          <h1>Morning Global Brief</h1>
+          <p>Private edition for Urvil Bumiya</p>
+          <ul>{items}</ul>
+          </body></html>"""
+          with open("index.html","w") as f:
+              f.write(html)
+          PYEOF
+          git add -A
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "digest: $(date -u +%Y-%m-%d)"
+          git push origin gh-pages
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: morning-global-brief-${{ github.run_id }}
+          path: output/
+          retention-days: 7
+
+      - name: Alert on failure
+        if: failure()
+        env:
+          TWILIO_ACCOUNT_SID:   ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN:    ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_WHATSAPP_FROM: ${{ secrets.TWILIO_WHATSAPP_FROM }}
+          RECIPIENT_WHATSAPP:   ${{ secrets.RECIPIENT_WHATSAPP }}
+        run: |
+          python3 - <<'EOF'
+          import os, requests
+          sid   = os.environ.get("TWILIO_ACCOUNT_SID","")
+          token = os.environ.get("TWILIO_AUTH_TOKEN","")
+          frm   = os.environ.get("TWILIO_WHATSAPP_FROM","")
+          to    = os.environ.get("RECIPIENT_WHATSAPP","")
+          if sid and token and to:
+              requests.post(
+                  f"https://api.twilio.com/2010-04-01/Accounts/{sid}/Messages.json",
+                  data={"From": frm, "To": to,
+                        "Body": "Morning Global Brief failed today. Check GitHub Actions."},
+                  auth=(sid, token), timeout=10,
+              )
+          EOF
