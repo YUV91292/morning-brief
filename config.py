@@ -11,9 +11,10 @@ RECIPIENT_TIMEZONE = "Asia/Dubai"   # UAE Standard Time (GMT+4)
 DIGEST_HOUR = 7                     # 7:00 AM local time
 
 # ─── Delivery ─────────────────────────────────────────────────────────────────
+# WhatsApp via Twilio (preferred)
 TWILIO_ACCOUNT_SID  = os.environ.get("TWILIO_ACCOUNT_SID", "")
 TWILIO_AUTH_TOKEN   = os.environ.get("TWILIO_AUTH_TOKEN", "")
-TWILIO_WHATSAPP_FROM = os.environ.get("TWILIO_WHATSAPP_FROM", "whatsapp:+14155238886")
+TWILIO_WHATSAPP_FROM = os.environ.get("TWILIO_WHATSAPP_FROM", "whatsapp:+14155238886")  # Twilio sandbox
 RECIPIENT_WHATSAPP  = os.environ.get("RECIPIENT_WHATSAPP", "whatsapp:+35796728544")
 
 # Email fallback
@@ -24,10 +25,12 @@ SMTP_PASS    = os.environ.get("SMTP_PASS", "")
 EMAIL_FROM   = os.environ.get("EMAIL_FROM", SMTP_USER)
 EMAIL_TO     = os.environ.get("EMAIL_TO", "")
 
+# File hosting for PDF link (optional - for SMS/WhatsApp link delivery)
 PAGES_BASE_URL = os.environ.get("PAGES_BASE_URL", "https://yuv91292.github.io/morning-brief")
 
 # ─── APIs ─────────────────────────────────────────────────────────────────────
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+NEWS_API_KEY      = os.environ.get("NEWS_API_KEY", "")           # newsapi.org (optional)
 
 # ─── Output ───────────────────────────────────────────────────────────────────
 OUTPUT_DIR   = os.path.join(os.path.dirname(__file__), "output")
@@ -56,8 +59,15 @@ RSS_FEEDS = {
     "Times of India":      "https://timesofindia.indiatimes.com/rssfeeds/296589292.cms",
     "Khaleej Times":       "https://www.khaleejtimes.com/rss",
     "Gulf News":           "https://gulfnews.com/rss",
+    "BBC Sport":           "https://feeds.bbci.co.uk/sport/rss.xml",
+    "Guardian Sport":      "https://www.theguardian.com/uk/sport/rss",
+    "ESPN Top":            "https://www.espn.com/espn/rss/news",
+    "BBC Entertainment":   "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+    "Variety":             "https://variety.com/feed/",
+    "Guardian Lifestyle":  "https://www.theguardian.com/lifeandstyle/rss",
 }
 
+# Sections and their editorial mapping
 SECTIONS = [
     "Front Page",
     "World & Geopolitics",
@@ -65,7 +75,7 @@ SECTIONS = [
     "Technology & AI",
     "Climate & Energy",
     "India / UAE / US Watch",
-    "Culture / Sport / Human Interest",
+    "Sport, Culture & Lifestyle",
     "Markets at a Glance",
     "What to Watch Next",
 ]
