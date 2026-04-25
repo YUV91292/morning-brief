@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · {{ edition_date }}</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · {{ recipient_name }}</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">{{ edition_date }}</div>
+</header>
+<nav class="nav">
+  {% for s in section_names %}
+  <a href="#{{ s|replace(' ', '-')|replace('/', '-')|lower }}">{{ s }}</a>
+  {% endfor %}
+</nav>
+{% for section in sections if section.name == "Front Page" %}
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  {% for story in section.stories if story.is_lead %}
+  <div class="lead">
+    <div class="lead-hed">{{ story.headline }}</div>
+    {% if story.image_url %}<div class="img-wrap"><img src="{{ story.image_url }}" alt="{{ story.headline }}" loading="eager"/><div class="img-caption">{{ story.image_caption or "" }}{% if story.image_credit %} · {{ story.image_credit }}{% endif %}</div></div>{% endif %}
+    <div class="lead-body">{{ story.summary }}</div>
+    <div class="why"><strong>Why it matters:</strong> {{ story.why_it_matters }}</div>
+    <div class="sources">{% for link in story.source_links %}<a href="{{ link }}" target="_blank" rel="noopener">Source ↗</a>{% endfor %}</div>
+  </div>
+  {% endfor %}
+  <div class="grid-2">
+  {% for story in section.stories if not story.is_lead %}
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">{{ story.headline }}</div>
+    <div class="card-body" style="font-size:12.5px;">{{ story.summary }}</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> {{ story.why_it_matters }}</div>
+    <div class="sources">{% for link in story.source_links %}<a href="{{ link }}" target="_blank" rel="noopener">Source ↗</a>{% endfor %}</div>
+  </div>
+  {% endfor %}
+  </div>
+</div>
+{% endfor %}
+{% for section in sections if section.name not in ("Front Page", "Markets at a Glance", "What to Watch Next") %}
+<div id="{{ section.name|replace(' ', '-')|replace('/', '-')|lower }}">
+  <div class="section-hd"><span class="section-label">{{ section.name }}</span><div class="section-rule"></div></div>
+  {% if section.stories|length >= 2 %}<div class="grid-2">{% else %}<div>{% endif %}
+  {% for story in section.stories %}
+  <div class="card">
+    <div class="card-meta">{{ section.name }}</div>
+    <div class="card-hed">{{ story.headline }}</div>
+    {% if story.image_url %}<div class="img-wrap"><img src="{{ story.image_url }}" alt="{{ story.headline }}" loading="lazy"/><div class="img-caption">{{ story.image_caption or "" }}{% if story.image_credit %} · {{ story.image_credit }}{% endif %}</div></div>{% endif %}
+    <div class="card-body">{{ story.summary }}</div>
+    <div class="why"><strong>Why it matters:</strong> {{ story.why_it_matters }}</div>
+    <div class="sources">{% for link in story.source_links %}<a href="{{ link }}" target="_blank" rel="noopener">Source ↗</a>{% endfor %}</div>
+  </div>
+  {% endfor %}
+  </div>
+</div>
+{% endfor %}
+{% if market_data %}
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · {{ edition_date }}</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      {% for name, d in market_data.items() %}
+      <tr>
+        <td>{{ name }}</td>
+        <td>{% if d.currency == "USD" %}${% endif %}{{ "%.2f"|format(d.price) }}</td>
+        <td class="{% if d.change_pct > 0 %}up{% elif d.change_pct < 0 %}down{% else %}flat{% endif %}">{% if d.change_pct > 0 %}▲ +{% elif d.change_pct < 0 %}▼ {% else %}—{% endif %}{{ "%.2f"|format(d.change_pct) }}%</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+{% endif %}
+{% if what_to_watch %}
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list">{% for item in what_to_watch %}<li>{{ item }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+{% if editors_note %}<div class="editors-note">{{ editors_note }}</div>{% endif %}
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · {{ edition_date }}<br/>
+  Private edition for {{ recipient_name }} · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated {{ generated_at }}
+</footer>
+</div>
+</body>
+</html>
