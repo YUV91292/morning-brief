@@ -27,7 +27,8 @@ RULES:
 - Assign each story to exactly one section from the list provided.
 - The "Front Page" section must have 1 lead story + 2-3 secondary stories.
 - "Markets at a Glance" and "What to Watch Next" are special sections handled separately.
-- Be honest about what you know. Do not invent facts. Stick to what the articles say.
+- IMPORTANT: Your entire response must be valid JSON. Use only double quotes for strings.
+  Never use apostrophes inside JSON string values — write around them or use alternate phrasing.
 - Return ONLY valid JSON — no markdown fences, no commentary outside the JSON.
 """
 
@@ -78,6 +79,32 @@ def articles_to_text(articles: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def _try_parse(raw: str) -> dict:
+    """Try increasingly aggressive methods to parse JSON from Claude's response."""
+    # 1. Direct parse
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        pass
+
+    # 2. Extract outermost { ... }
+    m = re.search(r'\{.*\}', raw, re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group(0))
+        except json.JSONDecodeError:
+            pass
+
+    # 3. Replace smart quotes and try again
+    cleaned = raw.replace('\u2018', "'").replace('\u2019', "'").replace('\u201c', '"').replace('\u201d', '"')
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        pass
+
+    raise ValueError("Could not parse JSON from Claude response")
+
+
 def curate_digest(articles: list[dict], date_str: str, sections: list[str], api_key: str) -> dict[str, Any]:
     client = anthropic.Anthropic(api_key=api_key)
     articles_text = articles_to_text(articles)
@@ -87,6 +114,7 @@ def curate_digest(articles: list[dict], date_str: str, sections: list[str], api_
         articles_text=articles_text,
     )
     log.info("Sending %d chars to Claude for curation…", len(user_prompt))
+
     message = client.messages.create(
         model="claude-opus-4-7",
         max_tokens=8000,
@@ -97,13 +125,25 @@ def curate_digest(articles: list[dict], date_str: str, sections: list[str], api_
     if raw.startswith("```"):
         raw = re.sub(r"^```[a-z]*\n?", "", raw)
         raw = re.sub(r"\n?```$", "", raw)
+
     try:
-        digest = json.loads(raw)
-    except json.JSONDecodeError:
-        m = re.search(r'\{.*\}', raw, re.DOTALL)
-        if m:
-            digest = json.loads(m.group(0))
-        else:
-            raise
+        digest = _try_parse(raw)
+    except ValueError:
+        # Ask Claude to fix its own JSON
+        log.warning("JSON parse failed — asking Claude to self-correct…")
+        fix = client.messages.create(
+            model="claude-opus-4-7",
+            max_tokens=8000,
+            messages=[{
+                "role": "user",
+                "content": f"The following is almost-valid JSON but has a syntax error. Fix it and return ONLY the corrected JSON, nothing else:\n\n{raw}"
+            }],
+        )
+        raw2 = fix.content[0].text.strip()
+        if raw2.startswith("```"):
+            raw2 = re.sub(r"^```[a-z]*\n?", "", raw2)
+            raw2 = re.sub(r"\n?```$", "", raw2)
+        digest = _try_parse(raw2)
+
     log.info("Curated digest: %d sections", len(digest.get("sections", [])))
     return digest
