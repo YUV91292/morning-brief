@@ -46,46 +46,37 @@ jobs:
 
       - name: Publish to GitHub Pages
         run: |
-          git config user.name  "Morning Brief Bot"
-          git config user.email "brief-bot@users.noreply.github.com"
-          git fetch origin gh-pages 2>/dev/null || true
-          git worktree add /tmp/gh-pages gh-pages 2>/dev/null || {
-            git worktree add /tmp/gh-pages --orphan gh-pages
-          }
-          cp output/morning-global-brief-*.html /tmp/gh-pages/
-          cd /tmp/gh-pages
+          mkdir -p /tmp/gh-pages-out
+
+          if git ls-remote --exit-code origin gh-pages; then
+            git fetch origin gh-pages
+            git archive origin/gh-pages | tar -x -C /tmp/gh-pages-out || true
+          fi
+
+          cp output/morning-global-brief-*.html /tmp/gh-pages-out/
+
           python3 - <<'PYEOF'
-          import os, glob, re
+          import glob, re, os
+          os.chdir("/tmp/gh-pages-out")
           files = sorted(glob.glob("morning-global-brief-*.html"), reverse=True)
           items = ""
           for f in files:
               m = re.search(r"(\d{4}-\d{2}-\d{2})", f)
               label = m.group(1) if m else f
               items += f'<li><a href="{f}">{label}</a></li>\n'
-          html = f"""<!DOCTYPE html>
-          <html><head><meta charset="UTF-8"/>
-          <meta name="viewport" content="width=device-width,initial-scale=1"/>
-          <title>Morning Global Brief</title>
-          <style>
-            body{{font-family:-apple-system,sans-serif;max-width:480px;margin:40px auto;padding:0 20px;}}
-            h1{{font-size:22px;margin-bottom:4px;}}
-            p{{color:#666;font-size:13px;margin-bottom:24px;}}
-            ul{{list-style:none;padding:0;}}
-            li{{border-bottom:1px solid #eee;padding:12px 0;}}
-            a{{color:#8b1c1c;font-size:16px;text-decoration:none;}}
-          </style></head>
-          <body>
-          <h1>Morning Global Brief</h1>
-          <p>Private edition for Urvil Bumiya</p>
-          <ul>{items}</ul>
-          </body></html>"""
+          html = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Morning Global Brief</title><style>body{{font-family:-apple-system,sans-serif;max-width:480px;margin:40px auto;padding:0 20px;}}h1{{font-size:22px;}}p{{color:#666;font-size:13px;}}ul{{list-style:none;padding:0;}}li{{border-bottom:1px solid #eee;padding:12px 0;}}a{{color:#8b1c1c;font-size:16px;text-decoration:none;}}</style></head><body><h1>Morning Global Brief</h1><p>Private edition for Urvil Bumiya</p><ul>{items}</ul></body></html>"""
           with open("index.html","w") as f:
               f.write(html)
           PYEOF
+
+          cd /tmp/gh-pages-out
+          git init -b gh-pages
+          git config user.name  "Morning Brief Bot"
+          git config user.email "brief-bot@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "digest: $(date -u +%Y-%m-%d)"
-          git push origin gh-pages
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push --force origin gh-pages
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
