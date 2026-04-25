@@ -39,6 +39,10 @@ jobs:
           TWILIO_WHATSAPP_FROM: ${{ secrets.TWILIO_WHATSAPP_FROM }}
           RECIPIENT_WHATSAPP:   ${{ secrets.RECIPIENT_WHATSAPP }}
           PAGES_BASE_URL:       ${{ secrets.PAGES_BASE_URL }}
+          SMTP_USER:            ${{ secrets.SMTP_USER }}
+          SMTP_PASS:            ${{ secrets.SMTP_PASS }}
+          EMAIL_FROM:           ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO:             ${{ secrets.EMAIL_TO }}
         run: |
           ARGS=""
           if [ "${{ inputs.no_deliver }}" = "true" ]; then ARGS="--no-deliver"; fi
