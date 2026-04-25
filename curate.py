@@ -7,6 +7,7 @@ import logging
 from typing import Any
 
 import anthropic
+from json_repair import repair_json
 
 log = logging.getLogger(__name__)
 
@@ -27,8 +28,7 @@ RULES:
 - Assign each story to exactly one section from the list provided.
 - The "Front Page" section must have 1 lead story + 2-3 secondary stories.
 - "Markets at a Glance" and "What to Watch Next" are special sections handled separately.
-- IMPORTANT: Your entire response must be valid JSON. Use only double quotes for strings.
-  Never use apostrophes inside JSON string values — write around them or use alternate phrasing.
+- IMPORTANT: Use only double quotes inside JSON. Never use apostrophes in JSON string values.
 - Return ONLY valid JSON — no markdown fences, no commentary outside the JSON.
 """
 
@@ -80,28 +80,28 @@ def articles_to_text(articles: list[dict]) -> str:
 
 
 def _try_parse(raw: str) -> dict:
-    """Try increasingly aggressive methods to parse JSON from Claude's response."""
+    """Try increasingly aggressive methods to parse JSON from Claude response."""
     # 1. Direct parse
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
         pass
-
-    # 2. Extract outermost { ... }
+    # 2. Auto-repair (handles unescaped quotes, apostrophes, trailing commas etc.)
+    try:
+        repaired = repair_json(raw, return_objects=True)
+        if isinstance(repaired, dict) and repaired:
+            return repaired
+    except Exception:
+        pass
+    # 3. Extract outermost { } then repair
     m = re.search(r'\{.*\}', raw, re.DOTALL)
     if m:
         try:
-            return json.loads(m.group(0))
-        except json.JSONDecodeError:
+            repaired = repair_json(m.group(0), return_objects=True)
+            if isinstance(repaired, dict) and repaired:
+                return repaired
+        except Exception:
             pass
-
-    # 3. Replace smart quotes and try again
-    cleaned = raw.replace('\u2018', "'").replace('\u2019', "'").replace('\u201c', '"').replace('\u201d', '"')
-    try:
-        return json.loads(cleaned)
-    except json.JSONDecodeError:
-        pass
-
     raise ValueError("Could not parse JSON from Claude response")
 
 
@@ -113,7 +113,7 @@ def curate_digest(articles: list[dict], date_str: str, sections: list[str], api_
         sections=", ".join(s for s in sections if s != "Markets at a Glance"),
         articles_text=articles_text,
     )
-    log.info("Sending %d chars to Claude for curation…", len(user_prompt))
+    log.info("Sending %d chars to Claude for curation...", len(user_prompt))
 
     message = client.messages.create(
         model="claude-opus-4-7",
@@ -129,14 +129,13 @@ def curate_digest(articles: list[dict], date_str: str, sections: list[str], api_
     try:
         digest = _try_parse(raw)
     except ValueError:
-        # Ask Claude to fix its own JSON
-        log.warning("JSON parse failed — asking Claude to self-correct…")
+        log.warning("JSON parse failed - asking Claude to self-correct...")
         fix = client.messages.create(
             model="claude-opus-4-7",
             max_tokens=8000,
             messages=[{
                 "role": "user",
-                "content": f"The following is almost-valid JSON but has a syntax error. Fix it and return ONLY the corrected JSON, nothing else:\n\n{raw}"
+                "content": f"Fix this JSON so it is valid. Return ONLY the corrected JSON, nothing else:\n\n{raw}"
             }],
         )
         raw2 = fix.content[0].text.strip()
