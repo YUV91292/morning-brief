@@ -72,7 +72,7 @@ DO NOT include it in your JSON output."""
 
 def articles_to_text(articles: list[dict]) -> str:
     lines = []
-    for i, a in enumerate(articles[:240], 1):  # cap fits Claude context with headroom
+    for i, a in enumerate(articles[:120], 1):  # cap fits Claude context with headroom
         lines.append(
             f"{i}. [{a['source']}] {a['title']}\n"
             f"   {a['summary'][:300]}\n"
@@ -100,7 +100,7 @@ def curate_digest(
 
     message = client.messages.create(
         model="claude-opus-4-7",  # highest quality for editorial work
-        max_tokens=8000,
+        max_tokens=16000,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
