@@ -85,26 +85,3 @@ jobs:
           name: morning-global-brief-${{ github.run_id }}
           path: output/
           retention-days: 7
-
-      - name: Alert on failure
-        if: failure()
-        env:
-          TWILIO_ACCOUNT_SID:   ${{ secrets.TWILIO_ACCOUNT_SID }}
-          TWILIO_AUTH_TOKEN:    ${{ secrets.TWILIO_AUTH_TOKEN }}
-          TWILIO_WHATSAPP_FROM: ${{ secrets.TWILIO_WHATSAPP_FROM }}
-          RECIPIENT_WHATSAPP:   ${{ secrets.RECIPIENT_WHATSAPP }}
-        run: |
-          python3 - <<'EOF'
-          import os, requests
-          sid   = os.environ.get("TWILIO_ACCOUNT_SID","")
-          token = os.environ.get("TWILIO_AUTH_TOKEN","")
-          frm   = os.environ.get("TWILIO_WHATSAPP_FROM","")
-          to    = os.environ.get("RECIPIENT_WHATSAPP","")
-          if sid and token and to:
-              requests.post(
-                  f"https://api.twilio.com/2010-04-01/Accounts/{sid}/Messages.json",
-                  data={"From": frm, "To": to,
-                        "Body": "Morning Global Brief failed today. Check GitHub Actions."},
-                  auth=(sid, token), timeout=10,
-              )
-          EOF
