@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Friday, May 29, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Friday, May 29, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Trump shares draft Iran peace deal with allies; Vance says 'not there yet'</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/4b105060abb2ceac65571e1a6ff38e4e0c6ab74b/546_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=82f7874713fcf2d78f2a68cc1a290077" alt="Trump shares draft Iran peace deal with allies; Vance says 'not there yet'" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">Donald Trump has circulated a draft peace agreement to end the US war with Iran among Israel and other allies, even as Vice President JD Vance cautioned that the two sides remain short of a final accord. US officials say the framework of a 60-day ceasefire extension has been agreed in principle, pending sign-off from Trump and Iran's leadership. Both governments appear keen to avoid a slide back into open conflict after recent tit-for-tat strikes. Tehran has yet to publicly respond to the proposal, and partial internet has only just returned to Iranians after an 88-day blackout.</div>
+    <div class="why"><strong>Why it matters:</strong> A durable US-Iran truce would reshape Gulf risk premia, Indian and Emirati energy flows, and the wider Middle East balance heading into US midterms.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/28/donald-trump-shares-draft-iran-peace-agreement-with-israel-and-other-allies" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c87qng40wz9o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/liveblog/2026/5/29/iran-war-live-tehran-trump-yet-to-comment-on-60-day-truce-extension-plan" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Netanyahu orders IDF to take 70% of Gaza, tearing at October ceasefire</div>
+    <div class="card-body" style="font-size:12.5px;">Benjamin Netanyahu has instructed the Israeli military to expand its control to roughly 70% of the Gaza Strip, a move that openly contradicts the ceasefire he signed with Hamas in October 2025. Speaking from a West Bank settlement, the prime minister — fighting for political survival before elections — said Israel is 'squeezing Hamas'. Gaza City hospitals reported several killed, including at least five children, in a strike that appeared to target a Hamas commander.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> An effective re-occupation of Gaza would collapse the existing truce architecture and complicate the parallel US push for an Iran deal.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/28/netanyahu-orders-israeli-army-seize-70-gaza-strip-violating-ceasefire-deal" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/ceqpelq5reqo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cn9p40en4ngo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Russian drone slams into Romanian apartment block as Ukraine war spills over</div>
+    <div class="card-body" style="font-size:12.5px;">A Russian drone that was part of an overnight assault on Ukraine crashed into a residential building in eastern Romania, injuring two people and starting a fire. Bucharest scrambled F-16s in response, in what officials described as one of the most serious incursions into NATO territory since the war began. EU officials separately said the dynamics of the conflict are now shifting in Ukraine's favour.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Each NATO-territory incident raises the political pressure for a more direct allied response — and the risk of miscalculation.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/29/russian-drone-romanian-apartments-wounding-two-people-and-starting-fire" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c93x4nxlkjeo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Israel strikes Beirut as Hezbollah deploys fibre-optic drones</div>
+    <div class="card-body" style="font-size:12.5px;">Israel carried out what it called a 'targeted strike' inside the Lebanese capital, ending months in which Beirut had largely been spared despite mutual accusations of ceasefire breaches. Mass evacuations are under way in southern Lebanon as the campaign widens. On the battlefield, Hezbollah — drawing lessons from Ukraine — is now leaning on fibre-optic-guided drones that are immune to electronic jamming.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Lebanon is the second front that could unravel any Iran deal, and the proliferation of fibre-optic drones is reshaping the economics of modern warfare.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cgqpjwdv7xeo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c0r2ydlvk41o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/29/lebanon-latest-mass-evacuations-as-israel-expands-attacks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Carney pitches Washington a new partnership 'to help make America great again'</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/04205c250e76cd9b5829d6f60685c10c801d9a4b/233_0_2336_1869/master/2336.jpg?width=140&quality=85&auto=format&fit=max&s=0b00ad7012e70b9e3eb3a3fcb7ff36a9" alt="Carney pitches Washington a new partnership 'to help make America great again'" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Canadian Prime Minister Mark Carney, speaking in New York, called for a reset of the US-Canada relationship and offered deeper economic cooperation, deploying Trump's own slogan in an attempt to defuse trade tensions. The pitch follows a bruising year of tariffs and provincial bans on US goods — including a 70% collapse in Canadian sales for one Minnesota distiller. It is Carney's clearest signal yet that Ottawa wants to negotiate, not retaliate.</div>
+    <div class="why"><strong>Why it matters:</strong> How North America settles its trade quarrel will set the template for Washington's other tariff fights, including with the EU and India.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/28/mark-carney-trade-partnership-canada-america" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c2l22ypl909o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Washington leans into Latin America: Guatemala cooperation, Brazilian gangs labelled 'terrorist'</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/1799ddf52d08c07001b7bde5795a51dff65f0ded/510_0_5103_4082/master/5103.jpg?width=140&quality=85&auto=format&fit=max&s=4290ef3ad567ef8941abcf69dc1b56a5" alt="Washington leans into Latin America: Guatemala cooperation, Brazilian gangs labelled 'terrorist'" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The Trump administration is preparing to designate two Brazilian gangs as terrorist organisations, while Guatemala has formally requested US military cooperation on counter-narcotics — though Guatemala City denies signing off on US strikes on its soil. At least 52 fighters were killed this week in clashes between armed groups in a strategic Colombian cocaine corridor, as voters there prepare to choose between two starkly different national visions.</div>
+    <div class="why"><strong>Why it matters:</strong> Washington is using the drug war to extend its security footprint across Latin America, with implications for sovereignty norms across the hemisphere.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/29/us-to-designate-two-brazilian-gangs-as-terrorist-organisations" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/28/guatemala-denies-agreeing-to-us-strikes-against-drug-traffickers" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/28/clashes-between-armed-groups-in-colombia-kill-at-least-52" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">EU weighs tougher curbs on Chinese imports, fines Temu €200m</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/3f4a696148c2f687a5c448849af70b87f0987f79/0_0_3004_2404/master/3004.jpg?width=140&quality=85&auto=format&fit=max&s=e48670059dc0687eaf33b88827049e59" alt="EU weighs tougher curbs on Chinese imports, fines Temu €200m" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">European commissioners meet on Friday to consider new restrictions on Chinese imports, amid fears that Beijing's export surge could hollow out European industry the way it did US Rust Belt towns. On a parallel track, the European Commission fined Temu €200m for failing to police illegal and unsafe goods — from baby toys to dodgy chargers — on its platform.</div>
+    <div class="why"><strong>Why it matters:</strong> Brussels is edging closer to a structural rethink of its China trade posture, with knock-on effects for Indian exporters hoping to fill the gap.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/28/eu-discuss-restrictions-chinese-imports-fears-overreliance" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c1k2ydn1rz8o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">US inflation jumps to three-year high as Iran war pushes up energy prices</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/0c98b4915557d21cf5ada02793836648119791cc/680_0_3320_2656/master/3320.jpg?width=140&quality=85&auto=format&fit=max&s=dec5048e98c170240e056a6498b31d0c" alt="US inflation jumps to three-year high as Iran war pushes up energy prices" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">US consumer prices rose at their fastest pace in three years in April, driven largely by higher energy costs linked to the war with Iran. The data cements expectations that the Federal Reserve will hold rates steady, even as polls show voter frustration with the administration's economic stewardship ahead of the midterms. Any breakthrough in Iran talks would likely take some heat out of headline inflation quickly — oil prices already slipped on reports of a draft deal.</div>
+    <div class="why"><strong>Why it matters:</strong> The Fed's room to ease has narrowed just as fiscal and tariff policy is adding to price pressures — bad news for emerging-market rate cuts too.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/may/28/inflation-increased-april-iran-war-price-rises" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cp3p62xddq4o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">China's EV juggernaut leaves global rivals scrambling</div>
+    
+    <div class="card-body">A BBC visit to China's electric-vehicle factories found Chinese makers dominating not just car production but the surrounding supplier ecosystem — batteries, software, raw materials — that increasingly defines the global auto industry. Western incumbents are struggling to match the price, pace and vertical integration of Chinese rivals. The story dovetails with Europe's new push to restrict Chinese imports.</div>
+    <div class="why"><strong>Why it matters:</strong> The contest for the EV stack is the defining industrial battle of the decade, with India's auto sector caught between Chinese supply chains and Western capital.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c4g8vg72z43o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Brexit 'sausage wars' end as UK-EU food trade deal published</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/61f92a04d6938b1176c0de5eb70fddfb2c128442/168_0_2105_1684/master/2105.jpg?width=140&quality=85&auto=format&fit=max&s=55bbbb4a544b2ca5e357388751bc1f21" alt="Brexit 'sausage wars' end as UK-EU food trade deal published" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Britain and Brussels have unveiled the first details of a new agri-food agreement that scraps checks on dairy, eggs, fish and fresh red meat moving between the two markets. It marks the most concrete easing of post-Brexit frictions since the divorce and complements the broader UK-EU reset under way. Exporters on both sides will see lower compliance costs almost immediately.</div>
+    <div class="why"><strong>Why it matters:</strong> After a decade of friction, even modest pragmatism between London and Brussels reshapes supply chains for European food retailers.</div>
+    <div class="sources"><a href="https://www.theguardian.com/politics/2026/may/28/brexit-red-tape-food-exports-scrapped-uk-eu-reset-deal" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Generation jobless: 1.25 million young Britons at risk of being shut out</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/91a7681277bad3fe15371ecc447575f9daf66610/0_450_2316_1853/master/2316.jpg?width=140&quality=85&auto=format&fit=max&s=8da3701d85ff1993fceba85dd09051fd" alt="Generation jobless: 1.25 million young Britons at risk of being shut out" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A major new report warns the number of UK 16–24-year-olds out of work, education or training could climb to 1.25 million by 2031, describing a 'lost generation' of shrinking opportunity. Young job seekers told reporters they had filed hundreds of applications without success, with some now turning to Instagram and even dating apps as makeshift hiring platforms.</div>
+    <div class="why"><strong>Why it matters:</strong> Youth disengagement at this scale carries long-tail costs for productivity, public finances and political stability across advanced economies.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cy026x9jpd0o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/society/2026/may/28/young-people-struggle-to-find-work-milburn-report" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/money/2026/may/28/gen-z-using-social-media-in-struggling-job-market" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Anthropic hits $965bn valuation, leapfrogs OpenAI</div>
+    
+    <div class="card-body">Claude-maker Anthropic has raised $65bn in a fresh round that values the company at $965bn, vaulting it past OpenAI as the most valuable private AI lab on the planet. The round is being read as a pre-IPO marker. The capital — and the implied compute commitments behind it — underscore how concentrated the AI race has become among a handful of well-funded labs and their hyperscaler partners.</div>
+    <div class="why"><strong>Why it matters:</strong> AI valuations of this magnitude reshape capex plans for data centres, power grids and chip supply chains worldwide.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/economy/2026/5/29/anthropic-soars-to-965bn-valuation-leapfrogging-openai" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Blue Origin's New Glenn explodes on the pad at Cape Canaveral</div>
+    
+    <div class="card-body">A Blue Origin New Glenn rocket erupted in a fireball during a test on the launch pad in Florida on Thursday night, in a major setback for Jeff Bezos's effort to close the gap with SpaceX. Bezos called it a 'very rough day'. The company has yet to detail the cause or the impact on its launch manifest, but the optics — a flaming pad while rivals continue to fly — will sting.</div>
+    <div class="why"><strong>Why it matters:</strong> The commercial launch market is consolidating around a few proven providers; New Glenn's struggles strengthen SpaceX's grip on heavy-lift contracts.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/29/blue-origins-new-glenn-rocket-explodes-on-launch-pad" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cvgzl5wd8xeo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">BMW bets on humanoid robots as carmakers chase Chinese cost curve</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/9563770e0eb8e4628031614d3f9a6bac8d63a2e5/417_0_4167_3333/master/4167.jpg?width=140&quality=85&auto=format&fit=max&s=7d6f9cb61ad1f70dc59b1335b56054f4" alt="BMW bets on humanoid robots as carmakers chase Chinese cost curve" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">BMW says humanoid robots are 'the future' of car manufacturing and is deploying them at a European plant, extending pilots already running in the US. The move comes as Western automakers search for any productivity edge against Chinese EV champions. It echoes a broader sense that robotics may be approaching its own ChatGPT moment, accelerated in part by Chinese deployments.</div>
+    <div class="why"><strong>Why it matters:</strong> If humanoids prove out on real production lines, the labour-cost arithmetic of reshoring manufacturing to high-wage economies changes meaningfully.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cgmpwzzvxr2o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/science/audio/2026/may/28/are-robots-nearing-their-chatgpt-moment-podcast" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Google engineer charged with using insider data to win $1.2m on Polymarket</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/9f05d708ce6310706e157dc6e9785e2117750303/404_0_4300_3441/master/4300.jpg?width=140&quality=85&auto=format&fit=max&s=744f37f1f7ef8169e98e3e25b1e7e251" alt="Google engineer charged with using insider data to win $1.2m on Polymarket" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">US prosecutors have charged a longtime Google software engineer with using internal data on the company's most-searched terms to place winning bets — worth roughly $1.2m — on Polymarket prediction markets. The case is one of the first insider-trading-style prosecutions tied to a crypto-based prediction platform. It raises pointed questions about the governance of fast-growing political and event-betting venues.</div>
+    <div class="why"><strong>Why it matters:</strong> Regulators are now treating prediction markets like real financial markets — with real disclosure and conflict-of-interest obligations.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/may/28/doj-charges-google-employee-insider-trading-polymarket" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c052yv259jvo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Europe bakes as Portugal sets May heat record; Delhi's poor labour at 45°C</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/59e646df1c7c850805dfde0113f50d2f041abb5f/126_0_3780_3024/master/3780.jpg?width=140&quality=85&auto=format&fit=max&s=3b6eb3a5a17bff610c0c5ebe25215412" alt="Europe bakes as Portugal sets May heat record; Delhi's poor labour at 45°C" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Portugal smashed its hottest-ever May temperature as a fierce heatwave gripped southern Europe, with red alerts across Italy and French students sitting exams in sweltering classrooms. In Delhi, informal workers are pressing on through 45°C heat because they cannot afford to stop. Separately, a new analysis finds global heating has 'fundamentally altered' the climate of Mecca, putting hajj pilgrims at growing risk even outside summer.</div>
+    <div class="why"><strong>Why it matters:</strong> Heat is now a binding constraint on labour, public health and travel — and its costs fall heaviest on emerging-market workers with the least protection.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c3v2yv5207xo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c172yyvp55do" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/environment/2026/may/29/global-heating-hajj-muslim-pilgrimage-saudi-arabia-dangerous" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Ireland's 'hidden datacentre tax' and Burberry's climate rollback</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e7a010d65d53ecec5a1305edb4536d90af2d67c4/500_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=6457b4b371e3190ff5bb09dcb55702e8" alt="Ireland's 'hidden datacentre tax' and Burberry's climate rollback" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Datacentres consumed 22% of Ireland's electricity last year, adding hundreds of euros to household bills in a pattern that could spread across Europe as AI workloads scale. The energy-AI tension is showing up elsewhere: Burberry has quietly extended its deadline for carbon neutrality even as it set up a bonus scheme that could pay its CEO up to £12.2m. The watering down of climate targets by major corporates is becoming a trend.</div>
+    <div class="why"><strong>Why it matters:</strong> The compute boom and corporate climate retreat are colliding — and consumers, voters and regulators are noticing.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/may/28/irish-datacentres-household-bills-electricity" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/may/28/burberry-boss-joshua-schulman-could-earn-up-to-122m-new-bonus-scheme" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump's $250 bill: White House pushes Congress to put the president on US currency</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/4c57a9a36695042c4ded2a604f9f193c2b986cce/447_0_4430_3545/master/4430.jpg?width=140&quality=85&auto=format&fit=max&s=35d27fcf941f4a0909abd5eb59837a93" alt="Trump's $250 bill: White House pushes Congress to put the president on US currency" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">Treasury Secretary Scott Bessent has confirmed plans to print a $250 banknote featuring Donald Trump's face, billed as a tribute to America's 250th anniversary. Federal law currently bars the depiction of living people on US currency; Trump's allies in Congress are moving to carve out an exception, while Democrats have vowed to block the change. It would be the first time a living person appeared on US money in more than a century.</div>
+    <div class="why"><strong>Why it matters:</strong> Beyond the symbolism, any new high-denomination note carries real implications for cash circulation, illicit-finance policing and the dollar's image abroad.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/29/us-treasury-secretary-confirms-plans-for-banknote-featuring-trumps-face" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/may/28/trump-250-bill" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/clypeyx6nemo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India marks Eid al-Adha amid prayer restrictions in several states</div>
+    
+    <div class="card-body">Muslims across India observed Eid al-Adha under tightened security and a patchwork of restrictions on public prayer and ritual sacrifice in several states, reflecting an increasingly tense communal backdrop. The day comes as Delhi's heatwave continues to expose the country's vast informal workforce to dangerous conditions. Authorities cited public-order concerns for the curbs.</div>
+    <div class="why"><strong>Why it matters:</strong> Restrictions on minority religious observance feed into wider debates over pluralism in the world's largest democracy ahead of state elections.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/video/newsfeed/2026/5/28/indians-celebrate-eid-al-adha-amid-prayer-restrictions" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Jill Biden: I feared Joe was having a stroke during 2024 debate</div>
+    
+    <div class="card-body">Former US First Lady Jill Biden told CBS News she was frightened by her husband's appearance during the disastrous 2024 presidential debate against Donald Trump, saying at one point she thought he might be having a stroke. The disclosure adds a fresh personal layer to the post-mortem on a campaign that ended the Biden presidency. Separately, BBC Verify published an analysis of thousands of Trump's social-media posts, mapping his messaging since returning to office.</div>
+    <div class="why"><strong>Why it matters:</strong> How Democrats narrate the Biden collapse will shape the 2028 primary and the party's posture toward an ageing political class.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c99l270vy3no" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/videos/cpvp30gpd0ko" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">PSG meet Arsenal in Champions League final; Wembanyama forces Game 7</div>
+    
+    <div class="card-body">Paris Saint-Germain and Arsenal meet tonight in the UEFA Champions League final, capping a season in which both clubs have been transformed by big-money squad rebuilds. Across the Atlantic, Victor Wembanyama and the San Antonio Spurs routed Oklahoma City 118–91 to force a Game 7 in the NBA conference finals, with the New York Knicks already waiting in the Finals. Meanwhile, FIFA is under investigation in New York and New Jersey over allegations that fans were misled on World Cup ticket pricing and seat locations.</div>
+    <div class="why"><strong>Why it matters:</strong> The commercial machinery around elite football and basketball — and FIFA's handling of the 2026 World Cup — is drawing growing legal scrutiny.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/5/28/psg-vs-arsenal-champions-league-final-teams-start-time-lineups" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/5/29/wembanyama-and-spurs-force-game-seven-against-thunder-in-nba-playoffs" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/videos/cx2164ldp0ko" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">The £5 coffee — tariffs, climate and Gen Z taste in one cup</div>
+    
+    <div class="card-body">Faisal Islam dissects how the flat white at your favourite city café crept past £5: a story of tariffs on commodities, climate-stressed Arabica harvests, shifting Gen Z preferences for higher-spec drinks, and increasingly market-savvy farmers in producing countries. It is a small luxury that has become a useful index of global economic turmoil. Coffee, in other words, is doing what oil used to do for headline writers.</div>
+    <div class="why"><strong>Why it matters:</strong> Everyday consumer prices are increasingly transmitting geopolitical and climate shocks directly to household budgets.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cr5pp1m6z06o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Friday, May 29, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7563.63</td>
+        <td class="up">▲ +0.59%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$50668.97</td>
+        <td class="up">▲ +0.41%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$26917.47</td>
+        <td class="up">▲ +0.98%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10425.96</td>
+        <td class="down">▼ -0.62%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>66329.50</td>
+        <td class="up">▲ +2.53%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4549.30</td>
+        <td class="up">▲ +1.11%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$87.56</td>
+        <td class="down">▼ -1.51%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>95.37</td>
+        <td class="down">▼ -0.70%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.02%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$73684.00</td>
+        <td class="up">▲ +0.20%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Tehran's formal response to Trump's draft Iran peace deal, and whether the proposed 60-day ceasefire extension holds through the weekend.</li><li>EU commissioners' Friday decision on new restrictions on Chinese imports — a potential inflection point for global trade alignments.</li><li>PSG vs Arsenal in the Champions League final tonight in London.</li><li>Ethiopia's general election on June 1, with Abiy Ahmed's ruling party eyeing a landslide amid a fragmented opposition.</li><li>Colombia's presidential vote choosing between sharply opposed visions for Latin America's fourth-largest economy.</li><li>Markets' read on next week's US economic data after April inflation hit a three-year high; watch for Fed commentary.</li><li>Whether Israel's Beirut strike and Gaza expansion trigger a wider regional escalation that derails US-Iran diplomacy.</li></ul>
+</div>
+
+<div class="editors-note">Two diplomatic tracks — a draft Iran deal and a widening Gaza-Lebanon war — are now running in opposite directions; which one wins the next 72 hours will set the tone for June.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Friday, May 29, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-05-29 07:00 UTC
+</footer>
+</div>
+</body>
+</html>

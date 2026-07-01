@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Sunday, May 17, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Sunday, May 17, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Trump and Xi part as 'friends' — but with no breakthroughs</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/16/multimedia/16dc-trump-diplo-mzvf/16dc-trump-diplo-mzvf-mediumSquareAt3X.jpg" alt="Trump and Xi part as 'friends' — but with no breakthroughs" loading="eager"/><div class="img-caption"> · NYT World</div></div>
+    <div class="lead-body">Two days of pageantry in Beijing yielded warm words and almost no concrete commitments on trade, semiconductors or Taiwan. Trump described Xi as a 'friend' and pointedly avoided pressing publicly on human rights, including the case of jailed Hong Kong publisher Jimmy Lai, telling supporters he was 'not optimistic' about a release. Analysts say the summit lays bare the risks of personality-driven diplomacy, with China emerging the more confident party. Putin is due in Beijing on Tuesday, underscoring whose orbit the moment may ultimately serve.</div>
+    <div class="why"><strong>Why it matters:</strong> The summit recalibrates US–China relations toward transactional détente, with knock-on consequences for Taiwan, tech export controls and global alignments.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/16/world/europe/trump-xi-china-summit.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/clypj01189lo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/16/trump-not-optimistic-jimmy-lai-release-xi-jinping" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Taiwan declares itself 'sovereign and independent' after Trump's arms-deal remark</div>
+    <div class="card-body" style="font-size:12.5px;">Fresh from Beijing, Trump described potential arms sales to Taiwan as a 'very good negotiating chip' — language that prompted Taipei to insist publicly that it is already a sovereign nation and to stress its intention to deepen US ties. The episode jolted security analysts who fear Washington's reliability as a guarantor is being openly auctioned. Taipei said it would maintain the cross-Strait status quo, but the diplomatic mood is visibly more anxious.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Treating Taiwan as a bargaining lever risks shaking allied confidence across the Indo-Pacific at a delicate moment in US–China relations.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/16/world/asia/trump-taiwan-arms-bargaining-chip-china.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/16/in-response-to-trump-taiwan-says-it-is-sovereign-and-independent" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cx2132w81jqo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">WHO declares Ebola outbreak in DR Congo a global health emergency</div>
+    <div class="card-body" style="font-size:12.5px;">The World Health Organization has classified the Bundibugyo-strain outbreak — roughly 246 cases and 80 deaths so far — as a public health emergency of international concern. Cases have already surfaced in the capitals of both DR Congo and Uganda, and there is no approved vaccine for this strain. Africa CDC warned that intense regional population movement could accelerate spread. Officials stop short of calling it a pandemic threat, but the lethality rate is described as 'very high'.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> A fast-moving Ebola variant with no licensed vaccine and urban footholds is the kind of outbreak global health systems are least prepared for.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/17/world/africa/ebola-congo-uganda-who-public-health-emergency.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c2l2p0wwzzdo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/16/drc-health-minister-warns-very-high-ebola-lethality-rate-as-toll-hits-80" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">US says ISIS 'second-in-command' killed in Nigeria raid</div>
+    <div class="card-body" style="font-size:12.5px;">Trump announced that US and Nigerian commandos killed Abu-Bilal al-Minuki, described by Washington as one of the Islamic State's top global figures, in a helicopter-borne assault on Friday night. US officials called him the group's second-ranking leader. The operation is the most significant publicised counter-terror action of Trump's second term and points to deepening US security cooperation in West Africa, where IS-affiliated violence has proliferated.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> It signals that, even amid summit diplomacy, kinetic counter-terror operations in Africa's Sahel-adjacent zones remain a live US priority.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/16/world/africa/trump-isis-nigeria-al-minuki.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/16/islamic-state-abu-bilal-al-minuki-killed-by-us-nigerian-forces-trump-says" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cy72p2kpd03o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Lebanon ceasefire extended 45 days — and almost immediately tested</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/054eff53d9d886e6e107709654eeef24cfbc727b/736_0_5600_4480/master/5600.jpg?width=140&quality=85&auto=format&fit=max&s=d92f30f5a7f7164ca47c2a4a680e5435" alt="Lebanon ceasefire extended 45 days — and almost immediately tested" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Hours after Washington announced a 45-day extension of the Israel–Lebanon truce, Israeli strikes on southern Lebanon killed at least six people, including three paramedics at a health centre. Separately, Hamas confirmed that its top military chief in Gaza, Izz al-Din al-Haddad, had been killed in an Israeli strike. BBC Verify also documented Hezbollah's increasing use of fibre-optic drones against Israeli targets, suggesting the conflict is technologically escalating beneath the diplomatic surface.</div>
+    <div class="why"><strong>Why it matters:</strong> The 'ceasefire' is now a paper-thin framework, and a wider Israel–Hezbollah confrontation remains one strike away.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/16/israeli-strikes-southern-lebanon-hours-after-extension-of-ceasefire" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/15/israel-and-lebanon-agree-ceasefire-extension-us-says" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/15/world/middleeast/israel-gaza-haddad-hamas.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Iran is exporting its proxy war beyond the Middle East</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/16/multimedia/16int-iraq-militia-cmfw/16int-iraq-militia-cmfw-mediumSquareAt3X.jpg" alt="Iran is exporting its proxy war beyond the Middle East" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">US prosecutors have charged Mohammad al-Saadi, an alleged Iraqi commander of an Iran-backed militia, with involvement in 18 attacks across the UK, Europe and the US. Analysts say the case crystallises a long-suspected shift: Tehran's Quds Force playbook now extends well past its traditional regional theatre. With Trump warning Iran of a 'very bad time' and Tehran floating tolls in the Strait of Hormuz, escalation channels are multiplying.</div>
+    <div class="why"><strong>Why it matters:</strong> If Iran is operationalising proxies on Western soil, the deterrence calculus for any future US–Iran conflict changes materially.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/16/world/middleeast/iran-proxy-groups-us.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/16/mohammad-baqer-saad-dawood-al-saadi-iran-guards-hayi" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/liveblog/2026/5/17/iran-war-live-tehran-eyes-tolls-in-hormuz-trump-warns-of-very-bad-time" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Washington squeezes Havana as Raúl Castro indictment looms</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/15/multimedia/15dc-cuba-fqbj/15dc-cuba-fqbj-mediumSquareAt3X.jpg" alt="Washington squeezes Havana as Raúl Castro indictment looms" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">The US is preparing to charge former Cuban leader Raúl Castro, with reports suggesting the case will centre on Cuba's 1996 downing of two civilian planes. The move comes alongside an energy embargo that has plunged the island into blackout, stepped-up surveillance flights and a recent CIA director visit — a playbook strikingly similar to the campaign that ousted Venezuela's Maduro. Tycoon Alex Saab has now been extradited to the US in a parallel purge of Maduro-era figures.</div>
+    <div class="why"><strong>Why it matters:</strong> Trump's Latin America doctrine is hardening into open regime-pressure diplomacy, with Cuba next in line after Caracas.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c1w2gnd9xp2o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/15/us/politics/trump-cuba-pressue-castro.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/16/world/americas/venezuela-extradites-tycoon-alex-saab.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Bolivia's army moves on protest roadblocks as crisis deepens</div>
+    
+    <div class="card-body">President Rodrigo Paz has deployed roughly 3,500 soldiers and police to clear roadblocks outside La Paz after 11 days of protests demanding his resignation. Tear gas and arrests followed the pre-dawn operation. The standoff is the most serious challenge yet to Paz's young government and risks pulling Bolivia back into the cycle of street-driven instability that has defined its past decade.</div>
+    <div class="why"><strong>Why it matters:</strong> A second Latin American government wobbling — alongside Cuba and Venezuela — adds to a region in political flux ahead of Brazil's and Colombia's elections.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/gallery/2026/5/16/bolivia-launches-early-morning-crackdown-on-roadblocks-outside-la-paz" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/16/bolivian-army-attempts-to-clear-roads-after-11-days-of-protests" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">London's twin marches: far-right rally meets pro-Palestinian crowds</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/16/multimedia/16int-uk-protest-ctbl/16int-uk-protest-ctbl-mediumSquareAt3X-v2.jpg" alt="London's twin marches: far-right rally meets pro-Palestinian crowds" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Tens of thousands joined a far-right rally led by activist Tommy Robinson in central London on Saturday, while a separate march marked the 78th anniversary of the Nakba. Thousands of police were deployed to keep the two crowds apart. Activist group Led By Donkeys trolled the far-right rally with a hijacked screen streaming pro-immigration messages. The day captured the increasingly polarised street politics shaping a Britain already convulsed by a Labour leadership crisis.</div>
+    <div class="why"><strong>Why it matters:</strong> Britain's political centre is thinning just as mass mobilisation on both flanks intensifies.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/16/world/europe/london-rival-protests.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/16/tens-of-thousands-join-far-right-rally-in-central-london" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/17/aje-onl-nf_clip-led-by-donkeys-hijack-far-right-rally-160526" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">UK gilts wobble and sterling slides as Starmer's grip weakens</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/15/multimedia/15int-uk-politics-wckm/15int-uk-politics-wckm-mediumSquareAt3X.jpg" alt="UK gilts wobble and sterling slides as Starmer's grip weakens" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Borrowing costs ticked up and the pound weakened on Friday as a Labour leadership drama spilled into markets. Analysts attributed the moves partly to fears that a potential Andy Burnham-led government would loosen the fiscal stance, while former health secretary Wes Streeting has now openly declared a run at the premiership. No formal challenge has yet been lodged against Starmer, but the air of inevitability is thickening.</div>
+    <div class="why"><strong>Why it matters:</strong> Sterling assets are once again pricing UK political risk — an unwelcome echo of the 2022 mini-budget moment.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/czr2pl5lj84o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/16/world/europe/britain-politics-labour-whats-next.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/16/uk-ex-health-minister-says-will-run-to-replace-prime-minister-keir-starmer" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">JLR and GM circle £900m UK military truck contract</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/a7d0aa865193bb749f182c1f7fd06e634e5be240/16_0_2630_2104/master/2630.jpg?width=140&quality=85&auto=format&fit=max&s=044a056f57e383bdb06be20380f2c865" alt="JLR and GM circle £900m UK military truck contract" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Jaguar Land Rover and General Motors are weighing a joint push into UK defence with a £900m contract to build a new generation of military trucks. The move reflects a wider pivot by commercial carmakers towards rearmament revenues as NATO members raise defence budgets. For JLR, recovering from cyber-incident disruption, defence offers a hedge against an EV-transition-bruised core business.</div>
+    <div class="why"><strong>Why it matters:</strong> Europe's rearmament boom is reshaping industrial strategy, with civilian carmakers becoming defence primes.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/may/17/jaguar-land-rover-general-motors-military-contract-trucks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Long Island Rail Road shut as unions walk out</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ee9bfc5f76aaf3b8ed0fb369bb6cc0c5365bde1f/243_0_4017_3214/master/4017.jpg?width=140&quality=85&auto=format&fit=max&s=1bb65e0c793dad42c453ebc1907c6435" alt="Long Island Rail Road shut as unions walk out" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">North America's largest commuter rail system ground to a halt on Saturday after unionised workers at New York's Long Island Rail Road went on strike. The shutdown threatens to disrupt the eastern New York metropolitan area's Monday commute and reignites the broader question of US transit-labour relations under a Trump administration markedly less union-friendly than its predecessor.</div>
+    <div class="why"><strong>Why it matters:</strong> A protracted LIRR strike would hit New York's economy and test the White House's appetite to intervene in labour disputes.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/16/new-york-long-island-rail-road-strike" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">The Iran-war oil shock: winners, losers and a redrawn energy map</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/14/multimedia/2026-04-28-oil-prices-index/2026-04-28-oil-prices-index-mediumSquareAt3X-v7.png" alt="The Iran-war oil shock: winners, losers and a redrawn energy map" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">A New York Times analysis of export data reveals which states have profited from elevated crude prices since the Iran war began — and which have hemorrhaged revenue. Gulf producers and select non-OPEC suppliers have captured windfall margins; major import-dependent economies, India among them, have absorbed the cost. With Tehran now floating tolls on Strait of Hormuz transit, that shock could deepen.</div>
+    <div class="why"><strong>Why it matters:</strong> Energy geopolitics are quietly redistributing trillions in current account flows, with India and the UAE on opposite sides of the ledger.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/16/business/energy-environment/iran-war-oil-countries-winners-losers.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/liveblog/2026/5/17/iran-war-live-tehran-eyes-tolls-in-hormuz-trump-warns-of-very-bad-time" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Cuba goes dark as US shuts off the oil tap</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/15/multimedia/15int-cuba-blackout-stack01-photo-zqcm/15int-cuba-blackout-stack01-photo-zqcm-mediumSquareAt3X.jpg" alt="Cuba goes dark as US shuts off the oil tap" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">An American energy embargo has tipped Cuba into an acute power crisis, with prolonged blackouts across the island. Photo essays document a population coping by candlelight as hospitals and food storage falter. The squeeze is coordinated with the broader US pressure campaign against the Castro-era leadership, blurring the line between sanctions tool and humanitarian event.</div>
+    <div class="why"><strong>Why it matters:</strong> Weaponised energy supply is again a frontline diplomatic instrument — with civilians bearing the immediate cost.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/15/world/americas/cuba-energy-crisis-photos.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Goa's foreign visitors have nearly halved — a warning for India's tourism brand</div>
+    
+    <div class="card-body">Foreign arrivals to Goa have dropped to roughly half their pre-Covid peak, even as domestic tourism booms. Visitors and operators cite rising costs, infrastructure strain, harassment complaints and competition from Southeast Asian beach destinations. The state's pivot toward a domestic mass market may be commercially rational but risks eroding the international cachet built over decades.</div>
+    <div class="why"><strong>Why it matters:</strong> Goa is a bellwether for whether India can convert its inbound-tourism ambitions into reality at premium price points.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cy827p9lg03o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Chinese state agents on US soil: the long arm tracking expats</div>
+    
+    <div class="card-body">Two recent US espionage cases have shed light on what investigators describe as a decade-long Chinese effort to surveil and pressure expatriates, dissidents and diaspora communities abroad. Methods range from secret police 'service stations' to propaganda-laced cultural outreach. The disclosures complicate the optics of Trump's softer Beijing posture and put Indian and other Asian diasporas on notice about transnational repression risks.</div>
+    <div class="why"><strong>Why it matters:</strong> Diaspora security is becoming a defining US domestic-intelligence challenge — and a quiet point of friction even amid friendlier US–China rhetoric.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cm2p8z261ylo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Rubio's China conversion: from hawk to harmoniser</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/15/multimedia/xxdc-rubio-china-vtkw/xxdc-rubio-china-vtkw-mediumSquareAt3X.jpg" alt="Rubio's China conversion: from hawk to harmoniser" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Secretary of State Marco Rubio, who as a senator floated the idea of regime change in Beijing, has now visibly tempered his language to match Trump's détente. The shift is mirrored across the MAGA movement, where long-standing China hawks are recalibrating publicly. Critics argue the administration is trading strategic clarity for short-term deal-making optics.</div>
+    <div class="why"><strong>Why it matters:</strong> When the chief US diplomat publicly inverts his prior worldview, alliance partners — India and the UAE included — must reassess the durability of US positions.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/16/us/politics/rubio-china-trump-trip.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cvgz902mqe5o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Thousands rally in Alabama for Black voting rights</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/08c3669127b978dc008077963ce8b6a73b49fb71/1012_0_5200_4160/master/5200.jpg?width=140&quality=85&auto=format&fit=max&s=883c3e9e9968360cdc0dc0cb0b5d8be3" alt="Thousands rally in Alabama for Black voting rights" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Crowds descended on Montgomery for the 'All Roads Lead to the South' march, the largest civil-rights mobilisation of the year so far, in protest against new district maps and federal rollbacks. Organisers framed the moment as a generational defence of post-1965 voting protections. The march coincides with the Trump administration's broader retreat from federal civil-rights enforcement.</div>
+    <div class="why"><strong>Why it matters:</strong> Voting-rights litigation and street mobilisation are converging just ahead of a high-stakes US midterm cycle.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/16/alabama-black-voting-rights-protest" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Rousey beats Carano in 17 seconds — and a sport ages on</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/17/multimedia/17int-nkorea-soccer-wtk-jcgh/17int-nkorea-soccer-wtk-jcgh-mediumSquareAt3X.jpg" alt="Rousey beats Carano in 17 seconds — and a sport ages on" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Ronda Rousey submitted Gina Carano with a signature armbar just 17 seconds into their long-hyped bout. The headline-grabbing comeback fight produced a definitive result and a debate about how meaningful staged legacy-era rematches really are. Separately, Algeria's USM Alger lifted the CAF Cup with a win over Egypt's Zamalek, and North Korea's women's team has made a rare visit to South Korea for a tournament.</div>
+    <div class="why"><strong>Why it matters:</strong> From combat-sport nostalgia to inter-Korean football, the weekend's sport doubles as a soft-power barometer.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/5/17/ronda-rousey-vs-gina-carano-fight-rousey-wins-with-a-17-second-submission" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/17/algerias-usm-alger-beat-egypts-zamalek-to-win-caf-cup" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/17/world/asia/north-korea-naegohyang-soccer-football.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Bulgaria wins Eurovision amid boycotts and Gaza protests</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/b8b88649274c89f36f43aefea30a020ab346bc6d/1747_31_4123_3299/master/4123.jpg?width=140&quality=85&auto=format&fit=max&s=de895eda927ae8bdfcb6c300db9e53c2" alt="Bulgaria wins Eurovision amid boycotts and Gaza protests" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Bulgaria pulled off an unexpected maiden Eurovision victory, while Australia's Delta Goodrem finished fourth to widespread acclaim at home. The contest was overshadowed by the withdrawal of Spain, Ireland, Iceland, Slovenia and the Netherlands in protest against Israel's participation amid the Gaza war, and by thousands of demonstrators outside the venue. Music's most defiantly apolitical event has, once again, refused to stay apolitical.</div>
+    <div class="why"><strong>Why it matters:</strong> Cultural arenas are increasingly where Europe's Gaza politics are being fought out in public.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/16/thousands-protest-at-eurovision-final-as-five-countries-boycott-over-israel" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/music/2026/may/17/delta-goodrem-eurovision-fourth-place-australia-wins-praise-eclipse" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">From Reble's defiant rap to a 56-year sticker-book finale</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/4373124cde69b2ead2262166d666f58b5a3909be/601_0_3333_2667/master/3333.jpg?width=140&quality=85&auto=format&fit=max&s=65a4a8db350db71dcc3e2ed31bb0e56c" alt="From Reble's defiant rap to a 56-year sticker-book finale" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Indian hip-hop has a new flag-bearer in Reble, whose northeast-rooted sound is upending expectations of where the country's rap mainstream sits. In Britain, fan Stephen Butler completed his Panini 1970 World Cup sticker album after 56 years, paying £150 for the elusive Chile sticker — an album now worth thousands but, he says, not for sale. Two small reminders that culture is built one stubborn obsession at a time.</div>
+    <div class="why"><strong>Why it matters:</strong> India's cultural exports are diversifying beyond Bollywood, while nostalgia economies continue to defy digital disruption.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c4g0z40xwx7o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/football/2026/may/17/got-panini-1970-world-cup-sticker-book-completed-after-56-years" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Sunday, May 17, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7408.50</td>
+        <td class="down">▼ -0.48%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$49526.17</td>
+        <td class="down">▼ -0.34%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$26225.15</td>
+        <td class="down">▼ -0.67%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10195.37</td>
+        <td class="down">▼ -1.26%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>61409.29</td>
+        <td class="down">▼ -1.99%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4561.90</td>
+        <td class="up">▲ +0.13%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$101.02</td>
+        <td class="down">▼ -4.17%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>95.95</td>
+        <td class="up">▲ +0.27%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$78006.50</td>
+        <td class="down">▼ -0.14%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Tuesday: Vladimir Putin arrives in Beijing for talks with Xi Jinping, just days after Trump's visit — watch for any Russia–China alignment on Taiwan or sanctions.</li><li>Monday commute: whether the Long Island Rail Road strike holds will signal the temperature of US labour relations under Trump 2.0.</li><li>Cuba: a Raúl Castro indictment could land 'as soon as next week', potentially triggering further sanctions and migration consequences.</li><li>Brazil: a new poll showing Lula and Bolsonaro tied sets the stage for an unusually competitive presidential race.</li><li>Ebola: WHO and Africa CDC reporting on whether the Bundibugyo strain spreads further in Kinshasa and Kampala.</li><li>UK: any formal leadership challenge to Keir Starmer would likely move gilts and sterling sharply at the open.</li></ul>
+</div>
+
+<div class="editors-note">A summit weekend that delivered atmospherics over outcomes — and a reminder that the real news this week may be what's quietly moving beneath: Ebola, Iran's proxies, and the long shadow over Taiwan.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Sunday, May 17, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-05-17 06:28 UTC
+</footer>
+</div>
+</body>
+</html>

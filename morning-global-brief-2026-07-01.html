@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Wednesday, July 1, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Wednesday, July 1, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Supreme Court upholds birthright citizenship, dealing Trump his sharpest legal defeat</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/bc18af59728ad049a7566ee0e9969741d4afffac/1846_69_5630_4507/master/5630.jpg?width=140&quality=85&auto=format&fit=max&s=4201225d53f8bab1ad17639116ef379d" alt="Supreme Court upholds birthright citizenship, dealing Trump his sharpest legal defeat" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">In a 6-3 ruling, the US Supreme Court rejected the Trump administration's attempt to strip citizenship from children born on American soil to some immigrants, ending the term on a note of defiance. The president responded by threatening to pursue abolition through Congress, an uphill constitutional battle. The same court, however, upheld state bans on transgender athletes in female school sports and agreed to hear challenges to assault-weapons bans next term. Civil rights groups called the citizenship ruling a rare firewall; MAGA voices were in open revolt.</div>
+    <div class="why"><strong>Why it matters:</strong> The 14th Amendment survives its most serious executive challenge in a century, but the court's mixed docket signals a jurisprudence increasingly willing to redraw American social policy.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/cgmepnx1wzzo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/live/2026/jun/30/birthright-citizenship-supreme-court-donald-trump-us-politics-latest-news" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.co.uk/news/articles/c4gyqeqe8xyo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Trump earned $1bn-plus from crypto in his first year back in office</div>
+    <div class="card-body" style="font-size:12.5px;">A federal filing shows the president pulled in more than $1bn — some reports put the figure at $1.4bn — from cryptocurrency ventures in 2025, eclipsing revenue from a real-estate empire built over decades. The disclosures come as his administration has systematically rolled out crypto-friendly regulation, raising ethics questions that Democrats and watchdogs say are unprecedented in modern presidencies. Trump-branded tokens, exchanges and NFT-adjacent products account for the bulk of the windfall.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The blurring of a sitting president's personal fortune with an industry he actively regulates is remaking the American conflict-of-interest debate in real time.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/cvgmv98ez3zo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/30/trump-1bn-crypto-businesses-2025" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/30/donald-trump-reports-1-4bn-in-cryptocurrency-income-in-government-filing" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Venezuela's earthquake toll passes 1,700 as satellite data suggests 58,000 buildings destroyed</div>
+    <div class="card-body" style="font-size:12.5px;">Rescuers in La Guaira state pulled a three-year-old alive from the rubble six days after twin earthquakes struck Venezuela, a rare bright moment amid a rising death toll. Preliminary satellite analysis suggests the destruction is far larger than official estimates, with 58,000 buildings damaged or flattened. More than 100 Venezuelans recently deported from the US were reportedly being held at a hotel that collapsed. With Nicolás Maduro removed earlier this year following US action, the state's near-absence has left survivors clawing at debris with pickaxes and their hands.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> A humanitarian catastrophe is unfolding in a country with almost no functioning central government, testing regional aid networks and Washington's post-Maduro Venezuela policy.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/30/tonnes-and-tonnes-of-rubble-more-than-58000-buildings-estimated-to-have-been-destroyed-in-venezuela-earthquakes" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.co.uk/news/articles/c1jykwk8n18o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/29/venezuela-hotel-collapse-earthquake" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">China emerges as the quiet winner of Trump's Middle East war</div>
+    <div class="card-body" style="font-size:12.5px;">A new geopolitical consulting report concludes that Beijing is the sole Asian beneficiary of the Strait of Hormuz crisis, having weathered the energy shock thanks to strategic stockpiles and its dominance of renewables. Iran, meanwhile, says it could not export a single barrel of oil during the US blockade of its ports. In Doha, US envoys are meeting Qatari mediators but not the Iranians directly, dampening hopes of a near-term diplomatic breakthrough.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The war Washington waged to weaken Tehran is instead accelerating Chinese leverage over the global energy and clean-tech transition.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/30/china-clear-winner-trump-war-middle-east-report-iran-strait-of-hormuz" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/liveblog/2026/7/1/iran-war-live-qatars-pm-meets-us-envoys-tehran-holds-firm-on-conditions" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.co.uk/news/articles/cpd38x1dy4no" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Ukrainian-born tycoon injured in Monaco parcel bomb; prosecutors call it attempted assassination</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/0ab190f605ad5b530c75e21bc8f28014cb5503ab/66_0_667_534/master/667.jpg?width=140&quality=85&auto=format&fit=max&s=03a8685a9d2224fdbb384d7c10e55bb9" alt="Ukrainian-born tycoon injured in Monaco parcel bomb; prosecutors call it attempted assassination" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Vadym Iermolaiev, a Ukrainian-born businessman worth an estimated $225m, was wounded along with his wife and child when an explosive device packed with bolts and pellets detonated at his Monaco apartment. Prosecutors have classed the incident as an attempted assassination rather than terrorism, and an international manhunt is under way. Associates insist Iermolaiev is not politically active, deepening the mystery over motive in a principality unaccustomed to such violence.</div>
+    <div class="why"><strong>Why it matters:</strong> A targeted bombing in Monaco underscores how the shadow war around Ukrainian wealth and oligarchic feuds now reaches deep into Western Europe's safest enclaves.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/cpv37wx03v7o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/30/vadym-iermolaiev-ukrainian-born-oligarch-monaco-bomber" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Afghan Taliban strike Pakistani border as tensions escalate</div>
+    
+    <div class="card-body">Taliban forces launched cross-border strikes on Pakistan, prompting the Pakistani military to say it shot down four rudimentary drones and warn of retaliation for any further provocation. The exchange marks a sharp deterioration in a relationship already frayed by disputes over the Durand Line, TTP militancy, and Afghan refugees. Islamabad is under separate domestic pressure after a school-roof collapse in Lahore killed 14 children.</div>
+    <div class="why"><strong>Why it matters:</strong> A hot border between two nuclear-adjacent neighbours in South Asia raises the risk of a wider conflict that could quickly draw in China and the Gulf.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/c621g086ek4o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Keiko Fujimori wins Peruvian presidency, extending Latin America's rightward turn</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/3de693b7a04e24f6f784f1b4f5bc7315b9d5480f/209_0_2093_1675/master/2093.jpg?width=140&quality=85&auto=format&fit=max&s=0c612907296b059133a893537db54c89" alt="Keiko Fujimori wins Peruvian presidency, extending Latin America's rightward turn" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Keiko Fujimori, daughter of the late Alberto Fujimori, was declared president-elect of Peru after weeks of ballot review, defeating leftist Roberto Sanchez. She has vowed to restore "order and hope" in a country worn down by political instability and crime. Her victory adds to a right-wing tilt sweeping the region and cements the Fujimori political dynasty despite years of legal troubles.</div>
+    <div class="why"><strong>Why it matters:</strong> A friendlier Lima for Washington and mining investors reshapes the balance of power in a copper-rich, strategically pivotal Andean economy.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/30/keiko-fujimori-wins-peru-presidential-election-polls-runoff" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Anti-migrant marches sweep South Africa as foreigners flee</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/dfe98802a4780d58fc0ad0d7fcfc1ef42716274c/0_0_6440_5152/master/6440.jpg?width=140&quality=85&auto=format&fit=max&s=c149c0df962d7d7eac9d79c41f5b0b29" alt="Anti-migrant marches sweep South Africa as foreigners flee" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">More than 2,000 protesters marched through Durban and other South African cities as an arbitrary deadline for undocumented migrants to leave the country expired. Many foreign nationals had already left, fearing a repeat of the 2008 xenophobic violence that killed 62 people. Police units were deployed nationwide in a bid to prevent looting and attacks.</div>
+    <div class="why"><strong>Why it matters:</strong> Africa's most industrialised economy is flirting with the same ethno-nationalist politics reshaping Europe and the US, with regional migration flows at stake.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/30/they-will-attack-me-if-i-stay-immigrants-in-south-africa-flee-for-safety-amid-violence-and-anti-foreigner-protests" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.co.uk/news/articles/cy4eq1l184po" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Germany's intelligence agency counts nearly 60,000 far-right extremists</div>
+    
+    <div class="card-body">Germany's domestic intelligence service says the country now hosts almost 60,000 far-right extremists, more than a quarter of whom it classifies as violent. The figures land as Berlin debates whether to demolish or preserve a Nazi-era bunker in the city centre — a symbolic argument about how Germany reckons with its past at a moment when the AfD sits near record polling highs.</div>
+    <div class="why"><strong>Why it matters:</strong> The largest documented far-right cohort in postwar Germany is testing the resilience of Europe's anchor democracy.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/crlw4ng79wzo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.co.uk/news/articles/cwy09753nq3o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">NAFTA's successor faces its 1 July reckoning — and the deadline will be missed</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/a4d0c2d67568e556fae9208a3ba69f6084acb85b/114_0_4561_3648/master/4561.jpg?width=140&quality=85&auto=format&fit=max&s=67c1f334772b86f64363888a3969aeac" alt="NAFTA's successor faces its 1 July reckoning — and the deadline will be missed" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">The US, Canada and Mexico were meant to decide by today whether to extend the USMCA trilateral trade pact, and all indications are that the deadline will lapse without agreement. The impasse arrives as Treasury Secretary Scott Bessent warns US oil and gas companies to bring prices down, saying "we're watching" — a sign of a White House increasingly willing to jawbone corporations. Uncertainty threatens supply chains from Detroit auto plants to Mexican avocado growers.</div>
+    <div class="why"><strong>Why it matters:</strong> A wobble in North America's $1.5trn trading bloc reverberates through every global manufacturer with a US-Mexico footprint.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/czdejmqmrdgo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/jun/30/scott-bessent-oil-gas-companies-prices-warning" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Australia sues Amazon over Prime subscription terms</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ad84b52ab41b9c2f075bbac386766cf028d9c191/330_0_4270_3419/master/4270.jpg?width=140&quality=85&auto=format&fit=max&s=e03450bb1bff54e84b0dd7a6a3f79250" alt="Australia sues Amazon over Prime subscription terms" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">The Australian Competition and Consumer Commission has filed suit against Amazon, alleging its subscription contracts breach consumer protection law through unfair terms. The action is the latest in a widening global regulatory front against Big Tech's consumer-facing practices — mirrored in the UK, where the CMA is moving to break Apple and Google's "effective duopoly" over app stores.</div>
+    <div class="why"><strong>Why it matters:</strong> Regulators outside the US are increasingly willing to force behavioural change on American tech giants, even as Washington backs away from antitrust enforcement.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/c20yz9rzwy0o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/jun/30/uk-apple-google-mobile-app-stores-developers-payment-cma" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Guo Wengui, exiled Chinese tycoon, sentenced to 30 years in US prison</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/f5f90f5bcbe9e5f984816e15175fd926b63386cd/565_0_4038_3231/master/4038.jpg?width=140&quality=85&auto=format&fit=max&s=d7a9f9a199e3f6cac8ce19e438cd03e3" alt="Guo Wengui, exiled Chinese tycoon, sentenced to 30 years in US prison" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A US federal court sentenced Guo Wengui, the flamboyant exiled Chinese businessman who cultivated a following as a Communist Party critic, to 30 years for defrauding thousands of supporters out of more than a billion dollars. His conviction in 2024 on nine counts including money laundering exposed a sprawling media and crypto empire built around anti-Beijing rhetoric. The ruling closes one of the most colourful diaspora-finance sagas of the past decade.</div>
+    <div class="why"><strong>Why it matters:</strong> The case is a cautionary tale for the Western political networks that lent Guo legitimacy — and for a whole genre of grievance-driven crypto ventures.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/30/guo-wengui-chinese-tycoon-sentenced-us-prison-fraud" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.co.uk/news/articles/cjeg15vw3z9o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">US lifts export ban on Anthropic's Fable and Mythos models</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/20b0b47a180c1b8010bc295ab02ff0130775dd74/139_0_4164_3333/master/4164.jpg?width=140&quality=85&auto=format&fit=max&s=98d53fb05aa6c5a1b0a7d71ecedc7968" alt="US lifts export ban on Anthropic's Fable and Mythos models" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Anthropic said Washington has removed export controls on its top-end Fable 5 and Mythos 5 models, less than three weeks after abruptly suspending foreign access over fears the systems could be weaponised by hackers. The company will begin restoring access to foreign nationals. The whiplash underlines how ad hoc US AI export policy has become, with rules changing on a scale of weeks rather than years.</div>
+    <div class="why"><strong>Why it matters:</strong> Frontier-AI export controls are becoming the new semiconductors — a live tool of US foreign policy that global enterprises must now navigate quarter by quarter.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/cdr42623e1do" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/economy/2026/7/1/us-lifts-restrictions-on-powerful-ai-models-fable-mythos-anthropic-says" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Ford rehires "greybeard" engineers after AI inspection systems misfire</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/7bc22106930e23dcb5638bc4b7c176b2611f825c/0_117_6646_5316/master/6646.jpg?width=140&quality=85&auto=format&fit=max&s=7d3543e310b630a1dbcba7acae021718" alt="Ford rehires "greybeard" engineers after AI inspection systems misfire" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">Ford has quietly brought back veteran engineers after hundreds of AI-powered cameras deployed for design and manufacturing quality checks proved unreliable in ways only human experience could catch. Separately, a US poll finds that frequent users of AI chatbots for health advice are markedly more likely to believe anti-vaccine myths, including debunked claims linking shots to autism. Together, the two stories puncture the reigning narrative of frictionless AI automation.</div>
+    <div class="why"><strong>Why it matters:</strong> Enterprises and public-health officials are being forced to price in the cost of AI's confident errors — and the humans still needed to correct them.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/30/ai-backfired-so-ford-had-to-rehire-humans-greybeard-engineers" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/jun/30/ai-chatbot-use-anti-vaccine-myths-poll" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">WhatsApp to introduce usernames, decoupling chat from phone numbers</div>
+    
+    <div class="card-body">Meta's WhatsApp will roll out usernames globally over the coming months, allowing users to connect without sharing phone numbers — a long-overdue privacy upgrade for the world's largest messaging platform. The change brings WhatsApp into line with Signal and Telegram and could reshape how businesses, journalists and activists in emerging markets manage contact.</div>
+    <div class="why"><strong>Why it matters:</strong> For the two billion-plus WhatsApp users concentrated in India, Latin America and Africa, this is one of the most consequential privacy shifts of the year.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/c1dykk3135xo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Oceans just posted their hottest June on record — again</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ae35d6c68ac3dd67688afc2abde68493108524f8/593_0_3302_2644/master/3302.jpg?width=140&quality=85&auto=format&fit=max&s=7d4da2e4d9ab01e4d5962c9ac460ed9a" alt="Oceans just posted their hottest June on record — again" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">EU climate monitors say the first half of 2026 has been marked by sustained and "exceptional" ocean warmth, capped by the hottest June ever recorded at sea. Scientists warn more heat is on the way, with implications for hurricane intensity, coral survival, and monsoon dynamics. On land, a heatwave-linked wildfire near Thessaloniki has killed at least two people, and a new study shows extreme heat is sharply cutting bee fertility with knock-on effects for pollination of food crops.</div>
+    <div class="why"><strong>Why it matters:</strong> The climate signal keeps outpacing the models — a difficult backdrop for governments still tightening rather than loosening fossil-fuel policy.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/7/1/worlds-oceans-experience-hottest-june-ever-scientists-say-more-heat-ahead" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.co.uk/news/articles/c0qy3nkex0qo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/environment/2026/jul/01/specieswatch-heatwave-bees-fertility-pollination-crops" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">UK energy bills leap 13% as regulator's price cap kicks in</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/9bfec409c8919814779cebbcf4048ba725b03212/315_0_4250_3400/master/4250.jpg?width=140&quality=85&auto=format&fit=max&s=8902e229942e5fa7f10e40495adf6c75" alt="UK energy bills leap 13% as regulator's price cap kicks in" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Britain's Ofgem price cap has risen sharply, pushing typical household energy bills up by around £220 a year and threatening to plunge 13.5 million homes into fuel poverty — defined as spending more than 10% of income on energy. Officials are urging households to submit meter readings ahead of the change to avoid overpaying at old rates. The move exposes lingering vulnerabilities from global gas-market volatility.</div>
+    <div class="why"><strong>Why it matters:</strong> A cost-of-living shock at the start of Britain's third post-Ukraine war winter is a political tinderbox for the Labour government.</div>
+    <div class="sources"><a href="https://www.theguardian.com/money/2026/jul/01/energy-price-cap-rise-will-push-millions-in-great-britain-into-fuel-poverty" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.co.uk/news/articles/c5yzqrpw2g8o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Delhi to ban petrol rickshaws and scooters in landmark clean-air push</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/1c08bfb1b84dc83860593b12e3873c88d3041929/133_0_4680_3744/master/4680.jpg?width=140&quality=85&auto=format&fit=max&s=84ff600ce4e8edd00d26b6259ea639af" alt="Delhi to ban petrol rickshaws and scooters in landmark clean-air push" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The Delhi government plans to phase out petrol-powered rickshaws and scooters and aims for electric vehicles to make up 30% of the capital's fleet by 2030. Activists are calling the move a "gamechanger" for a city that regularly tops global air-pollution rankings. The transition will reshape millions of daily commutes and put pressure on India's fledgling EV two- and three-wheeler manufacturers to scale rapidly.</div>
+    <div class="why"><strong>Why it matters:</strong> If Delhi can pull this off, it becomes the template for every megacity in South Asia — with vast implications for oil demand and EV supply chains.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/30/delhi-gamechanger-ban-petrol-vehicles-tackle-air-pollution-electric-cars" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's mega-IPO era: NSE and Jio Platforms come to market</div>
+    
+    <div class="card-body">The upcoming listings of the National Stock Exchange and Reliance's Jio Platforms — India's two biggest share sales — encapsulate a decade in which a nation of 1.4 billion moved online, into equities, and onto digital payments. The offerings will test whether domestic institutional appetite, now vastly deeper than in past cycles, can absorb marquee floats without foreign anchor demand. Retail participation via mobile broking apps is expected to be unprecedented.</div>
+    <div class="why"><strong>Why it matters:</strong> These IPOs will price the single most important consumer-tech and market-infrastructure story of the decade in emerging Asia.</div>
+    <div class="sources"><a href="https://www.bbc.co.uk/news/articles/cdej6ej7w4go" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Umar Khalid marks six years in Indian jail without trial</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/eb06a9ab1910a81fa04f62aa3e714803191bbec9/0_0_1106_885/master/1106.jpg?width=140&quality=85&auto=format&fit=max&s=88b3ac86f0e0cb9108a0d0e16d17bb06" alt="Umar Khalid marks six years in Indian jail without trial" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Activist Umar Khalid, one of India's most high-profile political prisoners, has spent six years incarcerated in Delhi's Tihar jail without ever facing trial, under anti-terror laws widely criticised by human rights groups. In a rare interview, Khalid describes prison life and his continuing opposition to the Modi government. His case has become a rallying point for concerns about civil liberties in the world's largest democracy.</div>
+    <div class="why"><strong>Why it matters:</strong> As India prepares to court global capital via mega-IPOs and clean-air reforms, the treatment of dissenters remains an uncomfortable footnote for Western partners.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/30/umar-khalid-interview-six-years-indian-jail-without-trial-modi-opposition-political-prisoner" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Democratic socialist Melat Kiros topples 15-term incumbent in Denver primary</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/61d65a59430860f727732089b2fc3145d3f07607/250_0_2500_2000/master/2500.jpg?width=140&quality=85&auto=format&fit=max&s=a919b5c49f2df3341e5f95f24e5c2c95" alt="Democratic socialist Melat Kiros topples 15-term incumbent in Denver primary" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">In one of the most striking primary results of the cycle, 29-year-old democratic socialist Melat Kiros defeated Representative Diana DeGette, a 15-term Democratic incumbent, in Colorado's deep-blue Denver district. Kiros ran on Gaza, housing and tech regulation, and drew fire from Silicon Valley-funded groups active elsewhere in the state's primaries. Meanwhile, Trump has unveiled plans for an unprecedented Republican midterm convention in Dallas.</div>
+    <div class="why"><strong>Why it matters:</strong> Both parties' insurgent wings are gathering strength ahead of November — a midterm shaping up to be far more ideologically raw than 2022 or 2024.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jul/01/melat-kiros-democrat-defeats-diana-degette-blue-state-colarado-house-primary-denver" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/30/trump-republican-convention-midterms-dallas" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/jun/30/silicon-valley-donations-colorado-democratic-primary" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Mexico break 40-year curse to reach World Cup last 16; Mbappé and Messi tied for Golden Boot</div>
+    
+    <div class="card-body">Co-hosts Mexico beat Ecuador to reach the World Cup Round of 16, ending a four-decade drought of failing to advance past the group stage on home-friendly terms. France's Kylian Mbappé bagged a brace against Sweden, drawing level with Lionel Messi on six goals in the Golden Boot race, as Didier Deschamps set his own record. The USA face Bosnia and Herzegovina in the knockouts with pride — and their credentials as a co-host — on the line.</div>
+    <div class="why"><strong>Why it matters:</strong> The first tri-nation World Cup is delivering on the field, and the marquee narratives are converging just as knockout football arrives.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/7/1/mexico-ecuador-fifa-world-cup-2026-score-jimenez-quinones-hincapie" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/7/1/mbappe-deschamps-break-world-cup-records-in-sweden-thrashing" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/7/1/usa-face-bosnia-in-world-cup-knockouts-with-pride-credentials-on-the-line" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">LeBron James signals Lakers exit as 24th NBA season looms</div>
+    
+    <div class="card-body">LeBron James publicly thanked the Los Angeles Lakers as he prepares to enter free agency ahead of what will be his 24th NBA season — an unprecedented tenure in modern professional sport. His next destination will be decided during the imminent free-agency period and will reshape title odds across the league.</div>
+    <div class="why"><strong>Why it matters:</strong> The most commercially important athlete of the streaming era is once again about to redraw the map of American basketball.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/7/1/lebron-james-thanks-la-lakers-ahead-of-free-agency-exit-for-24th-season" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Southeast Asia's homegrown pop steps out of K-pop's shadow</div>
+    
+    <div class="card-body">A new generation of Southeast Asian artists is challenging K-pop's regional dominance, drawing lessons from the Korean playbook — polished visuals, fan engineering, cross-platform strategy — while rooting their sound in local languages and traditions. Thai, Indonesian, Filipino and Vietnamese acts are increasingly charting internationally, backed by regional streaming platforms and diaspora audiences. The industry shift signals that Asia's soft-power exports are diversifying beyond Seoul.</div>
+    <div class="why"><strong>Why it matters:</strong> The next cultural wave out of Asia may not be Korean — a meaningful shift for the region's creative economies and its geopolitical branding.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/7/1/southeast-asias-homegrown-artists-are-knocking-k-pop-off-its-pedestal" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Wednesday, July 1, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7499.36</td>
+        <td class="up">▲ +1.98%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$52319.20</td>
+        <td class="up">▲ +0.85%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$26213.72</td>
+        <td class="up">▲ +3.62%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10486.56</td>
+        <td class="up">▲ +0.02%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>70474.96</td>
+        <td class="up">▲ +0.59%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$3977.60</td>
+        <td class="down">▼ -1.13%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$69.49</td>
+        <td class="down">▼ -0.01%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>94.86</td>
+        <td class="up">▲ +0.07%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$58572.19</td>
+        <td class="up">▲ +0.02%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Whether Washington, Ottawa and Mexico City announce even a stop-gap extension of the USMCA framework in the coming days, or let uncertainty compound.</li><li>US envoys' next moves in Doha — any sign of indirect Iran contact through Qatari mediators would move oil markets sharply.</li><li>Algeria's legislative vote today, the first real test of the post-Hirak political landscape and of turnout as protest.</li><li>The World Cup knockout weekend, with USA-Bosnia and a potential Messi–Mbappé Golden Boot duel front and centre.</li><li>Any indication that Trump will pursue a constitutional amendment or fresh executive action to circumvent the Supreme Court's birthright ruling.</li><li>Follow-through on Delhi's petrol two- and three-wheeler ban — implementation dates, subsidy design, and industry response from Bajaj, TVS and Ola Electric.</li></ul>
+</div>
+
+<div class="editors-note">A rare day in which the US Supreme Court, a Caribbean earthquake, and the World Cup all merit front-page attention — welcome to mid-2026.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Wednesday, July 1, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-07-01 07:18 UTC
+</footer>
+</div>
+</body>
+</html>

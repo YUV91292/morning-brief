@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Saturday, May 9, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Saturday, May 9, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Russia and Ukraine confirm three-day ceasefire as Trump claims diplomatic win</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ba7b3efeb6b419aa5840ef82e2a4462d9f898bb4/564_0_5637_4509/master/5637.jpg?width=140&quality=85&auto=format&fit=max&s=cb2b7c46f9206a5a233941c08dd99e57" alt="Russia and Ukraine confirm three-day ceasefire as Trump claims diplomatic win" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">Moscow and Kyiv have confirmed a 72-hour pause in hostilities running from May 9-11, alongside a 1,000-for-1,000 prisoner swap announced by President Trump. The truce coincides with Russia's Victory Day commemorations, and both sides traded accusations of violations even before it began. Western officials remain sceptical that the brief halt presages a wider settlement, particularly with North Korean troop deployments still being mourned in Pyongyang. For Trump, the optics of a deal — however narrow — bolster his self-styled peacemaker brand at a delicate moment for his Iran diplomacy.</div>
+    <div class="why"><strong>Why it matters:</strong> Even a symbolic pause tests whether Moscow and Kyiv can sustain reciprocal de-escalation after more than four years of war.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/08/trump-russia-ukraine-three-day-ceasefire-9-may" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c202zn5gg0lo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/8/trump-announces-three-day-ceasefire-in-russia-ukraine-war" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">US-Iran ceasefire wobbles after fresh Hormuz exchange</div>
+    <div class="card-body" style="font-size:12.5px;">The month-old US-Iran truce came under its most serious strain yet after both sides exchanged fire in the Strait of Hormuz, with the Pentagon releasing footage of strikes on two Iranian oil tankers. Tehran accused Washington of targeting civilian ships; Secretary of State Marco Rubio warned that any Iranian vessel firing on Americans would be "blown up." The UAE briefly engaged Iranian projectiles with its air defences, underscoring how quickly the Gulf can be drawn in. Diplomatic channels remain open, with Pakistani officials suggesting an interim deal is close.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Hormuz handles roughly a fifth of global oil flows; every flare-up reprices energy and global growth expectations.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/07/iran-accuses-us-of-violating-ceasefire-by-targeting-civilian-areas-and-ships-on-strait-of-hormuz" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/8/pentagon-releases-video-of-strikes-on-iranian-oil-tankers" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c86dp85g59xo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Reform UK breaks the duopoly as Labour suffers historic local losses</div>
+    <div class="card-body" style="font-size:12.5px;">Nigel Farage's Reform UK swept gains across English councils and Welsh and Scottish strongholds, with Welsh First Minister Eluned Morgan losing her seat as Labour was pushed into third place behind Plaid Cymru and Reform. In Scotland, the SNP reasserted itself; in England, Reform took chunks out of both Labour and Tory heartlands. A new poll finds 45% of Labour members want Keir Starmer gone, with Andy Burnham the preferred successor for 42%. Farage hailed a "historic shift" — though some pollsters caution Reform may already be near its ceiling.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Britain's two-party system, the bedrock of Westminster politics for a century, is visibly cracking.</div>
+    <div class="sources"><a href="https://www.theguardian.com/politics/2026/may/08/nigel-farage-reform-uk-election-gains-essex-sunderland" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/politics/2026/may/09/labour-members-keir-starmer-party-fortunes-poll" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/8/leader-of-the-pack-what-next-as-reform-makes-huge-election-gains" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Hantavirus cruise ship docks in Tenerife as global contact-tracing widens</div>
+    <div class="card-body" style="font-size:12.5px;">The MV Hondius is approaching Tenerife under an "unprecedented" evacuation operation, with the WHO confirming five hantavirus cases — including one fatality — and roughly a dozen countries linked to the outbreak. A third Briton is suspected infected; US CDC personnel are flying Americans to quarantine in Nebraska. Local protests have flared in the Canary Islands over fears the docking could pose public-health risks, even as Spanish authorities insist the operation is tightly controlled. Bad weather threatens to delay disembarkation past a 24-hour window.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> A small outbreak with global tendrils is testing post-Covid public-health coordination in real time.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/08/spanish-authorities-prepare-arrival-hantavirus-cruise-ship-hondius" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/clyp1505p84o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/08/americans-hantavirus-cdc-quarantine-nebraska" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Saudi snub forced Trump to shelve Hormuz tanker escort plan</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/5760101a3c7cc4eabc7d9e45ad8e76c606653bdf/537_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=e527265ac56b635b043aaa60abd03c36" alt="Saudi snub forced Trump to shelve Hormuz tanker escort plan" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Riyadh's refusal to grant the US use of its bases and airspace torpedoed "Project Freedom," a planned military escort for oil tankers transiting the Strait of Hormuz. The episode exposes how far Gulf monarchies have hedged their bets since the war began, reluctant to be drawn directly into a US-Iran fight on their doorstep. Without Saudi cooperation, Washington's options for keeping shipping lanes open narrow considerably. It is also a quiet rebuke to a president who has prized his personal rapport with the House of Saud.</div>
+    <div class="why"><strong>Why it matters:</strong> Gulf neutrality, not US firepower, may now be the swing variable in any Iran endgame.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/07/trump-project-freedom-saudi-arabia-strait-of-hormuz" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Israeli strikes intensify in southern Lebanon ahead of Washington talks</div>
+    
+    <div class="card-body">More than a dozen people, including a rescue worker, were killed in Israeli air raids across southern Lebanon on Friday, according to Lebanese authorities. The escalation comes just days before a fresh round of talks expected in Washington. Al Jazeera correspondents reported strikes near Tyre, raising concerns of a broader northern front opening even as the Iran ceasefire hangs in the balance. Lebanese officials are warning that civilian infrastructure is being deliberately targeted.</div>
+    <div class="why"><strong>Why it matters:</strong> An expanding Lebanon front could pull Hezbollah — and by extension Tehran — back into open conflict.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/8/more-than-a-dozen-reported-killed-in-israeli-attacks-on-south-lebanon" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/8/al-jazeera-reporter-witnesses-israeli-strikes-on-lebanon" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">South Africa's top court revives impeachment inquiry against Ramaphosa</div>
+    
+    <div class="card-body">The Constitutional Court has ruled that MPs were wrong to block impeachment proceedings against President Cyril Ramaphosa over the so-called "farmgate" scandal — the theft of a large sum of foreign currency from his farmhouse in 2020. Opposition parties are now calling for his resignation. The ruling reopens a politically toxic case that the ANC had hoped to bury, just as the party's coalition government navigates a fragile economic recovery.</div>
+    <div class="why"><strong>Why it matters:</strong> Africa's most industrialised economy faces renewed political instability at the very top.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/8/south-africas-top-court-revives-impeachment-inquiry-against-president" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cy4287vpvl7o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Hungary's Magyar to be sworn in, ending Orbán's 16-year grip</div>
+    
+    <div class="card-body">Péter Magyar, whose Tisza party delivered a landslide a month ago, will be sworn in as Hungary's prime minister at what supporters are billing a "regime change" celebration. The transition formally ends 16 years of Viktor Orbán's rule and reshapes the EU's internal balance, particularly on Ukraine and rule-of-law disputes. Brussels is watching closely to see whether Magyar can deliver the institutional reset he has promised.</div>
+    <div class="why"><strong>Why it matters:</strong> A pro-EU pivot in Budapest removes one of the bloc's most persistent internal spoilers.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ce3pqvvzgnko" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Anti-war protests rock Japan as Tokyo edges away from pacifism</div>
+    
+    <div class="card-body">Japan is witnessing its largest anti-war demonstrations in decades as the prime minister pushes constitutional changes to permit a more muscular defence posture. The protests reveal a society still deeply ambivalent about shedding the post-1945 settlement, even as it confronts a more assertive China and a volatile Korean peninsula. The government argues that the security environment leaves little choice; opponents say the pace of change is being forced through without genuine debate.</div>
+    <div class="why"><strong>Why it matters:</strong> Japan's strategic awakening is reshaping Asia's security architecture — but its domestic legitimacy is uncertain.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c4g93v8jqnyo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">US economy adds 115,000 jobs in April, defying war-driven gloom</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/905ce3ea49cd39da2b1b8a1d4f82f7b1c5db59af/0_0_5553_4445/master/5553.jpg?width=140&quality=85&auto=format&fit=max&s=53725699da648f59741ebb32d747e412" alt="US economy adds 115,000 jobs in April, defying war-driven gloom" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">American employers added 115,000 jobs last month with unemployment steady at 4.3%, a second consecutive upside surprise despite higher fuel prices and Iran-war jitters. The print suggests the labour market is absorbing geopolitical and tariff-related shocks better than feared. But corporate signals are mixed: Whirlpool warned of a "recession-level" sales slump and is hiking prices a further 4%, while Toyota booked a £3bn hit from soaring input costs and weaker sales tied to the Middle East conflict.</div>
+    <div class="why"><strong>Why it matters:</strong> The headline data and the corporate guidance are diverging — and only one of them can be right.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/may/08/april-jobs-report" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/may/07/whirlpool-recession-sales-iran-tariffs" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/may/08/iran-war-costs-toyota-3bn-prices-materials-soar-sales-fall" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Trump gives EU until July 4 to ratify trade deal as US court strikes down tariffs</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/80eb96a73963dcedfc342a0dfeef9f0e4e3cd6cc/652_0_6829_5464/master/6829.jpg?width=140&quality=85&auto=format&fit=max&s=756172197efbe36d785a9c05274732fd" alt="Trump gives EU until July 4 to ratify trade deal as US court strikes down tariffs" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">President Trump walked back his threat to tear up part of the US-EU trade agreement but set a July 4 deadline for ratification, warning of "much higher" tariffs if Brussels drags its feet. The ultimatum landed the same week a US trade court ruled his 10% global tariff regime violated American law — a decision the White House will appeal. Combined, the two developments leave transatlantic commerce in legal and political limbo.</div>
+    <div class="why"><strong>Why it matters:</strong> The legal foundation of Trump's tariff policy is wobbling just as he leans on it for diplomatic leverage.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/07/trump-gives-eu-until-4-july-to-ratify-trade-deal-or-face-much-higher-tariffs" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cp3pyk4nw3lo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">ASEAN moves to cushion members from Iran-war energy shock</div>
+    
+    <div class="card-body">ASEAN leaders, who collectively import more than half their crude from the Middle East, have adopted coordinated measures to ease the economic pain of the Iran war. The package signals a region trying to act with one voice on energy security even as it stays carefully neutral on the underlying conflict. A separate proposal floated by an international air body to widen acceptance of US-grade jet fuel in Europe hints at how supply chains are being quietly rewired.</div>
+    <div class="why"><strong>Why it matters:</strong> Asia's response will shape oil price floors as much as any OPEC decision in coming weeks.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/economy/2026/5/8/asean-summit-iran-war" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cp8pk2m4nlxo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Global cyberattack on Canvas paralyses universities and schools</div>
+    
+    <div class="card-body">A hacking group has breached Canvas, the academic software used by thousands of schools and universities worldwide, disrupting classes and exams in multiple countries. The incident underscores how concentrated education-tech infrastructure has become — and how a single supply-chain compromise can cascade across continents. Investigators are still determining the scope of data exposure.</div>
+    <div class="why"><strong>Why it matters:</strong> Education is now critical infrastructure, and its cyber defences lag well behind finance or healthcare.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ce3pq0136eqo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Meta switches off Instagram DM encryption in surprise privacy U-turn</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/d95928e9f50fd04fa2c00f6b7b7ae080b1146273/244_0_5151_4122/master/5151.jpg?width=140&quality=85&auto=format&fit=max&s=db1d3aaacd300f34c562a842ed2cdba2" alt="Meta switches off Instagram DM encryption in surprise privacy U-turn" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Meta has removed end-to-end encryption from Instagram direct messages, reversing a flagship privacy commitment without a clear public rationale. The decision puts the company at odds with regulators and civil-society groups in multiple jurisdictions and effectively makes a billion-plus users' messages newly accessible to platform-side processing. Separately, schools in the UK are being urged to scrub pupils' photos online as AI-generated blackmail imagery proliferates.</div>
+    <div class="why"><strong>Why it matters:</strong> The encryption rollback marks a quiet but significant retreat from the privacy norms of the past decade.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/clypzxl3lvqo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/may/08/uk-schools-remove-pupils-photos-online-ai-blackmail-threat-grows" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">GM pays $12.75m to settle California driver-data sale claims</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/32c6521fabe09c55881a3149cfac727b91343b52/0_0_6627_5304/master/6627.jpg?width=140&quality=85&auto=format&fit=max&s=2ce53ef467ad4de23d007f00afb209ac" alt="GM pays $12.75m to settle California driver-data sale claims" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">General Motors has agreed to pay $12.75m to resolve California claims that it sold the location and driving data of hundreds of thousands of motorists to data brokers, despite repeated assurances it would not. The settlement crystallises a long-running concern about connected vehicles becoming covert data-collection platforms. TikTok, meanwhile, has scaled back AI-generated video descriptions after a string of absurd errors went viral.</div>
+    <div class="why"><strong>Why it matters:</strong> Cars are now data products, and US enforcement is finally pricing in the consequences.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/08/general-motors-settlement-driving-location" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c5yerd05n01o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">European aviation emissions surge past pre-Covid levels</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/75a05f8a307067fa9a7bf8f025c1d60bea4f8d7a/496_0_1506_1205/master/1506.jpg?width=140&quality=85&auto=format&fit=max&s=ca56530b50e85af180eced32cd4e427c" alt="European aviation emissions surge past pre-Covid levels" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">Emissions from flying in Europe have now exceeded pre-pandemic levels, with Ryanair's carbon footprint up 50% on 2019, according to new research. Industry pledges on fuel efficiency and decarbonisation have been comprehensively outpaced by traffic growth. The findings sharpen the question of whether voluntary climate targets in transport are credible at all without binding caps.</div>
+    <div class="why"><strong>Why it matters:</strong> If aviation cannot bend its curve in Europe, the global net-zero pathway looks even more theoretical.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/may/08/airline-emissions-in-europe-top-pre-covid-levels-despite-pledge-to-decarbonise" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">US wheat belt buckles under heat and drought</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/b0b988050ccd01dbf70748149828d9bc60f4e545/666_0_3334_2667/master/3334.jpg?width=140&quality=85&auto=format&fit=max&s=8eb400b1f409e39ea7d36c7c98b821fb" alt="US wheat belt buckles under heat and drought" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">Farmers across the American Plains are confronting some of the worst wheat conditions in memory, with extreme temperature swings leaving crops stunted and some growers opting not to harvest at all. The damage adds to inflationary pressure on global grain markets already tight from the Iran war's logistical disruptions. Meanwhile, Indonesia's Mount Dukono erupted, killing three hikers — including two Singaporeans — who had ignored a no-go zone.</div>
+    <div class="why"><strong>Why it matters:</strong> Climate-driven yield losses in the world's breadbaskets are becoming a structural inflation story.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/may/08/wheat-farmers-face-loss-crops-heat-drought" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/08/hikers-dead-missing-eruption-indonesia-mount-dukono-volcano" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Suvendu Adhikari poised to become West Bengal chief minister</div>
+    
+    <div class="card-body">Suvendu Adhikari — once Mamata Banerjee's trusted lieutenant, now her bitterest rival — is set to become West Bengal's next chief minister at the head of a BJP government. His ascent caps a remarkable political journey and hands the BJP a long-coveted prize in eastern India. The shift will reverberate through 2029 general election calculations and reshape the political economy of one of India's most populous states.</div>
+    <div class="why"><strong>Why it matters:</strong> The BJP's first capture of West Bengal is a structural realignment of Indian politics.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwy2gp1wewjo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">UAE air defences engage Iranian projectiles as Hormuz heats up</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/1e1829a1267e335515ff97beaadbb7428e011a9a/0_0_1200_960/master/1200.jpg?width=140&quality=85&auto=format&fit=max&s=81f3104441f687e39f86b407fc244da5" alt="UAE air defences engage Iranian projectiles as Hormuz heats up" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The UAE confirmed its air defences engaged Iranian munitions during this week's exchange in the Strait of Hormuz, a stark reminder that the Gulf states are not merely spectators to the US-Iran confrontation. Abu Dhabi has so far been careful to frame its actions as purely defensive. Energy markets have responded with a renewed risk premium, and EU regulators are still resisting emergency measures for the airline sector.</div>
+    <div class="why"><strong>Why it matters:</strong> The UAE's airspace is now part of the active conflict perimeter — a major shift for a hub economy.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/live/2026/may/07/middle-east-crisis-iran-trump-us-negotiations-deal-war-peace-proposal-hormuz-latest-news-updates" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump weaponises passports — and revokes Venezuelan uranium</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ba80fa731911031bf01ca9edea875a500b972e55/416_0_4165_3332/master/4165.jpg?width=140&quality=85&auto=format&fit=max&s=a029aa407695667bfbcea6590ec92dcc" alt="Trump weaponises passports — and revokes Venezuelan uranium" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The Trump administration will revoke US passports from parents owing more than $2,500 in child support, an unusually punitive use of consular powers that civil-liberties groups are already challenging. In a separate flex, the Energy Department announced the removal of 13.5kg of highly enriched uranium from a Caracas reactor — a fraction of Tehran's stockpile, but a symbolic counterpoint as Iran talks drag on. The administration is also relaxing hunting restrictions across 55 national parks and refuges.</div>
+    <div class="why"><strong>Why it matters:</strong> The administrative state is being repurposed at speed to deliver Trump's policy priorities.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c62r52l107po" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/08/venezuela-enriched-uranium-trump" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/may/08/trump-administration-hunting-national-parks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Premier League title race goes to the wire between City and Arsenal</div>
+    
+    <div class="card-body">Manchester City face Brentford on Saturday and Arsenal travel to West Ham on Sunday in a title race that remains mathematically alive into the final weekends. Elsewhere in football, FIFPRO scored what it called a "landmark" win as a European body acknowledged calendar-related health and safety failings — vindication of years of player-union complaints. Real Madrid fined Federico Valverde and Aurélien Tchouameni €500,000 each over a dressing-room fight, declining sporting sanctions.</div>
+    <div class="why"><strong>Why it matters:</strong> Player welfare is finally being treated as a regulatory issue, not just a locker-room grumble.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/5/8/how-and-when-can-arsenal-or-man-city-win-the-premier-league" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/5/8/fifpro-in-landmark-win-as-european-body-admits-football-calendar-failings" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/5/8/real-madrid-fine-valverde-and-tchouameni-for-dressing-room-fight" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">World Cup broadcast deals still unresolved in India and China</div>
+    
+    <div class="card-body">With the FIFA World Cup just weeks away, broadcasters in India and China — two of football's largest growth markets — have yet to strike rights deals with FIFA. Fans in both countries face genuine uncertainty over how, or whether, they will watch matches. The standoff reflects FIFA's increasingly aggressive pricing and the squeezed economics of pay-TV in Asia.</div>
+    <div class="why"><strong>Why it matters:</strong> Losing live access in the world's two most populous countries would dent FIFA's commercial story for a generation.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cp9py4k8mllo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">David Attenborough turns 100</div>
+    
+    <div class="card-body">Sir David Attenborough has marked his 100th birthday, the celebrated naturalist saying he had thought he would mark the day quietly but expressing gratitude for the global outpouring. Few public figures have shaped popular understanding of the natural world — and, latterly, of climate change — as profoundly. His centenary lands at a moment when his warnings about biodiversity and warming feel especially urgent.</div>
+    <div class="why"><strong>Why it matters:</strong> A reminder that long-form, evidence-led storytelling can still move public opinion at planetary scale.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/video/newsfeed/2026/5/8/celebrated-naturalist-david-attenborough-marks-100th-birthday" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Pentagon releases first tranche of UFO files</div>
+    
+    <div class="card-body">The Pentagon has published transcripts, video clips and audio from its archive of unidentified anomalous phenomena, fulfilling a Trump executive order from February. Officials urged the public to "make up their own minds," while critics complained the disclosure was a distraction from the Iran war. The documents show hovering objects and flashing lights but, as ever, fall short of definitive answers.</div>
+    <div class="why"><strong>Why it matters:</strong> Government transparency on UAP is becoming routine — a meaningful shift in itself, regardless of what is inside the files.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/8/make-up-their-own-minds-pentagon-releases-first-tranche-of-ufo-files" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c1m2epkey44o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Saturday, May 9, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7398.93</td>
+        <td class="up">▲ +0.46%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$49609.16</td>
+        <td class="down">▼ -0.60%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$26247.08</td>
+        <td class="up">▲ +1.58%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10233.07</td>
+        <td class="down">▼ -1.97%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>62713.65</td>
+        <td class="down">▼ -0.19%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4730.70</td>
+        <td class="up">▲ +0.66%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$95.42</td>
+        <td class="up">▲ +0.64%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>94.47</td>
+        <td class="down">▼ -0.15%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$80391.26</td>
+        <td class="up">▲ +0.26%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Whether the Russia-Ukraine three-day ceasefire holds past May 11 — and whether it becomes a template for longer pauses.</li><li>Iran's formal response to the latest US peace proposals, expected imminently via back-channels in Islamabad and Rome.</li><li>Disembarkation of the MV Hondius in Tenerife and any new hantavirus cases as contact tracing expands across a dozen countries.</li><li>Keir Starmer's response to internal Labour pressure following Reform UK's breakthrough — including a possible reshuffle.</li><li>The July 4 deadline Trump has set the EU to ratify their trade deal, against the backdrop of a US court ruling tariffs unlawful.</li><li>Australia's Farrer by-election, a litmus test for whether One Nation can finally win a federal seat.</li></ul>
+</div>
+
+<div class="editors-note">A weekend defined less by resolution than by managed pauses — in Ukraine, in Hormuz, in Westminster — each of which could unravel by Monday.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Saturday, May 9, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-05-09 05:54 UTC
+</footer>
+</div>
+</body>
+</html>

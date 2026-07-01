@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Sunday, June 14, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Sunday, June 14, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Trump says US-Iran peace deal to be signed Sunday; Tehran disputes timing</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/2f2107bc4ef0c25ce04f404924ee47b195f7f272/513_0_5113_4092/master/5113.jpg?width=140&quality=85&auto=format&fit=max&s=7725d36353f52066e2b760529d114928" alt="Trump says US-Iran peace deal to be signed Sunday; Tehran disputes timing" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">Donald Trump claims an initial agreement with Iran will be inked today, promising the Strait of Hormuz will reopen shortly afterward and warning of an 'ultimate alternative' if Tehran balks. Iranian officials, including the foreign ministry, insist no date has been set and have cautioned against media speculation. The diplomatic flurry comes even as Israel continued strikes on southern Lebanon and the US military said it downed Iranian attack drones. Analysts note Iran's new, more militaristic leadership appears willing to absorb pressure rather than concede on terms.</div>
+    <div class="why"><strong>Why it matters:</strong> A deal — or its collapse — would reshape oil markets, regional security, and Trump's foreign-policy legacy heading into the US semiquincentennial.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cvglmn49xz0o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/13/preliminary-peace-deal-could-be-signed-within-days-says-us-iran-and-mediators" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/13/world/middleeast/iran-united-states-israel-lebanon.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Musk becomes world's first trillionaire as SpaceX storms Nasdaq</div>
+    <div class="card-body" style="font-size:12.5px;">SpaceX's blockbuster IPO closed Friday at a $2.2 trillion valuation, the largest market debut in history, pushing Elon Musk's personal fortune past $1.11 trillion on the Bloomberg index. The listing marked the end of nearly 25 years as a private company for the rocket-and-AI conglomerate. The milestone arrives amid mounting questions over the concentration of wealth and strategic infrastructure — from satellites to launch capacity — in the hands of a single individual.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> A trillion-dollar individual fortune redraws the politics of wealth, space and AI policy in one stroke.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c4gypy3wwl7o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/jun/12/elon-musk-spacex-net-worth" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/science/2026/jun/12/spacex-stock-price-ipo-spcx" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">US strike kills Tren de Aragua leader in Venezuela, Trump says</div>
+    <div class="card-body" style="font-size:12.5px;">Trump announced that Hector Rusthenford Guerrero Flores, known as Niño Guerrero and head of the Venezuelan gang Tren de Aragua, was killed in what he called a 'swift and lethal kinetic strike.' Unusually, US officials credited cooperation from the Maduro government — a striking shift after years of frosty relations. The gang has been a flashpoint in US immigration politics, with Washington designating it a foreign terrorist organisation.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The strike signals a tactical thaw with Caracas and a new template for cross-border action against criminal networks.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cp36z37knlko" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/13/world/americas/tren-de-aragua-leader-killed-us-venezuela.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/12/trump-venezuela-tren-de-aragua-leader-killed" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Switzerland votes on capping population at 10 million</div>
+    <div class="card-body" style="font-size:12.5px;">Swiss voters are casting ballots today on a Swiss People's Party initiative that would force the government to restrict migration so the population stays below 10 million by 2050. Proponents frame it as a sustainability measure; critics, including business groups, warn it could choke the economy and unravel bilateral arrangements with the EU. Polls suggest a close race in one of the world's wealthiest democracies.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> A Yes would set a precedent for hard-numerical migration caps in advanced economies — and a stress test for Swiss-EU relations.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cx23kz7e76po" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/13/swiss-wait-to-hear-result-of-ballot-on-capping-population-at-10-million" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/13/world/europe/switzerland-population-referendum-10-million.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Germany and Japan rearm — and quietly draw closer</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/06/13/multimedia/13int-germany-japan-01-hqmv/13int-germany-japan-01-hqmv-mediumSquareAt3X.jpg" alt="Germany and Japan rearm — and quietly draw closer" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Eighty years after their wartime alliance ended in catastrophe, Berlin and Tokyo are again coordinating on defence, this time framed around deterring Russia and China. Both economies are ramping up military spending and industrial cooperation, including on naval and air capabilities. The pivot reflects a broader Western anxiety about American reliability under Trump and the steady militarisation of the Indo-Pacific.</div>
+    <div class="why"><strong>Why it matters:</strong> A Berlin-Tokyo defence axis would meaningfully reshape the architecture of post-Cold War security.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/14/world/europe/germany-japan-rearmament-military.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Carney warns of 'global rupture' as Canada and EU close ranks before G7</div>
+    
+    <div class="card-body">Canadian Prime Minister Mark Carney has called for a tighter Canada-EU partnership ahead of the G7 summit, warning that the rules-based order is fraying under superpower competition. His framing — explicit about US drift — underscores how middle powers are hedging against Washington. Expect trade, critical minerals and Ukraine support to dominate the agenda.</div>
+    <div class="why"><strong>Why it matters:</strong> Middle-power coalitions are emerging as the new ballast for a wobbling liberal order.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/13/a-global-rupture-carney-calls-for-canada-eu-unity-before-g7-summit" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Ukraine running low on Patriot interceptors as Russian missiles pile up</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/06/13/multimedia/13interceptors-01-cwql/13interceptors-01-cwql-mediumSquareAt3X.jpg" alt="Ukraine running low on Patriot interceptors as Russian missiles pile up" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Kyiv is pleading for more US-made Patriot interceptors as Russia presses an intensifying ballistic missile campaign. Stocks are dwindling and production timelines lag battlefield need, raising the spectre of Ukrainian cities going under-defended this winter. The shortfall sharpens questions about US and European industrial mobilisation.</div>
+    <div class="why"><strong>Why it matters:</strong> Air-defence arithmetic, not battlefield maps, may decide the next phase of the war.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/13/world/europe/ukraine-russia-patriot-interceptors.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Rome rallies clash as Europe's migration politics harden</div>
+    
+    <div class="card-body">Thousands turned out in Rome for rival pro- and anti-migration marches, with the far-right 'remigration' movement drawing notable crowds. Police deployed in force to keep demonstrators apart. The scenes echo growing momentum across Europe — from the Swiss referendum to new EU migration rules now in force — for restrictionist policies.</div>
+    <div class="why"><strong>Why it matters:</strong> Migration is on track to be the defining electoral fault-line across the continent through 2027.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/13/thousands-rally-in-rome-italy-for-rival-pro-and-anti-migration-marches" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">DOJ green-lights $111bn Paramount-Warner Bros merger</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/8fdf445018427ee3091c229626070f9904de417f/0_0_1500_1200/master/1500.jpg?width=140&quality=85&auto=format&fit=max&s=b46bd743d405d3573ff1060bba17b2ae" alt="DOJ green-lights $111bn Paramount-Warner Bros merger" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">The US Justice Department has cleared the $111 billion combination of Paramount Skydance and Warner Bros Discovery, bringing CNN, HBO, Paramount and the Warner studio under Ellison-family control. The deal still faces UK regulatory scrutiny and possible challenges from state attorneys general. It arrives alongside an unusual FCC move to fast-track public comment on ABC's broadcast licences — a one-two punch that critics call politicised.</div>
+    <div class="why"><strong>Why it matters:</strong> Hollywood is consolidating fast, with political proximity to the White House emerging as a competitive asset.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cjwgled9jxwo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/12/paramount-warner-bros-merger" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/media/2026/jun/13/abc-fcc-license-trump-kimmel" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">UK to phase out Russian diesel and jet fuel imports by year-end</div>
+    
+    <div class="card-body">Britain has pledged to end imports of Russian diesel and jet fuel by 1 January as part of a fresh sanctions package over Ukraine. The move tightens loopholes that allowed Russian crude refined in third countries to reach the UK market. Energy traders expect knock-on effects in Asia-routed diesel pricing.</div>
+    <div class="why"><strong>Why it matters:</strong> Closing the refined-products loophole is the next frontier of Russia sanctions enforcement.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ceqdl8xre7qo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Why gold is sliding even as wars rage</div>
+    
+    <div class="card-body">Gold has been under sustained pressure since the US and Israel launched their war on Iran in February — counterintuitive for a classic safe-haven asset. Analysts point to dollar strength, real-yield dynamics and unwinding of speculative positions. If a US-Iran deal materialises this week, the slide could deepen.</div>
+    <div class="why"><strong>Why it matters:</strong> Gold's behaviour is challenging textbook assumptions about geopolitical risk premia.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/economy/2026/6/14/why-is-the-price-of-gold-trending-down" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Why the US economy keeps defying gravity</div>
+    
+    <div class="card-body">Despite the same global shocks battering peers — supply chains, energy, war risk — the US continues to outperform on growth, productivity and corporate earnings. The BBC dissects how AI capex, fiscal stimulus and an unusually dynamic labour market have kept the engine running. Whether the lead is structural or a sugar-high remains the trillion-dollar question.</div>
+    <div class="why"><strong>Why it matters:</strong> American economic exceptionalism is reshaping capital flows and global wage benchmarks alike.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwy031el03po" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Anthropic disables top Claude models after US national-security order</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ca24866ee13adb777b4a3136d8af62b284abe999/470_0_4630_3707/master/4630.jpg?width=140&quality=85&auto=format&fit=max&s=91fd3ab4b282e08e4b735dfab059efc9" alt="Anthropic disables top Claude models after US national-security order" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Anthropic said it will 'abruptly disable' its most advanced AI models for all users following a US government directive to suspend foreign-national access, citing concerns the safeguards could be bypassed and the tools used to find software vulnerabilities. The decision follows scrutiny of the newly released Claude Fable 5. It marks one of the first instances of an export-control-style restriction being applied to a frontier AI product mid-deployment.</div>
+    <div class="why"><strong>Why it matters:</strong> Washington is moving from voluntary AI safeguards to hard, capability-level restrictions — with industry-wide implications.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/13/anthropic-disable-advanced-ai-models-us-government-order" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c932g3v3e13o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">UK unveils AI infrastructure push at London Tech Week</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/571ac47b1baf13ad655d8c2be5d25da424d398fc/452_0_4975_3980/master/4975.jpg?width=140&quality=85&auto=format&fit=max&s=29b585cd75929b8de0bf96c8cb0eabb9" alt="UK unveils AI infrastructure push at London Tech Week" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">The UK government has announced multi-billion-pound investments in domestic AI compute, chips and adjacent infrastructure as it tries to carve a niche between US dominance and Chinese ambition. Plans also touch on social media regulation and skills. Analysts note delivery risks: chip supply, energy and grid connections remain bottlenecks.</div>
+    <div class="why"><strong>Why it matters:</strong> Sovereign AI capacity is becoming a top-tier industrial policy across the G7.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/13/uk-ai-hardware-london-tech-week-investment-chips" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">First UK police officer probed over AI-generated 'evidence'</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/c14300c7d738b35051666d33d3d2c067ba26ad35/1120_0_5600_4480/master/5600.jpg?width=140&quality=85&auto=format&fit=max&s=831a0482b3b27efd9b6b69730ecb3266" alt="First UK police officer probed over AI-generated 'evidence'" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">A Derbyshire officer has been removed from frontline duties and is under criminal investigation for allegedly using AI to generate evidential material — believed to be the first such case in Britain. The episode highlights how quickly generative tools are infiltrating sensitive workflows. Separately, a Dutch far-right MP paid damages after manipulating a court artist's sketch with AI to make Syrian defendants look more menacing.</div>
+    <div class="why"><strong>Why it matters:</strong> Courts and policing are confronting an evidentiary credibility crisis years before regulators have caught up.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/12/police-officer-under-criminal-investigation-over-alleged-use-of-ai" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/13/geert-wilders-pvv-dutch-far-right-party-damages-court-artist-change-image-ai" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's fertility rate drops below replacement to 1.9</div>
+    
+    <div class="card-body">India's Total Fertility Rate has fallen to 1.9 children per woman, below the 2.1 replacement benchmark, driven by rising costs, women's career ambitions, urbanisation and changing social norms. The shift reverses decades of policy framed around population growth and brings India into the demographic transition that has reshaped East Asia. The economic implications — for labour supply, savings and welfare — will play out over a generation.</div>
+    <div class="why"><strong>Why it matters:</strong> India's demographic dividend has a shelf life; policy planning must pivot from population to productivity.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/14/costs-careers-and-choice-why-indians-are-having-fewer-children" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump name comes off Kennedy Center after court order</div>
+    
+    <div class="card-body">Crews erected scaffolding at Washington's Kennedy Center to remove Donald Trump's name following a court order, with storms briefly delaying the work. The dismantling is a rare visible reversal of the president's branding push across federal cultural institutions. It comes as the US prepares for its 250th anniversary amid sharp debate about how — and by whom — the celebrations should be defined.</div>
+    <div class="why"><strong>Why it matters:</strong> Symbolism aside, the ruling sets a marker on the limits of executive cultural rebranding.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c5yzd4dgxw4o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/14/america250-versus-freedom250-what-to-know-about-the-us-semiquincentennial" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump turns 80 — and the world is watching the clock</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/af5060eb9fe4e7ffd10a2d67eae5e45628ba15f5/0_542_4000_3198/master/4000.jpg?width=140&quality=85&auto=format&fit=max&s=f8da8bcb862741277a4847e14d87d2af" alt="Trump turns 80 — and the world is watching the clock" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Donald Trump marks his 80th birthday today, an inflection point that is intensifying scrutiny of his judgement, stamina and decision-making at a moment of compounding global crises. Allies dismiss the concerns; critics, including in his own party, increasingly do not. The age question, once taboo, is now central to discussions of US continuity.</div>
+    <div class="why"><strong>Why it matters:</strong> Succession risk in the world's most powerful office is now an explicit variable in global planning.</div>
+    <div class="sources"><a href="https://www.theguardian.com/news/ng-interactive/2026/jun/14/donald-trump-turns-80-faces-foe-father-time" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">California warehouse blaze stretches into third day</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/8fa33cf697677ffec28198f89a0ecd274e572b2d/215_0_2936_2349/master/2936.jpg?width=140&quality=85&auto=format&fit=max&s=e0ec5d8d2a65cb1e2b6de52764335ae8" alt="California warehouse blaze stretches into third day" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A vast fire at a one-million-square-foot Medline medical-supply warehouse in Tracy, California, continued to burn into its third day, hitting air quality across a city of over 100,000 residents. Officials have warned vulnerable groups to remain indoors. The incident raises fresh questions about fire response capacity at industrial-scale logistics sites.</div>
+    <div class="why"><strong>Why it matters:</strong> Mega-warehouse fires are emerging as a recurring strain on US emergency services and supply chains.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/13/california-warehouse-fire-tracy" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Australia faces critical lubricants shortage as Middle East fallout widens</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/6d8bd3ded50694a1258c52e888ec32c11e67c515/1267_0_6827_5464/master/6827.jpg?width=140&quality=85&auto=format&fit=max&s=4c9e01a686b292dca14010b71215c074" alt="Australia faces critical lubricants shortage as Middle East fallout widens" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">Prices for base oils used to make lubricants are climbing in Australia as the protracted Middle East conflict disrupts not only fuel but the broader petrochemical chain. Industry warns of cascading effects on transport, mining and manufacturing if supplies tighten further. The episode underscores how war-driven energy shocks now reach well beyond petrol pumps.</div>
+    <div class="why"><strong>Why it matters:</strong> Resilience planning needs to extend from crude oil to the obscure intermediates that keep economies physically moving.</div>
+    <div class="sources"><a href="https://www.theguardian.com/australia-news/2026/jun/14/australia-is-facing-a-shortage-of-critical-lubricants-how-do-we-stop-everything-grinding-to-a-halt" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Knicks end 53-year drought with NBA championship</div>
+    
+    <div class="card-body">The New York Knicks beat the San Antonio Spurs 94-90 in Game 5 to clinch their first NBA title since 1973, taking the series 4-1. Jalen Brunson led a defensively gritty performance that turned the late stages. Manhattan erupted in celebration — coincidentally, just as the World Cup opener was being watched at bars across the city.</div>
+    <div class="why"><strong>Why it matters:</strong> A signature win for a flagship franchise reshapes the NBA's commercial gravity around New York again.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/14/knicks-vs-spurs-new-york-san-antonio-nba-finals-game-5" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c78yw4zw19do" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">World Cup 2026 kicks off — and the cracks are already showing</div>
+    
+    <div class="card-body">The expanded 48-team tournament is underway across North America, with Brazil and Morocco playing to a charged 1-1 draw, Australia surprising Turkiye 2-0, Scotland edging Haiti, and Qatar grabbing a historic injury-time point against Switzerland. Off the pitch, FIFA is fending off questions about empty seats — blamed on fans lingering on concourses — alongside concerns over heat, ticket costs, travel restrictions and the tournament's environmental footprint. Trump's absence from opening matches has also drawn comment.</div>
+    <div class="why"><strong>Why it matters:</strong> The 2026 World Cup is the largest ever, and its operational stumbles will set the template for mega-events in a fractured world.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/14/2026-world-cup-australia-stun-turkiye-2-0-in-counterattacking-masterclass" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/6/13/qatar-net-dramatic-late-goal-to-draw-world-cup-opener-against-switzerland" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/sport/football/articles/c14y0dp6vrdo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Russian families turn to AI to 'resurrect' war dead</div>
+    
+    <div class="card-body">A controversial trend has taken hold in Russia: families using generative AI to create video and audio simulations of relatives killed in Ukraine. The phenomenon sits at the intersection of grief, propaganda and rapidly democratised synthesis tools. Psychologists and ethicists are divided on whether the practice aids or prolongs mourning.</div>
+    <div class="why"><strong>Why it matters:</strong> AI is rewriting the most intimate human experiences — and war is accelerating the experiment.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwy24v72n19o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">The rise of 'virtual parents' as young people seek validation online</div>
+    
+    <div class="card-body">A niche but rapidly growing genre of content creators — middle-aged couples role-playing as warm, encouraging parents — is finding huge audiences among young viewers whose own family relationships feel insufficient. The BBC profiles users who say the videos fill a real emotional gap. Mental-health professionals warn the trend speaks to a broader loneliness epidemic.</div>
+    <div class="why"><strong>Why it matters:</strong> Parasocial 'family' content is the next chapter of how platforms substitute for community.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cpq3dnr5vlzo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Sunday, June 14, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7431.46</td>
+        <td class="up">▲ +2.26%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$51202.26</td>
+        <td class="up">▲ +2.57%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$25888.84</td>
+        <td class="up">▲ +2.86%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10471.72</td>
+        <td class="up">▲ +2.12%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>66020.04</td>
+        <td class="up">▲ +2.81%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4238.80</td>
+        <td class="up">▲ +0.56%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$84.88</td>
+        <td class="flat">—0.00%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>95.10</td>
+        <td class="down">▼ -0.57%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.04%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$64324.88</td>
+        <td class="down">▼ -0.15%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Whether a US-Iran agreement is actually signed today, and what it says about Hormuz shipping access.</li><li>Swiss referendum results on the 10-million population cap — likely declared by this evening CET.</li><li>G7 summit positioning ahead of next week's leaders' meeting, particularly Canada-EU coordination.</li><li>Market reaction Monday to SpaceX's debut and any second-day price action in the $1.77tn+ listing.</li><li>UK regulator response to the Paramount-Warner Bros merger, which could still derail the deal.</li><li>Verdict in the Norway rape trial of Marius Borg Høiby, the crown princess's son, expected this week.</li><li>World Cup Group stage: India-relevant matchups and continued scrutiny of FIFA's stadium operations.</li></ul>
+</div>
+
+<div class="editors-note">A rare Sunday where geopolitics, capital markets and sport all peak in the same 24 hours — read the Iran headlines closely, but watch what oil and gold do tomorrow.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Sunday, June 14, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-06-14 07:28 UTC
+</footer>
+</div>
+</body>
+</html>

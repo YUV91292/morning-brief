@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Monday, May 18, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Monday, May 18, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Trump warns Iran as drones hit UAE and Saudi sites</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/327bd905b46117905817c6345ce8d85237122c55/104_0_1668_1334/master/1668.jpg?width=140&quality=85&auto=format&fit=max&s=18f50ecaba0f36e97e99d7030d4f7fc7" alt="Trump warns Iran as drones hit UAE and Saudi sites" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">President Trump declared the 'clock is ticking' on Tehran after Iranian-aligned drones struck near the Barakah nuclear power plant in the UAE and other targets in Saudi Arabia, deepening a precarious ceasefire that has held only loosely since the February US-Israeli strikes. Abu Dhabi called the attack a 'dangerous escalation' and blamed Iran or its proxies. Iranian media insist Washington has offered no meaningful concessions on Tehran's latest proposals, while Trump publicly threatened that 'won't be anything left' if talks collapse. With the Strait of Hormuz still effectively closed, oil prices climbed again on the news.</div>
+    <div class="why"><strong>Why it matters:</strong> A strike on Gulf nuclear infrastructure is a red line that, if repeated, could pull the GCC directly into the war and detonate energy markets.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwy27pkj1l1o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/17/uae-blames-iran-or-its-proxies-for-drone-strike-fire-near-nuclear-plant" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/17/wont-be-anything-left-trump-issues-threat-to-iran-amid-stalled-talks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">WHO declares DR Congo Ebola outbreak a global health emergency</div>
+    <div class="card-body" style="font-size:12.5px;">The World Health Organization escalated the Ebola outbreak in north-eastern DRC to a 'public health emergency of international concern' after roughly 246 cases and 80 deaths, with infections now reported across Rwampara, Mongwalu and Bunia. The WHO stopped short of pandemic-level designation, but warned the strain has no approved vaccine. Uganda has activated emergency protocols at border points. Humanitarian agencies say a depleted aid system, gutted by donor cuts, will struggle to mount the kind of ring-vaccination response that contained past outbreaks.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Ebola's geographic spread into urban centres tests a global health architecture already weakened by funding shortfalls and donor fatigue.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c2l2p0wwzzdo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/17/world/africa/ebola-congo-uganda-who-public-health-emergency.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/features/2026/5/17/drc-faces-deadly-ebola-resurgence-amid-worsening-humanitarian-crisis" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Ukraine launches one of its largest drone barrages on Russia</div>
+    <div class="card-body" style="font-size:12.5px;">Nearly 600 Ukrainian drones swept across 14 Russian regions overnight, killing at least four people in the Moscow region and signalling a sharp shift in the war's tempo after Russia's deadly three-day assault on Ukrainian cities last week. President Zelensky called the strikes a 'justified' response. Russian air defences claimed to have intercepted most, but damage was reported deep inside the country. The escalation comes as Xi Jinping prepares to host Vladimir Putin in Beijing this week, just days after Trump's own visit to China.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Ukraine's deep-strike doctrine is shrinking Russia's strategic depth — and complicating any future negotiating posture as Putin courts Xi.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/17/people-killed-in-russia-ukraine-retaliatory-strikes-moscow" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/17/world/europe/russia-ukraine-strikes-moscow.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c5ye480kxpmo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Trump's grip on the GOP tested in Louisiana and Kentucky primaries</div>
+    <div class="card-body" style="font-size:12.5px;">A Trump-endorsed challenger, Julia Letlow, unseated the Louisiana Republican senator who voted to convict the president, after Trump branded the incumbent 'disloyal'. Attention now turns to Kentucky, where Trump is openly campaigning to oust libertarian congressman Thomas Massie, posting 'vote the bum out' on Sunday. The contests are the clearest test yet of whether dissenting Republicans can survive a Trump-aligned base ahead of the midterms.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Each primary purge tightens the president's hold on Congress and narrows the space for institutional check on a second-term agenda.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cx21d4pxq23o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/05/17/trump-thomas-massie-primary" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Xi to host Putin in Beijing days after Trump visit</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/efad3ca00ee424b2643123a9f8c1582e85d097c9/0_0_1803_1442/master/1803.jpg?width=140&quality=85&auto=format&fit=max&s=1b2eb3da1b105849f1fcecd89f30b994" alt="Xi to host Putin in Beijing days after Trump visit" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">China's Xi Jinping and Russia's Vladimir Putin exchanged warm 'congratulatory letters' ahead of Putin's visit to Beijing this week — only four days after Xi hosted Trump for a high-stakes summit that touched on Taiwan and trade. The choreography underscores Beijing's attempt to play both sides of the new great-power triangle. The White House says Trump's talks yielded a Chinese commitment to buy at least $17bn of US agricultural goods annually, though details remain thin.</div>
+    <div class="why"><strong>Why it matters:</strong> How Xi calibrates his embrace of Putin this week will signal whether Beijing sees the Trump détente as durable or merely tactical.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/18/xi-jinping-vladimir-putin-china-russia-four-days-after-donald-trump-us-visit" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/economy/2026/5/18/us-says-china-to-buy-billions-in-agricultural-goods-after-trump-xi-talks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Israel strikes Lebanon hours after extending ceasefire</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/054eff53d9d886e6e107709654eeef24cfbc727b/736_0_5600_4480/master/5600.jpg?width=140&quality=85&auto=format&fit=max&s=d92f30f5a7f7164ca47c2a4a680e5435" alt="Israel strikes Lebanon hours after extending ceasefire" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Israeli airstrikes killed at least six people in southern Lebanon — including three paramedics at a health centre — within hours of Israeli envoys agreeing to extend a fragile truce with the Lebanese government. Separately, Israel said it killed Hamas military chief Izz al-Din al-Haddad in a strike in Gaza, while aid workers in a community kitchen were among Palestinians killed in further bombardments. BBC Verify has documented Hezbollah's increasing use of fibre-optic drones against Israeli positions, a tactical evolution complicating any durable ceasefire.</div>
+    <div class="why"><strong>Why it matters:</strong> The 'ceasefire' is a label, not a reality; with Iran's allies and Israel still trading fire, the Middle East has multiple tinderboxes burning at once.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/16/israeli-strikes-southern-lebanon-hours-after-extension-of-ceasefire" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/17/israel-kills-five-in-lebanon-after-ceasefire-with-hezbollah-extended" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c1j2zwe9g5no" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Iran's executions of political prisoners surge since war began</div>
+    
+    <div class="card-body">The UN has verified the execution of at least 32 political prisoners in Iran since US and Israeli strikes hit the country in late February, the BBC reports, with rights groups warning the actual figure is far higher. Detainees have used smuggled audio recordings to say goodbye to families, fearing imminent death. Meanwhile Tehran is running mosque-based weapons training for civilians, signalling a regime simultaneously preparing for protracted conflict and tightening internal repression.</div>
+    <div class="why"><strong>Why it matters:</strong> A regime executing dissidents at home while negotiating abroad is a tell: Tehran is hardening, not softening, despite diplomatic overtures.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cn8p392nl7yo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/17/iranian-civilians-get-defence-training" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Taiwan's Lai: we won't provoke, we won't surrender</div>
+    
+    <div class="card-body">President Lai Ching-te made his first direct response to last week's Trump-Xi summit, telling Taiwanese audiences the island would neither provoke conflict nor yield its sovereignty after the two leaders reportedly discussed Taiwan independence. The carefully balanced statement reflects Taipei's anxiety that it may be a bargaining chip in a wider US-China deal. Investors and defence planners are watching for any softening in US assurances.</div>
+    <div class="why"><strong>Why it matters:</strong> Any perceived hint of US flexibility on Taiwan would reverberate through Asian capitals and tech supply chains within hours.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c7591gq10qko" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Peru heads to runoff between Fujimori and a leftist outsider</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/04/14/world/00int-peru-election-fujimori/00int-peru-election-fujimori-mediumSquareAt3X.jpg" alt="Peru heads to runoff between Fujimori and a leftist outsider" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Peruvian electoral authorities confirmed that conservative Keiko Fujimori and leftist Roberto Sánchez will contest a June 7 runoff, after a first round marred by logistical chaos and fraud allegations. The choice puts two starkly opposed visions of the state before voters in a country that has cycled through six presidents in as many years. Investors will watch for any market-friendly cues from Fujimori; social-spending pledges from Sánchez will worry the sol.</div>
+    <div class="why"><strong>Why it matters:</strong> Peru's instability matters for copper supply chains and for a Latin America already navigating Venezuela's post-Maduro transition.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/17/world/americas/peru-runoff-election.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/17/peruvian-authorities-confirm-fujimori-and-sanchez-advance-to-runoff" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Oil whips higher as Hormuz remains shut and Trump turns up the rhetoric</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/07/multimedia/00biz-somalia-aid-crisis-07-kqph/00biz-somalia-aid-crisis-07-kqph-mediumSquareAt3X.jpg" alt="Oil whips higher as Hormuz remains shut and Trump turns up the rhetoric" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Crude prices climbed again after Trump's latest ultimatum to Iran, with the Strait of Hormuz still effectively closed to commercial traffic and Gulf insurers ratcheting up war-risk premiums. Energy traders are now pricing in a sustained risk premium rather than a transient spike. Downstream, the NYT reports humanitarian costs are soaring in fragile economies like Somalia as food, fuel and fertiliser prices climb on the back of the conflict.</div>
+    <div class="why"><strong>Why it matters:</strong> A persistent Hormuz disruption reshapes inflation paths for every major central bank, and threatens the soft-landing narrative in the US and EU.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/czx2ne2ryppo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/18/business/iran-war-somalia-usaid.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">UK's HS2 inquest blames 'original sins' of design and politics</div>
+    
+    <div class="card-body">A new review of the UK's high-speed rail debacle attributes the project's spiralling costs to flawed initial technical specifications, shifting political mandates and unrealistic speed targets baked in from day one. The findings will shape how Whitehall procures the next generation of infrastructure. They also land awkwardly for a Labour government wrestling with how much of HS2's truncated northern leg can be salvaged.</div>
+    <div class="why"><strong>Why it matters:</strong> HS2 is fast becoming a global case study in how to mismanage megaprojects — and a warning for every government chasing a national-renewal narrative.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c936xeeye41o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Streeting throws his hat in to replace Starmer</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/aa4e69cb7d28fcf21f02d8ac8c042916e7bcd13d/100_0_1000_800/master/1000.jpg?width=140&quality=85&auto=format&fit=max&s=34feb2f49b93a2ae7600460f6622768a" alt="Streeting throws his hat in to replace Starmer" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Former UK health secretary Wes Streeting has declared he will challenge Keir Starmer for the Labour leadership, formalising a long-rumoured rivalry inside a governing party slipping in the polls. Streeting's pitch leans on NHS reform credentials and a more pro-business posture. Separately, the next ambassador to Tokyo, Corin Robertson, may be summoned by MPs over her role in granting Peter Mandelson security clearance against vetting advice.</div>
+    <div class="why"><strong>Why it matters:</strong> A leadership contest mid-term would freeze UK economic policymaking just as fiscal pressures bite and a US drug-pricing deal faces legal challenge.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/video/newsfeed/2026/5/18/former-uk-health-secretary-wes-streeting-announces-bid-to-replace-starmer" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/politics/2026/may/18/uk-ambassador-japan-corin-robertson-mandelson-inquiry" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/society/2026/may/18/campaigners-threaten-legal-action-over-uk-us-deal-on-prices-nhs-pays-for-drugs" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">The autonomous drone is rewriting the laws of war in Ukraine</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/18/multimedia/18int-theworld-ukraine-fedorov-lpjf-promo/18int-theworld-ukraine-fedorov-lpjf-promo-mediumSquareAt3X.jpg" alt="The autonomous drone is rewriting the laws of war in Ukraine" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Two NYT and BBC investigations chart how Ukraine's front line has become a 'kill-zone' dominated by unmanned systems, with one Ukrainian engineer openly pushing for drones empowered to make their own lethal-force decisions. Machines now hunt machines for kilometres beyond the trenches; human soldiers are retained mainly to hold ground. The ethical and legal frameworks built around human-in-the-loop targeting are eroding faster than treaties can adapt.</div>
+    <div class="why"><strong>Why it matters:</strong> Ukraine is the world's live laboratory for autonomous weapons — and whatever norms emerge here will shape every future battlefield, including the Indo-Pacific.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/05/17/world/killer-robots-ukraine-ebola-qatar.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c3w2xqj9x13o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Royal Observatory warns AI 'instant answers' are trivialising thinking</div>
+    
+    <div class="card-body">Paddy Rodgers, director of the UK's Royal Observatory, cautioned that the cultural shift toward LLM-generated answers is undermining the slow, accumulative nature of human knowledge that institutions like his exist to preserve. His remarks dovetail with growing public pushback against generative AI's energy and water demands — in Wisconsin, comedian Charlie Berens has emerged as an unlikely spokesperson against an AI data-centre boom locals say no one is negotiating on their behalf.</div>
+    <div class="why"><strong>Why it matters:</strong> The political economy of AI — who pays in power, water and cognition — is finally moving from boardrooms into the public square.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c2023l60370o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/ng-interactive/2026/05/17/comedian-charlie-berens-ai-datacenters" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Minnesota calls in National Guard as wildfires race through the north</div>
+    
+    <div class="card-body">Governor Tim Walz activated Minnesota's National Guard to support firefighters battling fast-moving wildfires in the state's northern forests, calling the blazes 'unpredictable' as dry, windy conditions fan them. The deployment is unusually early in the season for the Upper Midwest, a region not historically associated with wildfire crises. It is the latest data point in a continent-wide reshuffling of where and when fire risk materialises.</div>
+    <div class="why"><strong>Why it matters:</strong> Wildfire seasons are migrating north and lengthening — straining state budgets, insurance markets and air quality far beyond burn zones.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/05/17/minnesota-national-guard-wildfires" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">British households turn to solar as bills bite</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ede578e29753932f186af65709087d25120d2f3c/252_0_1406_1125/master/1406.jpg?width=140&quality=85&auto=format&fit=max&s=99be3d8ce0a452b74da5844555d0b445" alt="British households turn to solar as bills bite" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">UK installers report a surge in residential and small-business solar orders, with one company director buying 2,000 panels purely to lock in long-term costs. The motive, almost without exception, is bill protection rather than climate idealism. Sydney, meanwhile, has signed contracts for its first battery-electric ferry, due to trial in 2028 — a smaller, symbolic move in the same direction.</div>
+    <div class="why"><strong>Why it matters:</strong> When the decarbonisation pitch becomes 'cheaper energy', adoption accelerates regardless of political weather.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cjrp19v9vl2o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/australia-news/2026/may/18/sydney-electric-ferry-trial-new-fish-market-route" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Foreign tourists turn away from Goa</div>
+    
+    <div class="card-body">Foreign arrivals to Goa have nearly halved from their pre-pandemic peak even as domestic Indian tourism reaches new highs, a BBC investigation finds. Operators blame rising costs, infrastructure decay, safety concerns and a perception that the state has been recalibrated for an upmarket Indian clientele rather than backpacking Europeans. The shift has profound implications for shack owners, charter operators and the state's foreign-exchange earnings.</div>
+    <div class="why"><strong>Why it matters:</strong> Goa's reinvention is a microcosm of India's broader tourism pivot — wealthier, more domestic and less dependent on the Western backpacker economy.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cy827p9lg03o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Hajj 2026 begins May 25 as nearly two million prepare for Mecca</div>
+    
+    <div class="card-body">Around two million Muslims are expected in Mecca for the annual Hajj pilgrimage beginning May 25, with Eid al-Adha to follow. Saudi authorities have already absorbed reports of drone attacks elsewhere in the kingdom this week, though the holy cities have not been targeted. For the UAE, India and the wider Gulf, the pilgrimage is also a vast logistical and diplomatic undertaking, complicated this year by the simmering regional conflict.</div>
+    <div class="why"><strong>Why it matters:</strong> Hajj security in a year of active regional conflict is a stress test for Saudi statecraft and for Gulf travel and aviation networks.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/18/when-are-hajj-and-eid-al-adha-2026-a-visual-guide-to-the-muslim-pilgrimage" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump's 'One Nation Under God' rally divides US opinion</div>
+    
+    <div class="card-body">Tens of thousands gathered on the National Mall for a White House-backed prayer rally pitched as a 'rededication' of America as 'One Nation Under God', timed to feed into 250th-anniversary celebrations next year. Critics, including constitutional scholars, said the event blurred the line between church and state. Separately, union representatives warned that workers rushing to repaint the Lincoln Memorial reflecting pool blue on presidential order may be working unsafely to meet his timeline.</div>
+    <div class="why"><strong>Why it matters:</strong> The rally signals how thoroughly the administration is fusing religious symbolism with state authority ahead of the 2026 midterms.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/05/17/dc-national-mall-prayer-rally" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/05/17/trump-washington-dc-reflecting-pool" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Sinner completes career Golden Masters at the Italian Open</div>
+    
+    <div class="card-body">Jannik Sinner became the first Italian in half a century to lift the Italian Open trophy, and in the process completed a career Golden Masters sweep — winning all nine Masters 1000 events at least once. With Carlos Alcaraz sidelined by injury, Sinner now enters Roland Garros as outright favourite. The win cements his status as the defining men's player of this tennis generation.</div>
+    <div class="why"><strong>Why it matters:</strong> Sinner's dominance reshapes commercial dynamics in tennis as the sport's centre of gravity tilts decisively away from the Big Three era.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/5/18/sinner-wins-italian-open-to-complete-career-golden-masters" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">North Korean women's club lands in Seoul for first time in eight years</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/6f769ac63c0a6ee3860ce41c5ee9a6141d0dad8c/724_0_6827_5464/master/6827.jpg?width=140&quality=85&auto=format&fit=max&s=b002e31735fb91ba4c9e27d779bdcc1a" alt="North Korean women's club lands in Seoul for first time in eight years" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Naegohyang FC, a North Korean women's football side, has arrived in South Korea to play Suwon FC in an AFC Women's Champions League semi-final — the first sporting visit by athletes from the North in eight years. Both sides are downplaying any diplomatic significance, and analysts say it is unlikely to spark a wider thaw. Still, on a peninsula where every gesture is choreographed, the trip is being closely parsed in Seoul, Pyongyang and Beijing.</div>
+    <div class="why"><strong>Why it matters:</strong> Sport remains one of the few remaining channels of contact between the two Koreas — sometimes a precursor to diplomacy, sometimes just theatre.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/17/afc-women-champions-league-north-korea-south-korea-naegohyang-fc-suwon" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/05/17/world/asia/north-korea-naegohyang-soccer-football.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Bulgaria's 'Bangaranga' moment: first Eurovision win lifts a weary nation</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/f3e874c75818500de185bef5993ce26b3f2de573/800_166_4165_3332/master/4165.jpg?width=140&quality=85&auto=format&fit=max&s=448977a1f7c6b98a105d0c4a08d9b4d9" alt="Bulgaria's 'Bangaranga' moment: first Eurovision win lifts a weary nation" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Bulgarian singer Dara won her country its first-ever Eurovision title with the irrepressible 'Bangaranga', returning to Sofia to screaming crowds and a national mood that, after years of political instability, briefly resembled euphoria. Ukraine, meanwhile, broke a Eurovision record for the longest sustained note. In London, the BBC is conducting some soul-searching after four years of UK finishes near the bottom of the leaderboard.</div>
+    <div class="why"><strong>Why it matters:</strong> Eurovision continues to function as Europe's emotional barometer — and a soft-power league table no one quite admits to taking seriously.</div>
+    <div class="sources"><a href="https://www.theguardian.com/tv-and-radio/2026/may/17/bulgarians-celebrate-dara-eurovision-win-with-bangaranga" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cy72e81dp28o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">'Everest Man' and 'Mountain Queen' break their own records</div>
+    
+    <div class="card-body">Nepalese climbers Kami Rita Sherpa and Lakpa Sherpa have summited Everest for the 32nd and 11th times respectively, extending records they themselves already held. Beyond the personal feat, their careers are quiet evidence of how the Everest economy now runs on the expertise of Sherpa guides who shoulder the mountain's most dangerous work for foreign clients.</div>
+    <div class="why"><strong>Why it matters:</strong> The world's most photographed peak remains, structurally, a Sherpa industry — a fact often obscured by the climbers whose names make headlines.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c3927ejpj4eo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Monday, May 18, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7408.50</td>
+        <td class="down">▼ -0.48%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$49526.17</td>
+        <td class="down">▼ -0.34%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$26225.15</td>
+        <td class="down">▼ -0.67%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10195.37</td>
+        <td class="down">▼ -1.71%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>60815.95</td>
+        <td class="down">▼ -0.97%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4546.50</td>
+        <td class="down">▼ -0.34%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$103.19</td>
+        <td class="up">▲ +2.15%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>96.28</td>
+        <td class="up">▲ +0.60%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.01%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$76934.13</td>
+        <td class="down">▼ -0.64%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Putin arrives in Beijing this week; watch the joint communiqué for any reference to Ukraine settlement terms.</li><li>Kentucky Republican primary on Tuesday — Massie vs Trump-endorsed challenger — the next test of presidential intra-party power.</li><li>Peru's June 7 runoff campaign formally begins; expect early market reaction to Fujimori and Sánchez economic plans.</li><li>Hajj begins May 25; security posture and crowd-management in Mecca will be scrutinised given regional drone threats.</li><li>WHO emergency committee on Ebola meets again this week; watch for travel advisories that could affect Africa-Gulf-Europe routes.</li><li>French Open draw on the horizon — Sinner's path with Alcaraz absent will reset clay-court betting and broadcast narratives.</li></ul>
+</div>
+
+<div class="editors-note">A morning when the Gulf, the Donbas, and the Congo are all on the edge of something — and the markets, for now, are watching oil.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Monday, May 18, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-05-18 07:02 UTC
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Saturday, May 30, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Saturday, May 30, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Trump defers Iran decision after two-hour Situation Room huddle</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/fb7d3885815791e383918eb254922367dacfdf5f/0_0_3000_2400/master/3000.jpg?width=140&quality=85&auto=format&fit=max&s=168aff7312e5df0462559687040cd11f" alt="Trump defers Iran decision after two-hour Situation Room huddle" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">Donald Trump emerged from a two-hour meeting with national security aides without the 'final determination' on Iran he had teased earlier in the day. US and Iranian officials say a framework exists — one that reportedly demands Tehran reopen the Strait of Hormuz and surrender enrichment capacity — but Iran's foreign ministry insists nothing is finalised. JD Vance conceded the US is 'not there yet,' while Defence Secretary Pete Hegseth warned in Singapore that Washington remains 'more than capable' of resuming the war. The on-again, off-again choreography is wearing thin with allies who have now seen multiple Trump peace deadlines slip.</div>
+    <div class="why"><strong>Why it matters:</strong> Oil markets, Gulf shipping and the credibility of US deterrence all hinge on whether this framework hardens into a deal or collapses into another round of strikes.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c0r2d40r91qo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/29/trump-on-verge-of-approving-peace-deal-with-major-iranian-concessions" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/live/2026/05/29/world/iran-war-us-trump-deal" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Russian drone hits Romanian apartment block; NATO vows to defend 'every inch'</div>
+    <div class="card-body" style="font-size:12.5px;">A Russian-origin drone struck a residential building in southeastern Romania, wounding two and prompting Bucharest to expel Moscow's consul in Constanta. NATO Secretary-General Mark Rutte called the strike 'reckless' and reiterated the alliance's readiness to defend its full territory; Moscow denies involvement. Romanian officials say the drone was likely knocked off course by Ukrainian air defences. The incident follows weeks of mounting calls from frontline NATO members for a tougher posture against repeated airspace violations.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Every drone that lands on alliance soil narrows the political space between deterrence and direct NATO–Russia confrontation.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c93x4nxlkjeo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/29/russian-drone-romanian-apartments-wounding-two-people-and-starting-fire" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/29/romania-to-expel-russian-consul-after-residential-drone-strike" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Netanyahu orders IDF to seize 70% of Gaza and pushes past Lebanon's Litani</div>
+    <div class="card-body" style="font-size:12.5px;">Israeli Prime Minister Benjamin Netanyahu said he has instructed the military to expand control over 70% of Gaza, a move that would breach the October 2025 ceasefire with Hamas. Simultaneously, Israeli ground forces crossed Lebanon's Litani River, deepening an invasion that has drawn Hezbollah drone and rocket retaliation. The UN separately added Israel to its blacklist for conflict-related sexual violence for the first time, alongside Russia. Israel rejects the UN findings.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Two simultaneous escalations risk collapsing the fragile regional architecture just as Washington tries to land an Iran deal.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ceqpelq5reqo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/29/netanyahu-says-israeli-forces-have-crossed-lebanons-litani-river" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/29/un-israel-russia-blacklist-sexual-violence-conflict" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Anthropic hits $965bn valuation, overtaking OpenAI</div>
+    <div class="card-body" style="font-size:12.5px;">Claude-maker Anthropic raised $65bn in a single round, vaulting its post-money valuation to $965bn and crowning it the world's most valuable AI company. The sum dwarfs typical late-stage funding and underscores investors' conviction that the foundation-model race is far from settled. OpenAI, long the sector's bellwether, now finds itself nominally behind a younger rival founded by ex-OpenAI staff. The deal also intensifies questions about concentration risk in private AI capital.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The capital arms race in frontier AI is accelerating, with implications for chip demand, energy grids and the competitive map of Silicon Valley.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/may/28/anthropic-ai-valuation" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Russia's monthly losses in Ukraine nearly triple, yet front lines barely shift</div>
+    
+    <div class="card-body">Open-source assessments suggest Russia's rate of military losses in Ukraine has almost tripled year-on-year while its territorial gains in 2026 have effectively stalled. Ukrainian forces are increasingly deploying AI-guided drones to pick off Russian supply convoys, a tactic BBC Verify has documented in occupied territory. The grim arithmetic reinforces a war of attrition that is bleeding Moscow without breaking Kyiv. Separately, Polish President Karol Nawrocki has threatened to strip Volodymyr Zelenskyy of a top honour over a unit renaming linked to WWII-era killings of Poles.</div>
+    <div class="why"><strong>Why it matters:</strong> Attrition dynamics, not territory, will dictate whether and when this war becomes negotiable.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/29/russian-rate-of-losses-in-ukraine-almost-triples-in-one-year" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cdjp0n7rn41o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/29/polish-president-threatens-to-strip-ukraines-zelenskyy-of-top-state-honour" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Lula rebuffs US after Rubio brands Brazilian gangs 'terrorists'</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/00450ce2d8c25bfb9d10a3042ca91bd95cd29342/333_0_3333_2667/master/3333.jpg?width=140&quality=85&auto=format&fit=max&s=b864342c2038156bead2279d0815f546" alt="Lula rebuffs US after Rubio brands Brazilian gangs 'terrorists'" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">President Luiz Inácio Lula da Silva said Brazil would not be treated like a 'tinpot country' after Secretary of State Marco Rubio designated the First Capital Command and Red Command as foreign terrorist organisations. The announcement came after Rubio met Flávio Bolsonaro, son of Lula's far-right rival, fuelling accusations of political interference. Lula warned the designation could undermine Brazilian law enforcement and signalled retaliation. The episode caps a tense week in US-Latin America relations, with Guatemala separately requesting US military help against traffickers and Mexico passing a controversial 'foreign interference' election law.</div>
+    <div class="why"><strong>Why it matters:</strong> Washington's hemispheric muscle-flexing is reshaping South American politics ahead of Brazil's 2026 electoral cycle.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/29/brazil-gangs-terrorist-rubio" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/29/arbitrary-measures-lula-slams-us-terror-designation-for-brazil-gangs" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/29/mexico-senate-election-constitutional-amendment" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">WHO chief in DRC as Ebola death rate hits 30-50%</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/18afdea08970aaf951de9e441e5d2ec2361a4144/262_0_5758_4609/master/5758.jpg?width=140&quality=85&auto=format&fit=max&s=dea307988eac6faca7939d619b4a78ca" alt="WHO chief in DRC as Ebola death rate hits 30-50%" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Director-General Tedros Adhanom Ghebreyesus has arrived in the Democratic Republic of Congo as the WHO warns the current Ebola outbreak is killing 30-50% of those infected. Aid cuts and active armed conflict in eastern DRC are compounding the response; an Ebola treatment centre torched by protesters this month is only now being rebuilt. Tedros has called for a ceasefire among armed groups to allow health workers safe access. Cross-border spread is now a tangible risk.</div>
+    <div class="why"><strong>Why it matters:</strong> A weakened global health architecture is meeting an old, deadly virus in one of the world's most fragile states.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/29/who-chief-tedros-adhanom-ghebreyesus-drc-ebola-outbreak-epidemic" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/29/ebola-treatment-centre-rebuilt-after-being-torched-by-protesters-in-drc" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Hegseth tells Asia: we're staying, but pay more</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/8beb7786369353686089a37c7502d402c1506cde/478_358_6433_5146/master/6433.jpg?width=140&quality=85&auto=format&fit=max&s=2dbc04e7ecb58a4b7fdd72cbdc87c131" alt="Hegseth tells Asia: we're staying, but pay more" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">US Defense Secretary Pete Hegseth used the Shangri-La Dialogue in Singapore to insist Washington is 'not turning back' on its Asian alliances, while pressing partners to spend more on their own defence. He flagged 'alarm' at China's military buildup but said the US sought no 'needless confrontation.' Allies pressed him on the durability of US arms commitments amid Trump-era transactionalism. The tone — reassurance laced with conditionality — is now the new normal in the Indo-Pacific.</div>
+    <div class="why"><strong>Why it matters:</strong> Asia's security architecture increasingly depends on whether allies trust Washington's word and can absorb its price tag.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c5ye34k7yejo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/30/us-more-than-capable-of-resuming-war-against-iran-pete-hegseth-says" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Brent on track for worst month since 2020 on Iran hopes</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/f036f62ffaaedeaeb2aab32e34b8874ec85c88b9/112_0_2596_2078/master/2596.jpg?width=140&quality=85&auto=format&fit=max&s=82bb51bc8f5b2ab2cc4916b27268ff56" alt="Brent on track for worst month since 2020 on Iran hopes" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">Brent crude futures are down roughly 19% since the end of April, putting oil on course for its steepest monthly fall since the pandemic shock of 2020. The slide reflects investor bets on a US-Iran de-escalation and the possible reopening of the Strait of Hormuz. Equities have rallied in parallel. Any breakdown in talks would unwind much of that move within hours.</div>
+    <div class="why"><strong>Why it matters:</strong> Cheaper oil cools global inflation prints and reshapes calculations at central banks from Washington to Mumbai.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/may/29/oil-price-drops-amid-hopes-of-us-iran-peace-deal" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Universal swats away Ackman's bid for music empire</div>
+    
+    <div class="card-body">Universal Music Group rejected a takeover approach from Bill Ackman's Pershing Square, saying the offer 'fundamentally undervalued' the company. Universal — home to a catalogue spanning Taylor Swift to The Beatles — has become a bellwether for streaming-era valuations. Ackman, an unusually active shareholder, is unlikely to retreat quietly. Expect a renewed push or a proxy fight.</div>
+    <div class="why"><strong>Why it matters:</strong> The fight tests how public markets price intellectual-property cashflows in an AI-disrupted music industry.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cn8pnd9yj4eo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Canada pivots toward China as USMCA talks sideline Ottawa</div>
+    
+    <div class="card-body">Canada is deepening trade ties with Beijing as it finds itself increasingly sidelined in USMCA renegotiations dominated by Washington and Mexico City. Domestic growth is sputtering and tariff retaliation is biting both ways — one US liquor maker has even relocated production to Canada after provincial boycotts crushed sales. Alberta separatist sentiment is rising in parallel, with talk of a 'Canadian Brexit' moment. The Trudeau-era assumption of automatic North American integration is unravelling.</div>
+    <div class="why"><strong>Why it matters:</strong> A Canada-China tilt, however modest, would mark a structural realignment of North American trade.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/economy/2026/5/29/canada-sidelined-in-usmca-renegotiations-as-domestic-economy-dips" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c2l22ypl909o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/the-take-2/2026/5/29/aje-onl-can_albertareferendum_av_v2-290526" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Blue Origin's New Glenn explodes on the pad, denting NASA's Moon timeline</div>
+    
+    <div class="card-body">A Blue Origin New Glenn rocket exploded during a test at Cape Canaveral on Thursday night, in what founder Jeff Bezos called a 'very rough day.' The mishap is a serious setback for NASA's Artemis programme, which has been counting on Blue Origin hardware for lunar logistics. SpaceX's relative dominance of US heavy-lift looks even more entrenched. Expect a months-long investigation and slipped milestones.</div>
+    <div class="why"><strong>Why it matters:</strong> America's return to the Moon remains hostage to a single supplier — and now to a debris field in Florida.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwy2q0g07kgo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cvgzl5wd8xeo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">BMW bets humanoid robots will build its next cars</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/dbf620b0570af6971845b140c7b695e407e9d7ae/0_0_3087_2470/master/3087.jpg?width=140&quality=85&auto=format&fit=max&s=d1f6019737705a61c43523335932b597" alt="BMW bets humanoid robots will build its next cars" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">BMW is deploying humanoid robots on a European production line, extending pilots already underway in the United States. The German carmaker calls humanoids 'the future' of vehicle assembly, citing flexibility advantages over fixed automation. The move arrives as labour and AI thinktanks — including a new TUC-backed IPPR report — argue workers need stronger bargaining rights as the technology rolls out. The pace of factory-floor change is now outrunning the policy conversation.</div>
+    <div class="why"><strong>Why it matters:</strong> Humanoids on a German line is a credibility milestone the entire robotics industry has been waiting for.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cgmpwzzvxr2o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/may/29/give-staff-more-say-over-ai-to-ensure-they-share-benefits-uk-thinktank-urges" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Deadly May heatwave shatters records across Europe</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/81f80cdfdd9adc50e5d5b36110830c1c3609b2cf/500_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=68bb4350e790943d5aea411c491dd52b" alt="Deadly May heatwave shatters records across Europe" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Parts of Europe have endured temperatures 10-15°C above the May average this week, breaking national records under a stubborn high-pressure system. The episode has been deadly in several countries and is being read by meteorologists as further evidence of a Mediterranean climate shifting in real time. Across the world, Australia is bracing for cyclone-strength storms in the west and icy weather in the east. A May this hot is no longer an outlier — it is a trend.</div>
+    <div class="why"><strong>Why it matters:</strong> Energy grids, agriculture and public-health systems built for 20th-century summers are being stress-tested earlier each year.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/may/29/weather-tracker-deadly-may-heatwave-shatters-records-across-europe" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/australia-news/2026/may/30/western-australia-storm-to-affect-millions-icy-weather-for-nsw-victoria-sa" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Delhi at 45°C: informal workers pay the price of the heatwave</div>
+    
+    <div class="card-body">As Delhi temperatures hit 45°C, the city's vast informal workforce — rickshaw pullers, construction labourers, street vendors — continues to work through conditions that public-health bodies consider hazardous. For many, missing a day's earnings is a greater immediate threat than heatstroke. State heat-action plans exist on paper but rarely reach those most exposed. The story is a recurring summer feature of urban India and a quiet stress test of its labour market.</div>
+    <div class="why"><strong>Why it matters:</strong> Climate adaptation in India will be judged less by air-conditioned offices than by what happens to the half of the workforce that has none.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c172yyvp55do" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's national exam results trigger 400,000 re-checks</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ceba97e2cc93d8bbef6f9694fa19c3e20bff47d8/192_0_1915_1533/master/1915.jpg?width=140&quality=85&auto=format&fit=max&s=ad7d13617bfb7682e5c2b46e5a1f6b86" alt="India's national exam results trigger 400,000 re-checks" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">More than 400,000 Indian students have requested copies of their answer sheets after a new digital marking system produced widespread grading errors in the country's most important final exams. The system, intended to reduce human error, has instead generated a national outcry from families fearing university admission chances have been damaged. Education officials are scrambling to respond. The episode is a cautionary tale of tech rollout without adequate piloting.</div>
+    <div class="why"><strong>Why it matters:</strong> Trust in India's high-stakes exam system underpins social mobility for millions; a botched digital transition is no small thing.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/30/exam-fail-indian-students-complain-en-masse-about-marking-errors-in-key-final-exams" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump signs order halving recommended childhood vaccines</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/5c4b68c7152459df8e7b926c75f249c2c1a864c8/500_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=223262360998a74fdce0e8aa9446032c" alt="Trump signs order halving recommended childhood vaccines" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">President Trump signed an executive order, with little fanfare, instructing the CDC to use a Health and Human Services assessment that would roughly halve the vaccines recommended for American children. Public-health experts warn the move could erode herd immunity for diseases including measles. Separately, former Attorney General Pam Bondi defended her handling of the Epstein files in a closed congressional probe a month after Trump fired her. The White House is also pushing for a $250 banknote bearing Trump's image.</div>
+    <div class="why"><strong>Why it matters:</strong> A pivot away from established immunisation schedules in the world's most influential health regulator will ripple far beyond US borders.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/29/trump-vaccines-children-executive-order" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/czj2ldllgwgo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/may/28/trump-250-bill" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Mumbai's dabbawalas, a century-old logistics marvel, are fading</div>
+    
+    <div class="card-body">Mumbai's dabbawalas — the colour-coded couriers who have delivered home-cooked lunches to office workers for over 100 years — are leaving the trade in growing numbers. Remote work has thinned their customer base, while rising urban living costs erode margins. The network, long studied by management schools for its near-flawless accuracy, now confronts the same disruption it once defied. For Mumbai, it is the loss of a civic ritual.</div>
+    <div class="why"><strong>Why it matters:</strong> Even the world's most resilient analogue logistics network is not immune to the post-pandemic reorganisation of urban work.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c202d0l92weo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Taiwan Travelogue wins Booker, a first for Mandarin fiction</div>
+    
+    <div class="card-body">Yang Shuang-zi's Taiwan Travelogue has become the first novel translated from Mandarin Chinese to win the International Booker Prize, beating a strong field with a story woven around food and colonial-era Taiwan. The win is a milestone for Mandarin-language literature in global publishing and for translator-led recognition. Sales of the book are expected to surge well beyond niche literary circles. Taipei has welcomed the recognition with quiet satisfaction.</div>
+    <div class="why"><strong>Why it matters:</strong> A literary prize is also a soft-power moment for Taiwan at a delicate geopolitical juncture.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/videos/cx21k1dkygno" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Saturday, May 30, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7580.06</td>
+        <td class="up">▲ +0.79%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$51032.46</td>
+        <td class="up">▲ +0.77%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$26972.62</td>
+        <td class="up">▲ +1.12%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10409.28</td>
+        <td class="down">▼ -0.91%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>66329.50</td>
+        <td class="up">▲ +2.53%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4593.00</td>
+        <td class="up">▲ +2.08%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$87.36</td>
+        <td class="down">▼ -1.73%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>94.99</td>
+        <td class="down">▼ -1.10%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$73487.46</td>
+        <td class="up">▲ +0.16%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Whether Trump issues his 'final determination' on Iran over the weekend — and how oil markets open Monday in response.</li><li>NATO's next move after the Romania drone strike, with eastern members pressing for a more forceful response.</li><li>Israel's expanded operations in Gaza and southern Lebanon, and whether Hezbollah escalates beyond drone harassment.</li><li>Fallout from Trump's vaccine executive order as CDC advisory panels are reshuffled.</li><li>Blue Origin's preliminary findings on the New Glenn failure and what NASA signals about Artemis timelines.</li><li>Brazil's diplomatic response to the US terrorist designation of its largest criminal gangs.</li><li>WHO updates from the DRC as the Ebola outbreak's case count and geographic spread evolve.</li></ul>
+</div>
+
+<div class="editors-note">A weekend defined by deferred decisions — on Iran, on NATO's red lines, on America's vaccine schedule — each one capable of redrawing next week's news.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Saturday, May 30, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-05-30 06:29 UTC
+</footer>
+</div>
+</body>
+</html>

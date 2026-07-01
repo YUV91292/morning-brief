@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Sunday, June 7, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Sunday, June 7, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Iran fires at US bases in Bahrain and Kuwait as 100-day war enters dangerous new phase</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e1d1c55f93f2d0de09dfdc9bbc60cc78ac4d8e6f/493_0_4914_3933/master/4914.jpg?width=140&quality=85&auto=format&fit=max&s=e01edc3fd69f504ba110fe1f9f63bbff" alt="Iran fires at US bases in Bahrain and Kuwait as 100-day war enters dangerous new phase" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">Iranian ballistic missiles and drones struck targets in Bahrain and Kuwait on Saturday, hours after US forces destroyed Iranian radar sites and shot down two drones over the Strait of Hormuz. The exchange marks the most serious escalation since a brittle ceasefire was negotiated weeks ago, and pulls two previously sheltered Gulf states into open conflict. Analysts in Tehran describe an economy already in 10% contraction, plagued by blackouts and hyperinflation, even as the government leans on wartime nationalism. In Washington, polling shows Trump has failed to rally domestic support for the campaign, with Republican strategists worried about midterm fallout.</div>
+    <div class="why"><strong>Why it matters:</strong> Direct strikes on Gulf monarchies risk turning a bilateral war into a regional one — with immediate implications for oil flows, US bases, and the global economy.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/liveblog/2026/6/7/iran-war-live-israel-kills-lebanon-general-pakistan-urges-end-to-war" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/06/us-says-iran-radar-sites-struck-and-drones-intercepted-in-latest-threat-to-fragile-ceasefire" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/06/blackouts-hyperinflation-dissent-iran-considers-perilous-prospect-of-peace" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Ukrainian drones swarm St Petersburg in 'unprecedented' strike</div>
+    <div class="card-body" style="font-size:12.5px;">Residents of Russia's second city were told to stay indoors for the first time since the war began, after a long-range Ukrainian drone barrage targeted St Petersburg just hours after Vladimir Putin addressed an economic forum there. It is the second such strike in days and signals that Kyiv's deep-strike capability is maturing fast. Keir Starmer will host Volodymyr Zelenskyy, Emmanuel Macron and Friedrich Merz in Downing Street today to coordinate further support.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Ukraine is bringing the war home to Russia's symbolic heartland just as European leaders try to shore up wavering Western resolve.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/06/world/europe/ukraine-drone-strike-st-petersburg.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cg7498kz808o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/06/starmer-to-host-zelenskyy-and-eu-leaders-for-ukraine-talks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Pentagon flags Israeli espionage as 'critical' threat</div>
+    <div class="card-body" style="font-size:12.5px;">The US Defense Department has quietly raised its counterintelligence threat assessment for Israel to its highest level, citing concerns that Israeli agents eavesdropped on American negotiations with Tehran during ceasefire talks. The move marks an extraordinary breach in a relationship that has been publicly described as ironclad. It comes amid wider strain over Washington's handling of the Iran war.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Even close allies are being treated as adversaries inside a Trump administration whose Middle East strategy is increasingly fraying at the seams.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/06/us/politics/pentagon-sees-growing-espionage-threat-from-israel.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/6/pentagon-said-to-raise-threat-level-on-israel-spying-to-critical" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Hegseth's D-Day speech recasts migration as a European 'invasion'</div>
+    <div class="card-body" style="font-size:12.5px;">Speaking on the beaches of Normandy 82 years after the Allied landings, US Defense Secretary Pete Hegseth used the anniversary to attack European migration policy, framing arrivals as an 'invasion' of the continent. The speech, delivered alongside ageing veterans, drew sharp rebukes from European officials who called it a perversion of the day's meaning. It is the latest rhetorical alignment between Washington and Europe's hard right.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The Trump administration is openly campaigning against the political centre in allied capitals — and using sacred occasions to do it.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c802e7jk458o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Armenia votes under Russian pressure as Pashinyan seeks third term</div>
+    
+    <div class="card-body">Armenians head to the polls today in an election Moscow, Washington and Brussels are all watching with unusual interest. Prime Minister Nikol Pashinyan, who has steered Yerevan towards the West since the loss of Nagorno-Karabakh, is seeking a third term against a backdrop of slumping domestic approval and intensifying Russian pressure. A reversal of his pro-Western tilt would reshape the South Caucasus.</div>
+    <div class="why"><strong>Why it matters:</strong> Armenia is now the front line in Russia's effort to claw back influence in its near abroad, with energy and transit corridors at stake.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c3626n1epd5o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/inside-story/2026/6/6/why-are-armenias-elections-being-so-keenly-watched" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Xi visits Pyongyang for first time in seven years</div>
+    
+    <div class="card-body">China's Xi Jinping has arrived in North Korea for his first state visit in seven years, at a moment of accelerating military cooperation between Pyongyang, Moscow and Beijing. The timing — amid the Iran war and Ukrainian deep strikes — suggests an effort to consolidate an authoritarian bloc as Western alliances strain. North Korea has reportedly continued to ship munitions to Russia throughout the Ukraine war.</div>
+    <div class="why"><strong>Why it matters:</strong> A formal Xi-Kim embrace would signal the hardening of a Beijing-Moscow-Pyongyang axis with global security consequences.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/7/why-is-chinese-president-xi-jinping-visiting-north-korea-now" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Peru's voters face stark left-right choice in runoff</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/0ca42b11c3838c5571606b6d38461d5ef5db2787/479_0_4788_3830/master/4788.jpg?width=140&quality=85&auto=format&fit=max&s=b6f9eb1bf80ebb1a6d5d4c23b563713f" alt="Peru's voters face stark left-right choice in runoff" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">After eight presidents in a decade, Peruvians return to the polls today to choose between Keiko Fujimori — daughter of the jailed strongman Alberto, on her fourth attempt — and leftist congressman Roberto Sánchez. Crime, inequality and chronic instability dominate a campaign in which neither candidate inspires enthusiasm. Whoever wins inherits a country exhausted by political churn.</div>
+    <div class="why"><strong>Why it matters:</strong> Lima's instability matters for copper markets, Pacific trade and the broader question of whether Latin American democracies can deliver basic governance.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/07/peru-election-voters-face-straight-left-right-choice-keiko-fujimori" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/features/longform/2026/6/6/from-first-lady-to-president-inside-the-rise-of-perus-keiko-fujimori" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c9d21184e7yo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Death of a baby in Hebron reignites West Bank crisis</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/7b1502f4737fba2035091024af186e1793036a8a/582_0_5802_4644/master/5802.jpg?width=140&quality=85&auto=format&fit=max&s=def2c18c4627d177a6ae1afd950d5166" alt="Death of a baby in Hebron reignites West Bank crisis" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Seven-month-old Sam Fahd Abu Haikal was killed in his mother's arms when Israeli troops opened fire on the family's car in Hebron, despite the vehicle having complied with a stop order according to relatives. Israel's military says soldiers perceived the car was accelerating toward them and has opened an investigation. The baby was buried wrapped in a Palestinian flag, his small body carried by his father.</div>
+    <div class="why"><strong>Why it matters:</strong> Each such incident in the West Bank widens the gap between Israel's security narrative and the diplomatic ground its allies can defend.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/06/palestinian-baby-shot-dead-israeli-troops-occupied-west-bank" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/06/world/middleeast/israel-west-bank-infant.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cly8lgn0x30o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Neo-Nazi candidate reaches mayoral runoff in eastern Germany</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/06/07/multimedia/07int-germany-mayor-06-czwl/07int-germany-mayor-06-czwl-mediumSquareAt3X.jpg" alt="Neo-Nazi candidate reaches mayoral runoff in eastern Germany" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">For the first time since 1945, a candidate from a neo-Nazi party has advanced to a mayoral runoff in a German town, voters going to the polls today in the country's east. The result, even if the candidate ultimately loses, lays bare how thoroughly the postwar firewall against far-right normalisation has eroded. Mainstream parties are scrambling to coordinate a tactical response.</div>
+    <div class="why"><strong>Why it matters:</strong> Germany's political guardrails — once the most robust in Europe — are being tested at the local level where the AfD has already broken through.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/07/world/europe/germany-neo-nazi-mayor-election.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Mali's jihadist rebels seize key cities as state retreats</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/05/14/multimedia/00int-mali-assess-1-bkjc/00int-mali-assess-1-bkjc-mediumSquareAt3X.jpg" alt="Mali's jihadist rebels seize key cities as state retreats" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">An alliance of jihadist groups linked to al-Qaeda and Islamic State has nearly tripled urban attacks in Mali and is now in control of several key towns. Analysts warn that a prolonged standoff could trigger mass civilian casualties and accelerate the Sahel's slide out of any Western security architecture. Russian Africa Corps mercenaries, who replaced French forces, have been unable to stem the advance.</div>
+    <div class="why"><strong>Why it matters:</strong> The Sahel is becoming the world's deadliest jihadist theatre even as global attention is fixed elsewhere.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/06/world/africa/mali-rebels-fighting-jnim-isis.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">US adds 172,000 jobs in May as labour market defies war shock</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/7d96c1c1a3ffef261acae4683cbc6927244ceec4/830_0_5001_4000/master/5001.jpg?width=140&quality=85&auto=format&fit=max&s=accaa5b1eb710446d0b0622355285df9" alt="US adds 172,000 jobs in May as labour market defies war shock" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">American employers added 172,000 jobs in May while unemployment held at 4.3%, a more resilient print than economists expected given the inflationary jolt from the Iran war. The numbers complicate the Federal Reserve's path: services hiring remains firm even as energy prices push headline inflation higher. Wage growth is decelerating only gradually.</div>
+    <div class="why"><strong>Why it matters:</strong> A labour market this stubborn keeps rate cuts off the table — and feeds the equity correction now under way.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/05/us-jobs-market-unemployment" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Wall Street's Big Tech wobble: Nasdaq logs worst day since early 2025</div>
+    
+    <div class="card-body">US stocks slumped on Friday, with the Nasdaq posting its sharpest one-day fall in over a year as investors recoiled from Big Tech valuations and the AI capex story. President Trump is convening top AI chief executives this week to discuss federal investment in their companies — a meeting markets will parse for signs of either a backstop or political interference. Concentration risk in the index has rarely looked starker.</div>
+    <div class="why"><strong>Why it matters:</strong> If the AI trade cracks, it takes the entire US equity rally with it — and global pension funds are heavily exposed.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwy2yq0dj58o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c98r8r7dz5no" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Aviation chiefs gather in Rio under jet-fuel cloud</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e9092a50530f1c20aad55857bf4c1e1c7228e096/0_0_509_407/master/509.jpg?width=140&quality=85&auto=format&fit=max&s=cc88ed2c64685231f80bf5e4542d1b83" alt="Aviation chiefs gather in Rio under jet-fuel cloud" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">IATA's annual general meeting opens in Rio de Janeiro this weekend with the industry's mood darkened by jet fuel shortage warnings linked to disruption around the Strait of Hormuz. One delegate quipped that 'nothing says fuel crisis like flying everyone to Rio'. Carriers are quietly modelling hedging strategies against a prolonged Gulf disruption.</div>
+    <div class="why"><strong>Why it matters:</strong> Aviation is the most exposed industry to a Hormuz shock — and ticket prices will be the first place consumers feel it.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/06/aviation-industry-looks-skywards-as-leaders-fly-in-for-rio-summit" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Canadian Walmart warehouse workers sign first-ever union deal</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/6d4eb289a2933ae869b59dd03b0c288ef5355904/158_0_1706_1365/master/1706.jpg?width=140&quality=85&auto=format&fit=max&s=440ea96f4945cfe6f73307be933b6012" alt="Canadian Walmart warehouse workers sign first-ever union deal" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Canadian warehouse workers have signed Walmart's first-ever collective agreement, a breakthrough labour organisers are calling 'historic and powerful'. Union leaders concede it is only a beachhead, with broader campaigns across major employers still ahead. The deal sets a precedent that may reverberate across Walmart's North American operations.</div>
+    <div class="why"><strong>Why it matters:</strong> After decades of failed unionisation drives, a crack in Walmart's labour model could shift retail economics across the continent.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/06/canada-walmart-first-union-deal" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">EU carmakers plead for second delay to post-Brexit EV tariffs</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/59c63f2a5b451b3833f990061630407d7cec52d4/986_0_3045_2436/master/3045.jpg?width=140&quality=85&auto=format&fit=max&s=e1363cad08e1f9d4f3ab0bded35314bd" alt="EU carmakers plead for second delay to post-Brexit EV tariffs" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">European and British carmakers are lobbying Brussels to suspend, for a second time, the Brexit-era tariffs on electric vehicles crossing the Channel. The original 2020 deal sought to stimulate local battery production, but industry says capacity targets remain out of reach. Without relief, manufacturers warn EV prices will rise just as Chinese rivals press their advantage.</div>
+    <div class="why"><strong>Why it matters:</strong> Europe's EV transition is colliding with its industrial strategy — and Chinese exporters are the only winners from delay.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/07/eu-uk-car-industry-lobbying-second-brexit-ev-tariff-delay" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">New York moves to become first US state to pause large datacenter buildouts</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/46220c650589099f91e2d8734928255c847d145e/402_0_4427_3543/master/4427.jpg?width=140&quality=85&auto=format&fit=max&s=bf789cace56d82a7ca7275e3417308d3" alt="New York moves to become first US state to pause large datacenter buildouts" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">New York's state legislature has approved a one-year moratorium on hyperscale datacenters above 20MW, a direct shot at the AI infrastructure boom. Sponsor State Senator Kristen Gonzalez framed it as a refusal to 'sacrifice' communities to grid and water demands of AI hyperscalers. Industry lobbyists are mobilising against the bill before it reaches the governor's desk.</div>
+    <div class="why"><strong>Why it matters:</strong> If New York signs the moratorium into law, expect a cascade of similar bills in states already straining under AI's energy footprint.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/06/new-york-datacenter-temporary-ban" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/06/stratos-datacenter-utah-suit" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">'Poisoned' ChatGPT: AI recommendations are funnelling shoppers to scam sites</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/5b159f0a4ab644187eac8ef560051bc791814eda/0_0_2500_2001/master/2500.jpg?width=140&quality=85&auto=format&fit=max&s=2523e0643f6460f592a4bef1c4459452" alt="'Poisoned' ChatGPT: AI recommendations are funnelling shoppers to scam sites" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Consumers asking ChatGPT for shopping advice are increasingly being directed to fake storefronts impersonating legitimate retailers, according to a Guardian investigation. Fraudsters appear to be deliberately seeding content that AI assistants then surface as trusted recommendations. Banks are reporting a surge in disputed transactions traced back to AI-generated links.</div>
+    <div class="why"><strong>Why it matters:</strong> Generative AI is becoming the new front line for consumer fraud — and the platforms still have no clear liability framework.</div>
+    <div class="sources"><a href="https://www.theguardian.com/money/2026/jun/07/ai-chatgpt-shopping-scams-fake-websites" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Kenyan graduates turn to AI tools as agriculture replaces the office job</div>
+    
+    <div class="card-body">With formal jobs scarce, young Kenyan graduates are blending traditional farming with mobile AI advisory apps, building livelihoods on small plots that older generations would have considered a fallback. The trend underscores how generative AI is reaching emerging-market frontline workers faster than it is reshaping Western office jobs. Yields and incomes, advocates say, are measurably improving.</div>
+    <div class="why"><strong>Why it matters:</strong> AI's most transformative use cases may emerge not in Silicon Valley but in African agriculture, where the productivity gap is largest.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/economy/2026/6/7/kenyan-graduates-turn-to-ai-tools-for-farming-as-jobs-dry-up" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Ebola spread in Central Africa could match 2014 West African catastrophe, CDC warns</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/d29f1823ec834f359f53a62da865bb4f401956dc/515_0_4334_3469/master/4334.jpg?width=140&quality=85&auto=format&fit=max&s=7146131ee975bb915fc37c78f243bfe8" alt="Ebola spread in Central Africa could match 2014 West African catastrophe, CDC warns" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">US CDC modelling suggests the Ebola outbreak in the Democratic Republic of Congo is on a 'dangerous trajectory' and could approach the scale of the 2014-16 West African outbreak that killed more than 11,000 people. Confirmed cases have already surged past 480, and a US doctor has recovered in Berlin after treatment hailed as a 'significant therapeutic success'. With Washington in retreat from global health, attention is turning to whether China will step into the gap.</div>
+    <div class="why"><strong>Why it matters:</strong> An uncontrolled Ebola outbreak in the heart of Africa is both a humanitarian crisis and a test of who leads global health in the post-USAID era.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/06/ebola-spread-in-central-africa-could-match-2014-record-outbreak-us-health-officials-say" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/6/us-doctor-recovers-from-ebola-in-germany-as-drc-cases-surge-to-488" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/06/world/asia/as-ebola-spreads-in-east-africa-will-china-step-up.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Delhi's labourers forced to choose between heat and hunger</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/06/06/multimedia/06int-india-heat-01-bpmt/06int-india-heat-01-bpmt-mediumSquareAt3X.jpg" alt="Delhi's labourers forced to choose between heat and hunger" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Severe heatwaves stretching from April have transformed daily life for India's outdoor workforce, forcing construction workers, rickshaw pullers and street vendors to choose between dangerous exertion and lost wages. Public health experts warn that India's heat protection rules remain largely unenforced on informal worksites. Hospitals in Delhi report rising cases of heatstroke even among young, otherwise healthy workers.</div>
+    <div class="why"><strong>Why it matters:</strong> Heat is no longer a forecast risk for South Asia — it is a daily economic and mortality crisis with no policy answer in sight.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/06/world/asia/india-heat-workers-health-income.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's 'Cockroach Janta Party' goes from joke to mass movement</div>
+    
+    <div class="card-body">A Gen-Z protest movement that began as satire — the Cockroach Janta Party — has drawn thousands into the streets of Delhi, channelling frustration with what young Indians describe as a calcified political system. Organisers insist they are not seeking power, but the rallies have evolved into a vehicle for genuine dissent on jobs, civil liberties and corruption. Authorities are watching warily.</div>
+    <div class="why"><strong>Why it matters:</strong> A generationally distinctive protest movement in India's capital is a leading indicator of political volatility ahead of state polls.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/06/world/asia/india-protest-cockroach-janta-party.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump pardons ex-congressman convicted of insider trading</div>
+    
+    <div class="card-body">President Trump has pardoned former Republican congressman Stephen Buyer, who was convicted and sentenced to 22 months in prison for insider trading. Buyer has maintained his innocence. The pardon is the latest in a string of clemency decisions favouring allies and political fellow travellers, and adds to growing scrutiny of how presidential pardon power is being deployed.</div>
+    <div class="why"><strong>Why it matters:</strong> Each pardon further weakens the deterrent effect of US white-collar enforcement at a moment when markets need credible policing.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/6/trump-pardons-former-us-congress-member-accused-of-insider-trading" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Protests in Tirana target Trump-Kushner-linked luxury resort</div>
+    
+    <div class="card-body">Thousands rallied in Albania's capital against a proposed luxury beach resort linked to the Trump and Kushner families, the latest flashpoint in a backlash over politically connected development on the Adriatic coast. Critics question both the environmental footprint and the propriety of foreign-policy-adjacent business ties. The Albanian government has defended the project as critical foreign investment.</div>
+    <div class="why"><strong>Why it matters:</strong> The Trump family's global commercial footprint continues to entangle US diplomatic relationships — now in a NATO ally.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/video/newsfeed/2026/6/7/aje-onl-nf_protests-grow-in-albania-against-trump-resort-060626" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">CIA officer accused of pocketing millions through fake spy programme</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/06/06/multimedia/06dc-intel-crime-cia-hcbk/06dc-intel-crime-cia-hcbk-mediumSquareAt3X.jpg" alt="CIA officer accused of pocketing millions through fake spy programme" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">A federal judge has ordered the continued detention of CIA officer David Rush, who was found with gold bars and is accused of inventing a fictitious intelligence operation to funnel millions in federal funds to himself. The case is shaping up as one of the most embarrassing internal scandals at Langley in recent memory. Investigators are still tracing the full network of accounts and assets.</div>
+    <div class="why"><strong>Why it matters:</strong> A serious internal-control failure at the CIA arrives at the worst possible moment, with the agency stretched thin across multiple wars.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/06/us/politics/cia-officer-gold-fake-spy-program.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Andreeva, 19, wins French Open in straight sets</div>
+    
+    <div class="card-body">Russia's Mirra Andreeva captured her first Grand Slam title at Roland Garros, dismantling 114th-ranked Polish qualifier Maja Chwalinska 6-3, 6-2 in a final that confirmed the eighth seed's arrival as the women's tour's next dominant force. Andreeva's poise on Philippe-Chatrier belied her age. The men's final is set for later today.</div>
+    <div class="why"><strong>Why it matters:</strong> A new generation is finally breaking through in women's tennis — and Andreeva is its most complete player.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/6/russian-teenager-mirra-andreeva-wins-french-open-to-claim-first-grand-slam" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Antonelli takes Monaco pole, first Italian on principality top spot since 2004</div>
+    
+    <div class="card-body">F1 championship leader Kimi Antonelli produced what observers called a 'magic lap' to claim pole position in Monaco for Mercedes, becoming the first Italian to top the timesheets at Monte Carlo since Jarno Trulli in 2004. The teenager has now consolidated his championship lead with a string of front-row starts. Race day will test whether he can convert speed into silverware on F1's hardest circuit.</div>
+    <div class="why"><strong>Why it matters:</strong> Mercedes appears to have found its post-Hamilton era star — and Monaco is the truest test of a generational talent.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/7/teenager-antonelli-snatches-monaco-pole-with-magic-lap-for-mercedes" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">World Cup visa row: Iran says staff blocked, players cleared</div>
+    
+    <div class="card-body">Hours after the US confirmed Iranian players would receive visas for the World Cup, Tehran says its technical staff have been denied entry — the latest awkward intersection of sport and the Iran war. FIFA is scrambling to mediate as multiple teams face last-minute visa decisions just days before kick-off. The episode underscores how thoroughly geopolitics has overtaken tournament logistics.</div>
+    <div class="why"><strong>Why it matters:</strong> The first North American World Cup of the Trump era is already being defined by who is, and is not, allowed to play.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cy8286nqz87o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/6/7/why-are-players-being-issued-visas-just-days-before-the-world-cup" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Bernadette Chirac, the steel behind a French presidency, dies at 93</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/fb9a45b155a0362983cc154cad1c9fc537911925/780_797_2463_1971/master/2463.jpg?width=140&quality=85&auto=format&fit=max&s=bb035d7ed04e01637957d51d2772f5ce" alt="Bernadette Chirac, the steel behind a French presidency, dies at 93" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Bernadette Chirac, the formidable widow of former French president Jacques Chirac, has died at 93. France's first lady for 12 years, she was both a behind-the-scenes operator instrumental in her husband's political rise and, in later life, a relentless champion of children's charities. Tributes have crossed France's bitter partisan lines — a rarity in 2026.</div>
+    <div class="why"><strong>Why it matters:</strong> Her passing closes a chapter on a Gaullist political tradition that today's French right barely resembles.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/06/bernadette-chirac-former-first-lady-france-dies" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/06/world/europe/bernadette-chirac-dead.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Fifty years on, Ilaiyaraaja is still rewriting the rules of Indian music</div>
+    
+    <div class="card-body">Half a century after his debut, the South Indian composer Ilaiyaraaja remains one of the most influential figures in Indian cinema, blending Carnatic ragas with Western symphonic forms in a way no contemporary has matched. A new generation of listeners is rediscovering his catalogue through streaming platforms. The 'Maestro' himself, now in his eighties, is still composing and touring.</div>
+    <div class="why"><strong>Why it matters:</strong> Ilaiyaraaja's longevity is a reminder of how deeply Indian popular culture has always lived at the intersection of classical and global forms.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cm2pldw8x9zo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Sunday, June 7, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7383.74</td>
+        <td class="down">▼ -2.25%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$50866.78</td>
+        <td class="up">▲ +0.35%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$25709.43</td>
+        <td class="down">▼ -4.26%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10368.05</td>
+        <td class="up">▲ +0.35%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>66588.12</td>
+        <td class="down">▼ -1.31%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4365.30</td>
+        <td class="up">▲ +0.65%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$90.54</td>
+        <td class="flat">—0.00%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>94.95</td>
+        <td class="down">▼ -1.26%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.04%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$62138.01</td>
+        <td class="up">▲ +2.09%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Peru's runoff result tonight: a Fujimori victory would mark the family's return to power after a generation in the political wilderness.</li><li>Armenia's vote count: any Pashinyan setback will be read in Moscow as an opening to reverse Yerevan's pro-Western drift.</li><li>Trump's planned meeting this week with top AI chief executives — markets will look for any signal of federal equity stakes or industrial-policy intervention.</li><li>IATA AGM in Rio: watch for revised fuel cost guidance and carrier hedging postures against a prolonged Hormuz disruption.</li><li>Germany's small-town mayoral runoff: a neo-Nazi win, however local, would force a national reckoning over the AfD-adjacent far right.</li><li>Monaco GP race day: can Antonelli convert pole into a first Monte Carlo win and effectively seal Mercedes' constructors' resurgence?</li><li>CDC Ebola modelling updates: case curves out of DRC over the next ten days will determine whether this becomes a continent-wide emergency.</li></ul>
+</div>
+
+<div class="editors-note">One hundred days into the US-Israel war on Iran, the contours of a new global disorder are sharpening — but so are the costs, from Gulf monarchies under fire to a Nasdaq finally cracking under AI valuation strain.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Sunday, June 7, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-06-07 07:11 UTC
+</footer>
+</div>
+</body>
+</html>

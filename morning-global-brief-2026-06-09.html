@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Tuesday, June 9, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Tuesday, June 9, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Iran and Israel halt strikes after Trump intervention, but warn of fresh retaliation</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/c8b85b74862aefb86bbca51ca50dd7707eb2fb0f/545_0_6609_5290/master/6609.jpg?width=140&quality=85&auto=format&fit=max&s=e756a9a83c0e0834651fac4ebc75bc8f" alt="Iran and Israel halt strikes after Trump intervention, but warn of fresh retaliation" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">Israel and Iran said they had paused direct strikes on each other late Monday after Donald Trump publicly demanded both sides 'immediately stop shooting'. Netanyahu acknowledged the pause but vowed a 'forceful response' to any future attack, while Iran's armed forces signalled the lull was conditional. Trump claimed the US was in the 'final throes' of a wider deal and predicted the Strait of Hormuz would reopen within days. Yet Israeli strikes continued against Hezbollah targets in southern Lebanon, killing at least 14 and undercutting the notion of a real ceasefire.</div>
+    <div class="why"><strong>Why it matters:</strong> A genuine de-escalation would calm oil markets and revive nuclear diplomacy; a relapse risks dragging the US directly into a regional war.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cj6ge150z5go" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/08/israel-and-iran-attacks-pause-after-trump-calls-to-stop-shooting" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/9/trump-warns-netanyahu-youll-be-on-your-own-if-attacks-on-iran-continue" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Tehran emerges emboldened — and Trump-Netanyahu rift widens</div>
+    <div class="card-body" style="font-size:12.5px;">Analysts in Tehran and London read the latest exchange as evidence that Iran's leadership feels its position has strengthened, betting that Trump's appetite for a sustained military campaign is limited. The episode also exposed the widening gap between the US president, who insists he is 'calling all the shots', and Netanyahu, who has continued operations against Hezbollah despite Washington's calls for restraint. The dynamic complicates any path back to nuclear talks.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> If Iran believes it can weather US pressure, the diplomatic off-ramp Washington is selling may not exist.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cp8lm75186lo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cly72ryrd1jo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/08/complex-relationship-between-trump-and-netanyahu-continues-to-undermine-middle-east-ceasefire" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">OpenAI files for IPO that could top $850bn valuation</div>
+    <div class="card-body" style="font-size:12.5px;">OpenAI confidentially filed paperwork for a US stock market debut on Monday, just a week after rival Anthropic did the same. Bankers expect a valuation north of $850bn, which would rank it among the largest listings in history and intensify the AI capital arms race. The filing comes as tech stocks sold off on AI-bubble jitters — a reminder that even mega-listings will face a sceptical public market.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> An OpenAI IPO would crystallise the AI boom into a single public benchmark — and a single political target.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/08/openai-ipo-files-for-public-stock-market" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cd958eqg1n5o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/economy/2026/6/8/tech-giant-openai-files-for-us-initial-public-offering" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Magnitude-7.8 quake devastates southern Philippines, kills at least 37</div>
+    <div class="card-body" style="font-size:12.5px;">A powerful earthquake struck Mindanao on Monday morning, killing at least 37 people, injuring hundreds and triggering small tsunami waves that reached Indonesia and Japan. General Santos, a city of 720,000, suffered some of the worst damage, while in Digos schoolchildren fled collapsing buildings. Rescue teams are racing against aftershocks as authorities warn residents to stay out of damaged structures.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The disaster will test Manila's disaster-response capacity and shipping in one of Asia's busiest maritime corridors.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/08/philippines-earthquake-mindanao-tsunami-warnings" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/9/race-to-find-survivors-as-philippines-quake-toll-rises-to-37" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/clyel78e6p5o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Xi lands in Pyongyang to reclaim leverage over Kim</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e9e1a427651f9f7f476801d0fc45909a6af25687/533_154_3130_2504/master/3130.jpg?width=140&quality=85&auto=format&fit=max&s=637a83a558f206e3edb029184d995426" alt="Xi lands in Pyongyang to reclaim leverage over Kim" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Xi Jinping arrived in North Korea on Monday for his first visit in nearly seven years, greeted personally by Kim Jong-un. The trip is widely read as Beijing's bid to reassert influence over a junior partner that has drifted noticeably closer to Moscow since the Ukraine war began. Chinese state media leaned on the old 'lips and teeth' metaphor; the harder question is whether Kim still listens.</div>
+    <div class="why"><strong>Why it matters:</strong> A more obedient Pyongyang gives China a sharper lever in talks with Washington — and could constrain Russia's access to North Korean arms.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/08/xi-jinping-kim-jong-un-meeting-north-korea" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cdep497r256o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/9/as-close-as-lips-and-teeth-the-highs-and-lows-of-china-north-korea-ties" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Armenia's pro-Western government wins decisive mandate</div>
+    
+    <div class="card-body">Nikol Pashinyan's Civil Contract party secured close to 50% of the vote despite an aggressive Russian-backed campaign against it, cementing Yerevan's tilt towards the EU and away from Moscow. The result deepens a regional realignment that has accelerated since the loss of Nagorno-Karabakh. Russia's influence in the South Caucasus continues to recede.</div>
+    <div class="why"><strong>Why it matters:</strong> Another former Soviet republic is quietly slipping out of Moscow's orbit while the Kremlin is distracted by Ukraine.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cvgel990n51o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Zelensky's European backers lay out five conditions for any peace deal</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/5e9862dd09729d700d6bd450389bdd06f0d48a7d/0_980_5464_4369/master/5464.jpg?width=140&quality=85&auto=format&fit=max&s=a37427155a6e32b82a5d19c803c28a18" alt="Zelensky's European backers lay out five conditions for any peace deal" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Volodymyr Zelensky met his closest European allies in London to publish a five-point framework for any negotiations with Russia, even as Trump's attention has visibly shifted to the Iran file. In a Guardian interview, the Ukrainian president struck an upbeat tone, offered to share Kyiv's drone-warfare expertise with NATO partners, and floated inviting King Charles to Ukraine. The message: Europe must be ready to lead if Washington steps back.</div>
+    <div class="why"><strong>Why it matters:</strong> Europe is hedging against the prospect of an American-imposed deal that disregards Ukrainian and EU red lines.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cr7xr1g3nvvo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/ng-interactive/2026/jun/09/volodymyr-zelenskyy-interview-russia-putin-drone-warfare-ukraine" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">ICC chief prosecutor Karim Khan suspended over misconduct claims</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e9450bb29e195cb18fab88ad977c8f469a04442e/70_0_4843_3873/master/4843.jpg?width=140&quality=85&auto=format&fit=max&s=b62b3316df575518296f1fff5e9eb127" alt="ICC chief prosecutor Karim Khan suspended over misconduct claims" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The International Criminal Court has suspended its chief prosecutor, British barrister Karim Khan, after a disciplinary process triggered by sexual misconduct allegations first surfaced in 2024 reached a conclusion. Khan, who oversees the court's high-profile cases including those against Israeli and Russian leaders, denies the claims and is contesting the suspension. The matter now goes to member states.</div>
+    <div class="why"><strong>Why it matters:</strong> The crisis lands at the worst possible moment for an institution already under sustained political attack from Washington and Moscow.</div>
+    <div class="sources"><a href="https://www.theguardian.com/law/2026/jun/09/icc-chief-prosecutor-karim-khan-suspended-international-criminal-court" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/9/icc-prosecutor-suspended-pending-vote-on-sexual-misconduct-claims" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Global nuclear weapons spending hits record $119bn</div>
+    
+    <div class="card-body">States spent a combined $119bn on their nuclear arsenals in 2025, an increase of nearly $17bn year on year, according to the International Campaign to Abolish Nuclear Weapons. The US accounted for the lion's share, with China and Russia not far behind, as modernisation programmes accelerated against a backdrop of strained arms-control treaties. The figures arrive as Iran's nuclear file is once again the central question in Middle East diplomacy.</div>
+    <div class="why"><strong>Why it matters:</strong> Arms-control architecture built after the Cold War is visibly eroding even as proliferation risks rise.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/economy/2026/6/9/nuclear-weapons-spending-surges-to-record-high-of-119bn-report-says" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">SpaceX prepares for a market debut that could redraw Musk's empire</div>
+    
+    <div class="card-body">Elon Musk's rocket company is moving towards a long-awaited public listing that bankers say could be one of the largest in history, eclipsing Musk's other corporate ventures. The IPO would crystallise the value of Starlink — now the dominant satellite-internet operator — and give Musk fresh firepower at a politically sensitive moment. It would also place SpaceX, a major US defence contractor, under quarterly scrutiny for the first time.</div>
+    <div class="why"><strong>Why it matters:</strong> A listed SpaceX would tether US national-security infrastructure to public-market sentiment and Musk's increasingly political profile.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cy8d9e4lzv1o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Pentagon adds BYD, Alibaba and Baidu to 'Chinese military' list</div>
+    
+    <div class="card-body">The US Defense Department added China's largest EV maker BYD, along with Alibaba and Baidu, to its list of companies allegedly tied to the Chinese military, warning American firms of the reputational and regulatory risks of doing business with them. The designation does not impose sanctions but typically deters US investors and partners. Beijing called the move discriminatory.</div>
+    <div class="why"><strong>Why it matters:</strong> The list is becoming a de facto blacklist that is reshaping global tech, EV and cloud supply chains.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c75y6e5p9reo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/economy/2026/6/9/us-lists-chinas-byd-alibaba-baidu-as-chinese-military-companies" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Tech sell-off and Hormuz fears rattle global markets</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ef5e7178d44e3cb982ed3f207097d4291b36c415/830_0_6524_5222/master/6524.jpg?width=140&quality=85&auto=format&fit=max&s=30f38c114fb9948a5c7c0dc3dd1d492b" alt="Tech sell-off and Hormuz fears rattle global markets" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Asian and European bourses fell on Monday as last week's US tech sell-off rolled on and renewed Iran-Israel strikes sent oil prices jagging higher. Investors are weighing whether AI-driven valuations have run too far at the same moment that supply-chain risk is rising in the Gulf. Traders said the dual shocks — AI doubt and oil risk — were an unusually awkward combination.</div>
+    <div class="why"><strong>Why it matters:</strong> A simultaneous correction in tech and a Gulf supply scare would test the soft-landing thesis that has supported equities all year.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c78yd5g9qx0o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/jun/08/stock-markets-fall-tech-firms-ai-boom-oil-prices-iran-israel" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Airlines concede 2050 net-zero pledge is slipping out of reach</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/f2bc509f5bfd5fa3c126b4d2230f867b76aaeec2/418_0_4164_3333/master/4164.jpg?width=140&quality=85&auto=format&fit=max&s=f18dbb746ccc74dafa7a8889134e617f" alt="Airlines concede 2050 net-zero pledge is slipping out of reach" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">IATA director general Willie Walsh said the aviation industry's flagship 2050 net-zero target is now unlikely to be met, blaming insufficient sustainable-fuel supply, slow government incentives and delayed aircraft programmes. Walsh called for a 'realistic timeline'. Airlines simultaneously face an extra $100bn in jet-fuel costs that will likely feed through into higher fares.</div>
+    <div class="why"><strong>Why it matters:</strong> If aviation publicly walks back 2050, other hard-to-abate sectors will feel licensed to follow.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/jun/08/airline-industry-chiefs-willie-walsh-2050-net-zero-unlikely" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Apple unveils Siri overhaul as Tim Cook signals farewell</div>
+    
+    <div class="card-body">At its annual developer conference, Apple revealed a long-promised AI rebuild of Siri alongside a suite of new child-safety features aimed at blocking explicit images on children's devices. The launch coincided with what was widely interpreted as Tim Cook's valedictory address, with a succession plan looking imminent. The product pivot lands amid growing scrutiny of 'nudification' apps and regulatory pressure in the UK and Australia.</div>
+    <div class="why"><strong>Why it matters:</strong> Cook's departure would mark the end of an era in which Apple defined the smartphone industry; the Siri reboot is its bet on staying relevant in the AI one.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cnv9dr996v8o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Most new US AI data centres will be built on drought-stricken land</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/1b58afecc5e86ac970c94f00b544539353635352/0_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=9dce9e1f7da1b4c505e45bafad5a5335" alt="Most new US AI data centres will be built on drought-stricken land" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">A Guardian analysis finds that the majority of planned American AI data centres are slated for some of the country's driest regions, even as a record drought grips much of the US. Operators argue cooling technology is improving; local communities and water authorities are increasingly sceptical. The story is becoming a flashpoint from Arizona to Texas.</div>
+    <div class="why"><strong>Why it matters:</strong> Water, not chips, may turn out to be the binding constraint on the next leg of the AI boom.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/08/datacenter-ai-drought-water" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Starmer gives Apple and Google a September deadline on child-safety filters</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/c63533c46bc7419b46ab5f9695aa935ed5e8e3fd/378_0_3527_2821/master/3527.jpg?width=140&quality=85&auto=format&fit=max&s=7716776fd0846d9d95b793d2dce021b2" alt="Starmer gives Apple and Google a September deadline on child-safety filters" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">UK prime minister Keir Starmer told Apple and Google they must activate built-in tools to block sexually explicit images on children's phones by September or face new legislation. The move follows growing public alarm about AI-generated abuse material and 'nudification' apps. It also dovetails with Australia's emerging social-media age restrictions.</div>
+    <div class="why"><strong>Why it matters:</strong> Western governments are converging on a tougher, more interventionist model for child online safety — with global platform implications.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/08/starmer-tech-firms-ultimatum-block-explicit-images-children-phones" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cly752ydjw6o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Iran's lakes are vanishing as drought meets war</div>
+    
+    <div class="card-body">Newly released satellite imagery shows Iran's major inland lakes — including Urmia — shrinking at an accelerating pace, the cumulative result of years of drought, declining rainfall, and unsustainable agricultural water use. The current US-Israel-Iran conflict, with damage to petrochemical and power infrastructure, has worsened the picture. Tehran faces a slow-burning water emergency layered on top of an acute security one.</div>
+    <div class="why"><strong>Why it matters:</strong> Climate stress on Iran's interior is a long-term driver of instability that will outlast any ceasefire.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/features/2026/6/9/irans-lakes-are-vanishing-satellite-images-show-a-deepening-water-crisis-2" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Monsoon arrives early in India as Kerala drenched by 280mm in 72 hours</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/2b5b5f4767bb0182b1ed9aeaf9bde68e9907ee70/275_0_7680_6144/master/7680.jpg?width=140&quality=85&auto=format&fit=max&s=69199d256fef85e4e0e7dce3e071ba9d" alt="Monsoon arrives early in India as Kerala drenched by 280mm in 72 hours" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">India has officially declared the onset of the south-west monsoon after intense rainfall — up to 280mm in 72 hours — pounded Kerala, with further heavy downpours hitting south-west Thailand. The seasonal rains are crucial to agricultural output, hydropower and the broader economy. Forecasters will be watching whether the front advances on schedule into the wheat- and rice-growing heartlands.</div>
+    <div class="why"><strong>Why it matters:</strong> Monsoon performance shapes everything from rural incomes to Indian inflation prints and equity sector rotation.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/jun/08/weather-tracker-monsoon-season-vital-rainfall-parts-asia" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's fertility rate falls below replacement for the first time</div>
+    
+    <div class="card-body">India's total fertility rate has dropped to 1.9 children per woman, slipping below the 2.1 replacement level — a milestone for the world's most populous country. Demographers say the decline will reshape the labour market, intensify pressure on elder care and gradually narrow the much-discussed demographic dividend. The trend mirrors East Asia's, though India's transition is occurring at a much lower per-capita income level.</div>
+    <div class="why"><strong>Why it matters:</strong> The story of 21st-century India will increasingly be about productivity, not population.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/9/indias-fertility-rate-falls-below-replacement-level-why-it-matters" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Mamata Banerjee's Trinamool unravels after West Bengal defeat</div>
+    
+    <div class="card-body">Weeks after losing power in West Bengal, Mamata Banerjee's Trinamool Congress is showing signs of structural disintegration, with defections, internal feuds and a leadership question that the once-dominant chief minister has so far refused to answer. The collapse removes one of the most prominent regional checks on the BJP. It also raises the question of who, if anyone, anchors the opposition in eastern India.</div>
+    <div class="why"><strong>Why it matters:</strong> The further weakening of regional parties tilts India's federal balance — and 2029 calculations — towards Delhi.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cx2w4y6l9yqo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Air India crash anniversary: the victims who were never on the plane</div>
+    
+    <div class="card-body">One year after the Air India disaster, the BBC has gathered testimony from people on the ground who lost relatives, witnessed the crash, or survived it from below. Their accounts — 'we don't look at the sky any more' — are a reminder of an aviation tragedy whose full causes are still being litigated. Reform of India's safety oversight has been slow and uneven.</div>
+    <div class="why"><strong>Why it matters:</strong> The anniversary will renew political pressure on the DGCA and Tata-owned Air India just as Indian aviation enters its biggest fleet expansion in history.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwy2y9n11pyo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump nominates personal lawyer Todd Blanche as attorney general</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/8a1f582a3eb2f5231e69b66c6a3204f03a666237/458_0_4585_3668/master/4585.jpg?width=140&quality=85&auto=format&fit=max&s=177b8e8685a5f5933e5d3d5cc7e00236" alt="Trump nominates personal lawyer Todd Blanche as attorney general" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">President Trump formally nominated Todd Blanche, his former personal defence lawyer and current acting attorney general, to take the role permanently. Blanche has overseen a series of controversial Justice Department moves, including handling of the Epstein files and January 6 cases. Democrats, led by Senator Adam Schiff, vowed to 'vigorously oppose' confirmation.</div>
+    <div class="why"><strong>Why it matters:</strong> Confirmation would entrench a deeply loyalist Justice Department for the remainder of Trump's term.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/08/trump-nominates-todd-blanche-attorney-general" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/8/trump-nominates-todd-blanche-as-attorney-general-setting-up-senate-fight" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Sam Bankman-Fried applies for a Trump pardon</div>
+    
+    <div class="card-body">FTX founder Sam Bankman-Fried, currently serving a 25-year sentence for fraud, has formally applied for a presidential pardon. The application puts Trump in the awkward position of weighing leniency for a major figure of the previous crypto cycle at a moment when the administration is courting the industry. The White House has not commented.</div>
+    <div class="why"><strong>Why it matters:</strong> A pardon — or even serious consideration of one — would mark another extraordinary inflection in US crypto policy.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cjwgd6jqd5do" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Trump booed at NBA Finals as Knicks chase first title since 1973</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/6487189bc104b18b25c03220817da4be8aa94eec/0_188_4495_3596/master/4495.jpg?width=140&quality=85&auto=format&fit=max&s=b719bbd790b1db0749c1a8d7bdb89742" alt="Trump booed at NBA Finals as Knicks chase first title since 1973" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Donald Trump became the first sitting US president to attend an NBA Finals game and was met with a loud chorus of boos at Madison Square Garden during Game 3 between the Knicks and the San Antonio Spurs. Ticketholders were also subjected to airport-style security, irritating fans. On the court, Spurs phenomenon Victor Wembanyama spoiled the Knicks' home run as New York's title drought continued.</div>
+    <div class="why"><strong>Why it matters:</strong> A sharp reminder that even sport is now a stage for the country's political polarisation.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/czj89mz3mzzo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/sport/2026/jun/08/donald-trump-knicks-spurs-nba-finals-crowd-reaction-boos" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">US visa restrictions cast a shadow over the World Cup</div>
+    
+    <div class="card-body">FIFA has dropped Somali referee Omar Artan from its World Cup officiating roster after he was denied entry to the US at Miami over vetting concerns. Iran's national team, meanwhile, has based itself in Mexico and will fly in and out of the US for each group-stage match. Fans worldwide say new American travel bans are turning what should be a global tournament into a partial one.</div>
+    <div class="why"><strong>Why it matters:</strong> The tournament risks being remembered as much for who couldn't attend as for who lifted the trophy.</div>
+    <div class="sources"><a href="https://www.bbc.com/sport/football/articles/cnv9drg0qzgo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cx212p8r28eo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/videos/cz6vw0deq09o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Eriksen recovering at home after on-field collapse</div>
+    
+    <div class="card-body">Christian Eriksen says he is 'doing well' and is back at home with his family after collapsing during Denmark's match against Ukraine on Sunday. Team doctors confirmed that the implantable cardioverter-defibrillator (ICD) fitted following his 2021 cardiac arrest activated as designed. He is being monitored as further tests continue.</div>
+    <div class="why"><strong>Why it matters:</strong> A reassuring outcome for football, and a vivid endorsement of post-incident cardiac care protocols at the top level.</div>
+    <div class="sources"><a href="https://www.bbc.com/sport/football/articles/c9w2kpyx58no" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cewq1g7z4qzo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Tuesday, June 9, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7405.73</td>
+        <td class="down">▼ -2.35%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$50786.01</td>
+        <td class="down">▼ -1.50%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$25929.66</td>
+        <td class="down">▼ -3.36%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10373.20</td>
+        <td class="up">▲ +0.12%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>65416.63</td>
+        <td class="up">▲ +2.17%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4358.50</td>
+        <td class="up">▲ +0.52%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$89.92</td>
+        <td class="down">▼ -1.51%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>95.63</td>
+        <td class="up">▲ +0.72%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$63199.32</td>
+        <td class="up">▲ +0.17%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Whether the Iran-Israel pause holds through the week and whether the Strait of Hormuz actually reopens, as Trump has predicted.</li><li>Primary elections in Maine, Nevada, South Carolina and North Dakota, an early read on the November US midterms.</li><li>Peru's final presidential vote count, with Fujimori and Sánchez separated by a hair.</li><li>OpenAI and Anthropic's IPO prospectuses — and how a jittery market prices the AI bull case.</li><li>Aftershocks and humanitarian response in Mindanao following the magnitude-7.8 quake.</li><li>The Senate's reception of Todd Blanche's nomination as attorney general.</li></ul>
+</div>
+
+<div class="editors-note">Two stories to read side by side this morning: Iran's vanishing lakes and India's sub-replacement fertility rate — slow-moving demographic and ecological shifts that will outlast every headline above them.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Tuesday, June 9, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-06-09 06:56 UTC
+</footer>
+</div>
+</body>
+</html>

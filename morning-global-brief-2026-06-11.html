@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Thursday, June 11, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Thursday, June 11, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">US and Iran trade strikes for second consecutive day as ceasefire hopes collapse</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/28a1fa0b89b4a1dc125be4c37425a58a26cf2be0/144_0_3333_2667/master/3333.jpg?width=140&quality=85&auto=format&fit=max&s=5c2edd534ea278ea0457041d5dd1ebca" alt="US and Iran trade strikes for second consecutive day as ceasefire hopes collapse" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">A second wave of American airstrikes on Iranian targets drew retaliatory missile fire on US assets in Kuwait, Bahrain and Jordan, with Bahrain's capital reporting overnight damage. Tehran has formally announced the closure of the Strait of Hormuz, a chokepoint for roughly a fifth of global oil shipments. Trump warned Iran would 'pay the price' for stalled talks, while former Israeli intelligence officials concede any deal will require engaging Iranian demands on sanctions relief. The BBC's Jeremy Bowen argues Trump and Netanyahu have lost control of consequences after miscalculating the war's trajectory.</div>
+    <div class="why"><strong>Why it matters:</strong> A closed Hormuz means a structural shock to oil prices, global inflation and Asian energy security — with India and the UAE among the most exposed.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/10/middle-east-peace-talks-iran-strikes" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c4gyp9v0e93o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/11/iran-war-day-104-iran-says-it-attacks-us-bases-after-american-strikes" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cjdgl548x3eo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Trump shrugs at 4.2% inflation: 'I love the inflation'</div>
+    <div class="card-body" style="font-size:12.5px;">US consumer prices rose at their fastest pace in three years in May, hitting an annual rate of 4.2% — up from 2.4% before the Iran war began. The president told reporters he 'loves the inflation' and boasted of covertly siphoning Iranian oil, prompting Speaker Mike Johnson into damage-control mode on Capitol Hill. Economists pin the surge squarely on energy disruption from the Hormuz closure. Consumer confidence is now at a historic low.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> A sustained inflation shock will reshape the Fed's path, dent US household balance sheets and complicate the political backdrop heading into America's 250th anniversary.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/10/inflation-report-rate" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c0myzxjkw99o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Three Indian sailors killed as US strikes tanker in Gulf of Oman</div>
+    <div class="card-body" style="font-size:12.5px;">India confirmed three of its seafarers died in a US attack on the oil tanker Settebello off Oman; 21 crew were rescued. The strike is the most direct Indian casualty toll yet in the widening US-Iran war and has prompted urgent diplomatic contact between New Delhi and Washington. Indian shipping minister Sarbananda Sonowal confirmed the deaths. Roughly two-thirds of crews on the world's commercial tankers are Indian or Filipino.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> India's massive seafaring workforce is now in the firing line of a war it has carefully tried to stay out of — a test for Modi's balancing act between Washington and Tehran.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c0rygjw1kqxo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Pakistan strikes Afghanistan, reigniting border crisis</div>
+    <div class="card-body" style="font-size:12.5px;">Pakistani warplanes launched deadly air raids inside Afghanistan after weeks of calm, with hundreds gathering in eastern provinces for funerals of civilian dead. Islamabad has not formally claimed the strikes but Afghan officials say women and children are among the casualties. The renewed escalation comes as the Taliban faces its own rare internal pressure, with two killed in Herat protests over women's dress-code arrests.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> A hot Pakistan–Afghanistan front opening alongside the Iran war risks turning South Asia's western flank into a contiguous arc of instability.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cvg57nk373lo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/6/11/funerals-held-after-deadly-pakistani-strikes-in-afghanistan" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/global-development/2026/jun/10/two-killed-in-rare-street-demonstration-over-womens-rights-in-afghanistan" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">IAEA demands Iran disclose nuclear stockpile as Tehran cries politics</div>
+    
+    <div class="card-body">The UN nuclear watchdog passed a US-backed resolution demanding Iran account for its enriched uranium holdings. Tehran denounced the move as politically motivated and warned it could derail any path back to ceasefire negotiations. The resolution lands at the worst possible diplomatic moment, with US and Iranian forces in open exchange.</div>
+    <div class="why"><strong>Why it matters:</strong> Re-litigating Iran's nuclear ambiguity during an active war narrows the off-ramp for both sides.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/11/un-watchdog-demands-iran-provide-information-on-nuclear-stockpile" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Ukraine strikes deep into Russia, hitting plant and 'shadow fleet' tanker</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/99ccd48062236758770fa8b8f65bd5c8c3f98201/156_0_4688_3750/master/4688.jpg?width=140&quality=85&auto=format&fit=max&s=2439357bd74077c7492f5d70f7a7a3a3" alt="Ukraine strikes deep into Russia, hitting plant and 'shadow fleet' tanker" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Kyiv claims successful long-range missile hits on a Russian military manufacturing plant, a refinery and a sanctions-evading oil tanker in the Black Sea. Inside Ukraine, a Guardian dispatch from Kyiv captures a population that has absorbed Putin's air war into a strange new normal of quiet adaptation. Separately, Zelensky faces pressure from Warsaw to defuse a row over the WW2-era naming of a Ukrainian army unit.</div>
+    <div class="why"><strong>Why it matters:</strong> Ukraine is sustaining offensive momentum even as global attention shifts to the Middle East — but its diplomatic margin in Europe is narrowing.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c5yzm2nzgr2o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/10/years-on-i-still-marvel-at-the-resilience-of-day-to-day-life-under-putins-cruel-air-war" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c992r4kn5j9o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">US diplomat found dead in Yangon; Thai national detained</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/6f592966b7003162f120e9cfb959f57e1b1ace9f/0_0_6017_4816/master/6017.jpg?width=140&quality=85&auto=format&fit=max&s=7ce710999ab698b9c6f273f7e05b635b" alt="US diplomat found dead in Yangon; Thai national detained" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Burmese police are treating the death of a US diplomat at a Yangon hotel as a possible homicide, with a Thai woman in custody. The case adds a strange diplomatic wrinkle to a country already in the grip of civil war, where BBC reporting from rebel territory shows opposition forces losing ground as the junta forcibly conscripts men.</div>
+    <div class="why"><strong>Why it matters:</strong> Washington has minimal leverage in Myanmar and the case will test what little channel remains with the junta.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/10/us-diplomat-found-dead-myanmar" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c20y6966xqzo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Belfast burns for a third night as anti-immigrant unrest spreads</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/aa52ea46f854d461994d835ab2dec0532ff5ceea/166_0_3091_2473/master/3091.jpg?width=140&quality=85&auto=format&fit=max&s=a57f93646fba2fd879ec7d99bcd901c2" alt="Belfast burns for a third night as anti-immigrant unrest spreads" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Police deployed water cannon against rioters in Belfast as anti-immigrant protests sparked by a stabbing intensified, with cars torched and families fleeing burning homes. The victim's family has called for calm and condemned the violence targeting migrants. The Guardian traces how a single piece of CCTV footage was weaponised online by far-right agitators.</div>
+    <div class="why"><strong>Why it matters:</strong> Northern Ireland's fragile communal peace is being tested by an information-age playbook that European capitals are watching nervously.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/11/police-in-belfast-use-water-cannon-as-anti-immigrant-unrest-continues" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/uk-news/2026/jun/11/how-the-belfast-stabbing-was-the-spark-to-a-fuse-loaded-with-grievance-and-provocation" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cevl9j9y8dmo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Thousands march in Albania against Kushner's Sazan island resort</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/4a068ffc8b96c7ea261d83869eb338adfce4fffd/326_0_3260_2608/master/3260.jpg?width=140&quality=85&auto=format&fit=max&s=4ca972cbdac5d8ba5a9a1caf417404aa" alt="Thousands march in Albania against Kushner's Sazan island resort" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The largest demonstration yet rallied in Tirana under the slogan 'Albania is not for sale' against a $1.6bn luxury development on Sazan island backed by Jared Trump. Environmentalists are challenging a similar Trump-administration land transfer to SpaceX in Texas. Both projects highlight how the Trump orbit is converting political access into hard real estate.</div>
+    <div class="why"><strong>Why it matters:</strong> Sovereign land deals tied to the US first family are becoming a live political issue from the Adriatic to the Rio Grande.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/11/thousands-rally-in-albania-in-largest-protest-yet-against-kushner-resort" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/10/spacex-trump-administration-texas-land-swap" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">TSMC warns chip prices may rise as AI demand strains supply</div>
+    
+    <div class="card-body">In a rare interview, a senior TSMC executive declined to rule out price hikes as the world's dominant chipmaker grapples with surging AI demand, rising input costs and geopolitical pressure to diversify production. The Taiwanese giant supplies almost every advanced AI accelerator on earth. Any sustained pass-through would ripple from datacentre capex budgets to smartphone retail prices.</div>
+    <div class="why"><strong>Why it matters:</strong> TSMC pricing is effectively a global tax on the AI build-out and on consumer electronics — including Apple's product line.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ce3ez4zzzlvo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">BYD targets Toyota's crown within five years, plans £1.8bn EU charger push</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/933a88ba8dbdce5a04bb27eee60ce7a6cf4d76ed/650_0_5807_4645/master/5807.jpg?width=140&quality=85&auto=format&fit=max&s=eb8bc4c462cf165119395aa60e022531" alt="BYD targets Toyota's crown within five years, plans £1.8bn EU charger push" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">China's BYD declared its intention to become the world's largest automaker within five years, backed by a £1.8bn plan to roll out five-minute flash chargers across Europe. The Shenzhen group already outsells Tesla globally and is expanding aggressively into right-hand-drive and European markets. Toyota has held the top spot for most of the past two decades.</div>
+    <div class="why"><strong>Why it matters:</strong> BYD's European charging build-out is the kind of infrastructure moat that could lock in Chinese EV dominance before Brussels finalises its tariff regime.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/10/china-byd-car-firm-ev-maker-toyota" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Frasers bids £1.73bn to take full control of Hugo Boss</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/0afeee8e0c87443fcede73f3f7450ca544ed01b8/505_216_3815_3053/master/3815.jpg?width=140&quality=85&auto=format&fit=max&s=9a3b79a859c05f4908e88f0d2550fa71" alt="Frasers bids £1.73bn to take full control of Hugo Boss" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Mike Ashley's Frasers Group has offered £1.73bn to acquire the rest of Hugo Boss, on top of its existing 25%-plus stake. The German fashion house would be Ashley's most ambitious move yet into prestige branding, well beyond Frasers' Sports Direct roots. Separately, Australian billionaire Brett Blundy is mounting a campaign to oust the chair of Victoria's Secret, where his fund owns about 13%.</div>
+    <div class="why"><strong>Why it matters:</strong> Activist and opportunistic foreign buyers are circling listed Western consumer brands as valuations lag the AI-led rally.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c07y92gplmyo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/australia-news/2026/jun/11/brett-blundy-bbrc-victorias-secret" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">South Korea fines Coupang $408m over country's largest-ever data leak</div>
+    
+    <div class="card-body">Seoul's data protection regulator levied a record fine on e-commerce giant Coupang after 37.5 million users had personal data exposed and the company delayed disclosure. The penalty signals Korea's increasingly assertive privacy enforcement, in line with European norms. It is also a warning shot for any Asian platform operating at consumer scale.</div>
+    <div class="why"><strong>Why it matters:</strong> Asia's privacy regimes are catching up fast — and the fines are now large enough to matter to P&Ls, not just press releases.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/economy/2026/6/11/south-korea-fines-coupang-408m-over-biggest-data-leak-in-countrys-history" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cvgj4rgz2n2o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Seattle bans new AI datacentres for a year as backlash grows</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/27d2b8af60843420ac553ec65a099dbcc0d17493/481_0_4814_3852/master/4814.jpg?width=140&quality=85&auto=format&fit=max&s=9f44840d1d99bebb2f14e26b70d313c5" alt="Seattle bans new AI datacentres for a year as backlash grows" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">The home city of Amazon and Microsoft has imposed a one-year moratorium on new datacentre construction, citing energy and water concerns. A new study quantifies just how much heat AI facilities pump into local environments. OpenAI, meanwhile, claims China-linked actors are running influence operations to amplify public opposition to datacentre projects.</div>
+    <div class="why"><strong>Why it matters:</strong> Power, water and now politics are emerging as the binding constraints on the AI build-out — and the fight is moving from energy markets to city councils.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/09/seattle-ai-datacenters-ban" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/11/how-much-heat-does-an-ai-data-centre-produce-and-where-are-they-located" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/economy/2026/6/11/openai-says-china-based-actors-stoking-opposition-to-ai-data-centres" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Anthropic releases public version of Claude Mythos after safety hold</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/c1d842f8d1f28f0a67be4a40d9121c0b5530f0e0/559_0_5590_4474/master/5590.jpg?width=140&quality=85&auto=format&fit=max&s=ea11d331a5f24d2bbcfe59bf1e9b0183" alt="Anthropic releases public version of Claude Mythos after safety hold" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Anthropic has made a 'safe' version of its most powerful Mythos-class model — Fable 5 — generally available, after restricting access for months over cybersecurity concerns including chemical and biological risk. Sensitive use cases remain gated. The release sharpens competition with OpenAI and Google at the frontier of capability.</div>
+    <div class="why"><strong>Why it matters:</strong> Even self-styled safety-first labs are moving frontier models into wide deployment — the commercial pressure to ship is winning.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/09/anthropic-claude-mythos-ai-model" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Florida man sues over wrongful arrest blamed on AI facial recognition</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/898e4b6f40778f62f4cdd579b0089ff5df3fef86/612_1574_3618_2893/master/3618.jpg?width=140&quality=85&auto=format&fit=max&s=8c133d263810da65c9be982c245b5828" alt="Florida man sues over wrongful arrest blamed on AI facial recognition" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Robert Dillon, arrested at his Florida home for an alleged child-luring offence committed 300 miles away, is suing multiple law enforcement agencies after being misidentified by facial recognition software. The case follows a string of similar wrongful arrests in the US, almost all involving racial minorities. Separately, X told a UK-based Chinese activist that sexualised deepfakes targeting her did not breach its rules.</div>
+    <div class="why"><strong>Why it matters:</strong> AI-driven misidentification and platform-tolerated deepfakes are accumulating into a substantive civil-liberties crisis with no federal guardrails in sight.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/10/florida-lawsuit-ai-facial-recognition" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/jun/10/chinese-activist-uk-apple-peiqing-ni-x-deepfakes" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Trump immigration crackdown hits hardest at climate-vulnerable countries</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e568abb057651e11af43846809a978df3c5a45ff/0_0_1500_1200/master/1500.jpg?width=140&quality=85&auto=format&fit=max&s=eacbb29eaeac394d90486ad92b4bf270" alt="Trump immigration crackdown hits hardest at climate-vulnerable countries" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A Guardian analysis finds that most of the 39 countries hit by new US entry restrictions are also among the most exposed to climate shocks — from Haiti to Sudan to Myanmar. The pattern suggests Washington is, in effect, closing the door on the world's first wave of climate refugees just as displacement hits new records. UNHCR now estimates one in 70 people globally is forcibly displaced.</div>
+    <div class="why"><strong>Why it matters:</strong> The convergence of climate displacement and hardline migration policy will define the humanitarian politics of the next decade.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/10/trump-administration-immigrants-climate-crisis" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/11/one-in-70-people-worldwide-is-forcibly-displaced-unhcr" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Indonesia floods wipe out 7% of world's rarest great ape</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/8c24d843b7436f3f696fc1c2a360e9a848c702cc/1215_263_3442_2754/master/3442.jpg?width=140&quality=85&auto=format&fit=max&s=a0349bd076e66c727682d75d2270ff9e" alt="Indonesia floods wipe out 7% of world's rarest great ape" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Four days of climate-driven extreme rainfall and landslides in North Sumatra killed roughly 7% of the remaining Tapanuli orangutan population, a new study finds. Fewer than 800 of the critically endangered apes existed before the disaster. Conservationists fear the species may now be functionally beyond recovery.</div>
+    <div class="why"><strong>Why it matters:</strong> A single weather event can now move the needle on species extinction — a sobering preview of biodiversity collapse under a hotter climate.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/10/rainfall-landslides-climate-crisis-tapanuli-orangutan-indonesia-extreme-weather" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Millions of UK homes face climate-driven subsidence risk</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/db2c93994d5c9f62b218709b733c35fb9317c439/63_0_4720_3776/master/4720.jpg?width=140&quality=85&auto=format&fit=max&s=c50bb441fc980edb083a41f62c39918e" alt="Millions of UK homes face climate-driven subsidence risk" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">British Geological Survey analysis identifies millions of homes across London, Essex and Kent as vulnerable to subsidence as hotter, drier summers cause clay soils to shrink and crack foundations. Insurers and mortgage lenders are beginning to reprice the risk. The findings reframe UK climate exposure as a domestic balance-sheet issue, not a future abstraction.</div>
+    <div class="why"><strong>Why it matters:</strong> Subsidence claims could become to UK housing what wildfire is to California insurance — a structural shock to property markets.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/jun/11/millions-homes-london-essex-and-kent-sinking-climate-crisis-subsidence" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Air India 171 crash: pilot's father vows to defend son amid investigator briefings</div>
+    
+    <div class="card-body">With investigators expected to release a fresh update on last year's Air India Flight 171 disaster that killed 260 people, a furious dispute is brewing over the cause. The father of one of the pilots has publicly committed to defending his son's reputation, pushing back against early leaks pointing to crew error. Final conclusions are still pending.</div>
+    <div class="why"><strong>Why it matters:</strong> Findings will shape India's aviation safety reputation, Boeing's narrative, and the carrier's privatised reboot under the Tata Group.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwyk9exxp2qo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cj0gj911060o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's dengue crisis breaks free of the monsoon calendar</div>
+    
+    <div class="card-body">Rising temperatures, erratic rainfall and rapid urbanisation have turned dengue from a seasonal threat into a year-round public health emergency across India, doctors warn. Outbreaks once tied tightly to the monsoon now stretch deep into winter months. The disease burden is overwhelming under-resourced urban clinics.</div>
+    <div class="why"><strong>Why it matters:</strong> Climate-driven disease patterns will demand a structural overhaul of India's public health surveillance and primary care.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/11/why-indias-deadly-dengue-crisis-is-now-no-longer-confined-to-the-monsoons" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Gates testifies on Epstein ties, says he never reciprocated 'personal relationship'</div>
+    
+    <div class="card-body">Bill Gates spent hours in closed-door congressional testimony detailing his interactions with Jeffrey Epstein, telling lawmakers that Epstein sought a personal relationship he 'never reciprocated' and used knowledge of Gates's marital infidelities as leverage. The Microsoft co-founder's account is the most extensive on-record version yet. Lawmakers are continuing to compile testimony from Epstein's broader contact network.</div>
+    <div class="why"><strong>Why it matters:</strong> Continued disclosures will keep Epstein-linked figures in legal and reputational jeopardy across US tech, finance and politics.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c0jy8v0ge66o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/videos/cly828v3l24o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">World Cup opens under cloud of US visa rows and lightning protocols</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/054ae7b516879c39b7fb3ea84fb7b4d2e1c1954a/910_143_3399_2719/master/3399.jpg?width=140&quality=85&auto=format&fit=max&s=880b5a72c730b3167408802bfd318baa" alt="World Cup opens under cloud of US visa rows and lightning protocols" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">FIFA chief Gianni Infantino has urged critics to 'relax' as Somali referee Omar Artan was denied US entry — Washington alleging links to suspected members of terror organisations — and Iranian squad visas were delayed. The tournament, expanded across the US, Canada and Mexico, is on track to be the largest betting event in history. Organisers in Florida are also bracing for lightning-related stoppages under strict US safety rules. Haiti has been forced to redesign its kit after FIFA objected to imagery from the 1803 Battle of Vertières.</div>
+    <div class="why"><strong>Why it matters:</strong> The first World Cup hosted under Trump 2.0 is already a test case for whether sport can transcend hardened US border policy.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/11/fifas-infantino-defends-us-as-world-cup-host-amid-visa-row-entry-denials" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/sport/football/articles/c2dylj8kj82o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/news/2026/jun/11/weatherwatch-lightning-electrical-storms-disrupt-world-cup" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/6/11/fifa-world-cup-2026-haiti-kit-political-flag-war-imagery-football" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Knicks within a win of NBA title after record Game 4 comeback</div>
+    
+    <div class="card-body">The New York Knicks engineered the largest comeback in NBA Finals history to edge the San Antonio Spurs by a point in Game 4, moving 3-1 up in the series. OG Anunoby led the late rally; San Antonio's Victor Wembanyama could not close it out. New York is one win from its first championship since 1973.</div>
+    <div class="why"><strong>Why it matters:</strong> A Knicks title would mark a generational shift in NBA gravity back toward the East Coast — and a marketing windfall for the league.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/11/new-york-knicks-nba-finals-2026-san-antonio-spurs-og-anunoby-wembanyama" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Pope Leo XIV blesses Sagrada Família's final tower, 144 years on</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/071b978e40c5d6036250bcdb865f5e86325d7df7/778_270_3594_2875/master/3594.jpg?width=140&quality=85&auto=format&fit=max&s=02ee85891ab69004301ac045fc5b0c6b" alt="Pope Leo XIV blesses Sagrada Família's final tower, 144 years on" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Pope Leo XIV blessed the recently completed central tower of Gaudí's Sagrada Família in Barcelona, with fireworks illuminating the basilica that the pontiff called a masterpiece of 'stones, colours and light'. The 144-year construction project is approaching completion, though architectural historians continue to debate how faithfully it adheres to Gaudí's original plans. The ceremony drew vast crowds.</div>
+    <div class="why"><strong>Why it matters:</strong> A rare moment of cultural transcendence, and a soft-power milestone for a still-new papacy navigating a fractured world.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/10/pope-leo-bless-sagrada-familia-antoni-gaudi" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/videos/ce95gmdlp98o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">French singer Patrick Bruel charged with rape in landmark #MeToo case</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/7fa3a99d72405f965739d0579e9b0119d92485cf/1309_194_2486_1989/master/2486.jpg?width=140&quality=85&auto=format&fit=max&s=6ca87f884c42d9afb7ac0b5cfe175bd5" alt="French singer Patrick Bruel charged with rape in landmark #MeToo case" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Patrick Bruel, one of France's most prominent musical figures, has been placed under formal judicial investigation on charges of rape and sexual assault after allegations from more than 20 women dating back to the 1990s. He denies all charges. The case is among the largest yet to test the French music industry's reckoning with sexual violence.</div>
+    <div class="why"><strong>Why it matters:</strong> France's #MeToo wave is now reaching the cultural establishment's biggest household names.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/11/patrick-bruel-charged-rape-sexual-assault" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c3ey8d3jwglo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Japanese manga fans tell Trump: hands off Pikachu and Naruto</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/378f9ae2bd444a0d86bdbe6ab1d89afc6b433ba7/0_96_3577_2861/master/3577.jpg?width=140&quality=85&auto=format&fit=max&s=ccee780bae5a711c92f09d3a5676a7ac" alt="Japanese manga fans tell Trump: hands off Pikachu and Naruto" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Some 20,000 Japanese fans have signed a petition urging the US president to stop using anime and manga characters — including Pikachu and Naruto — in his social media posts. The latest post depicted Trump as the ninja Naruto. The pushback adds an unusual cultural-diplomatic irritant to the US–Japan relationship.</div>
+    <div class="why"><strong>Why it matters:</strong> Japan's $20bn manga industry is fiercely protective of its IP — and unusually willing to take on the White House over it.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/10/japanese-manga-anime-fans-urge-trump-to-stop-using-characters-social-media-posts" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cdx7vynyl4eo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Thursday, June 11, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7266.99</td>
+        <td class="down">▼ -1.87%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$49918.78</td>
+        <td class="down">▼ -1.71%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$25169.50</td>
+        <td class="down">▼ -2.93%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10297.97</td>
+        <td class="up">▲ +0.69%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>64217.27</td>
+        <td class="up">▲ +0.06%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4126.10</td>
+        <td class="up">▲ +0.44%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$89.83</td>
+        <td class="down">▼ -0.22%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>95.72</td>
+        <td class="up">▲ +0.37%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$62693.24</td>
+        <td class="up">▲ +2.02%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Whether Iran's declared closure of the Strait of Hormuz translates into actual interdictions of tanker traffic — and the oil price response.</li><li>Any IAEA follow-through and Iranian counter-moves on its nuclear declaration in the coming 48 hours.</li><li>The next Air India 171 investigation update, expected imminently, and its implications for Boeing and Tata.</li><li>US May CPI follow-on data and Fed commentary as 4.2% inflation collides with an active war economy.</li><li>World Cup kickoff weekend: visa controversies, opening fixtures and US security posture in host cities.</li><li>Game 5 of the NBA Finals — the Knicks' first chance to close out a championship in over five decades.</li><li>Whether the Belfast unrest spreads to other UK cities and prompts emergency policing legislation.</li></ul>
+</div>
+
+<div class="editors-note">An unusually heavy news day in which a single conflict — the US–Iran war — is now visibly distorting oil, inflation, migration, sport and global shipping all at once.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Thursday, June 11, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-06-11 08:10 UTC
+</footer>
+</div>
+</body>
+</html>

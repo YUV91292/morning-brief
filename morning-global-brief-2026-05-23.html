@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Saturday, May 23, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Saturday, May 23, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Rubio in Delhi: energy diplomacy as Hormuz crisis squeezes oil supply</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/bd213e7091c3c8292d3e5a7a7eabd22abd1a4da1/188_0_2185_1748/master/2185.jpg?width=140&quality=85&auto=format&fit=max&s=24dc17d63ba409d2303837c994868890" alt="Rubio in Delhi: energy diplomacy as Hormuz crisis squeezes oil supply" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">Secretary of State Marco Rubio used a visit to New Delhi to pitch the United States as a reliable energy partner for India, as the closure of the Strait of Hormuz and a continuing oil shock force Indian refiners to scramble for alternatives to Iranian crude. The trip is part of a broader push: Qatar has rushed mediators to Tehran, Pakistan's army chief is in Iran, and the EU is preparing fresh sanctions over the blockade. For Delhi, the choice is awkward — accepting more US LNG and crude binds it more tightly to Washington at a moment when Trump has publicly soured on long-standing alliances. Tehran says diplomacy continues but no deal is yet in hand.</div>
+    <div class="why"><strong>Why it matters:</strong> Energy is now the chief lever of US influence in the Indo-Pacific, and India's response will set the tone for its strategic balancing through the rest of 2026.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c87qrwyyrn2o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/22/uranium-strait-of-hormuz-us-iran-war-talks-pakistan" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/22/pakistans-army-chief-in-iran-as-uss-rubio-says-slight-progress-in-talks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Gabbard resigns as US intelligence chief after turbulent 15 months</div>
+    <div class="card-body" style="font-size:12.5px;">Tulsi Gabbard has stepped down as Director of National Intelligence, citing her husband's cancer diagnosis after a tenure marked by reorganisations, public clashes with career officials, and a near-total absence from the public stage during recent US military operations against Iran. The former Democrat turned Trump loyalist took office without a traditional intelligence background and leaves with the office's standing diminished. Her departure opens a key seat at a moment of acute geopolitical strain.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Whoever Trump names next will inherit a fragmented intelligence community at war on multiple fronts and with shaken allies.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cvgj2gkv1x1o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/may/22/tulsi-gabbard-intelligence-director" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/23/tulsi-gabbard-resigns-as-trumps-top-us-intelligence-official-2" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Shanxi gas blast kills at least 82 miners, nine still missing</div>
+    <div class="card-body" style="font-size:12.5px;">A gas explosion at a coal mine in northern China's Shanxi province late Friday has killed at least 82 workers, with nine more unaccounted for, according to state media. President Xi Jinping has ordered authorities to 'spare no effort' in rescue operations. It is one of the deadliest mining disasters in China in years and casts an awkward spotlight on Beijing's repeated pledges to modernise its coal sector even as it pushes record renewables capacity.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> China's coal output is climbing again to feed industrial and AI power demand — safety standards are being tested in the process.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c5y0ve18qlko" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/23/china-mine-explosion-shanxi-deaths-xi-jinping" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Starship V3 flies — and SpaceX heads for a $1.75tn IPO</div>
+    <div class="card-body" style="font-size:12.5px;">SpaceX successfully launched its upgraded Starship V3 from Texas, the most powerful rocket ever built, which ended its flight in a planned splashdown and explosion over the Indian Ocean. The test comes days after the company filed a prospectus for a $1.75 trillion stock-market debut next month, disclosing details of its Mars ambitions, Starlink revenues and unusual investor warnings about Grok and Elon Musk's other ventures. NASA is counting on the vehicle to land astronauts on the Moon.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> A successful Starship and a mega-IPO would entrench Musk's space monopoly at the heart of US national security and capital markets.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c62d65y16nno" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/science/2026/may/22/spacex-launch-texas-test-flight" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/may/22/spacex-ipo-filing-details" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Rubio tries to steady Nato as Trump flips on Poland troops</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/45f0f1608d373f0ef9e40b2c7c1dfd3c9c10afe5/2555_92_3286_2630/master/3286.jpg?width=140&quality=85&auto=format&fit=max&s=b3752a620845cbc9923e7e9594801c2e" alt="Rubio tries to steady Nato as Trump flips on Poland troops" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Marco Rubio sought to reassure jittery Nato allies in Sweden, even as Donald Trump reversed course and said he wants to send more US troops to Poland a week after his administration cancelled a similar deployment. Rubio warned that Russian provocations in the Baltics could 'spark into something bigger' and confirmed Trump's 'disappointment' that allies refused to join attacks on Iran will be aired at July's summit in Ankara. The Czech president urged the alliance to 'show its teeth'.</div>
+    <div class="why"><strong>Why it matters:</strong> The Ankara summit is shaping up as the most consequential Nato meeting in decades, with the alliance's coherence visibly fraying.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cedpz9669deo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/live/2026/may/22/nato-mark-rutte-us-donald-trump-troops-poland-summit-russia-baltics-drones-tensions-ukraine-latest-news-updates" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/22/czech-president-petr-pavel-nato-show-teeth-russia-provocations" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Taiwan arms sales 'paused' to feed Iran war effort</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/d4f859707494ed265e82a2921dd4fe051a5cf51c/80_0_3752_3002/master/3752.jpg?width=140&quality=85&auto=format&fit=max&s=38dde594d602e6ac3c51e8ddb782ba7f" alt="Taiwan arms sales 'paused' to feed Iran war effort" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Washington's acting Navy Secretary, Hung Cao, has confirmed that US arms sales to Taiwan have been paused to ensure sufficient munitions for ongoing operations against Iran — a striking acknowledgement that the Middle East war is degrading deterrence in the Pacific. Taipei is alarmed: a $14bn package is in limbo just as Trump has publicly questioned long-standing US support. Beijing will note the asymmetry.</div>
+    <div class="why"><strong>Why it matters:</strong> A real-world demonstration that the US industrial base can no longer credibly support two simultaneous theatres.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/22/us-arms-sales-taiwan-pause-iran-war-says-acting-navy-chief" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/22/why-has-the-us-arms-delay-rattled-taiwan" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Gaza flotilla detainees allege sexual assault in Israeli custody</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/819e749bb414ef6c6d766c4c3259370822fa38b9/358_0_4468_3575/master/4468.jpg?width=140&quality=85&auto=format&fit=max&s=e30f2154bfe47c41b144734d2e26fa88" alt="Gaza flotilla detainees allege sexual assault in Israeli custody" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Activists released from Israeli detention after their aid flotilla bound for Gaza was intercepted say they were beaten, humiliated and, in some cases, subjected to sexual violence, with several hospitalised. Israel's prison service denies the allegations. Analysts note the methods echo well-documented patterns of abuse against Palestinian detainees under Itamar Ben-Gvir's tenure — a system now drawing global attention because the victims include foreigners.</div>
+    <div class="why"><strong>Why it matters:</strong> International outrage over treatment of foreign activists may finally trigger the diplomatic pressure that abuse of Palestinians has not.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/22/gaza-flotilla-activists-allege-sexual-assault-and-in-israeli-detention" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cglp5z63k9no" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/may/22/flotilla-video-ben-gvir-template-televised-abuse-honed-palestinians" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Trump turns up the heat on Cuba — and indicts Raúl Castro</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/4a73690e482704d3858150bf304b42dc074301bf/500_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=d46ca9318d5bf4bf8d2b73d2f4fcde49" alt="Trump turns up the heat on Cuba — and indicts Raúl Castro" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Rubio said the chance of a negotiated agreement with Havana 'is not high' as Trump again raised the spectre of military intervention, just as the Justice Department charged former leader Raúl Castro over the 1996 downing of two civilian aircraft. Thousands rallied in Havana against the indictment. The administration's posture toward the island has hardened sharply in recent weeks.</div>
+    <div class="why"><strong>Why it matters:</strong> Cuba is becoming the third active front of Trump's foreign policy, alongside Iran and Ukraine.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/22/marco-rubio-doubtful-diplomacy-cuba-trump-renews-threat-military-action" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c5yrkl96xwvo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/22/thousands-in-cuba-rally-for-raul-castro-to-protest-us-indictment" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Ebola risk in DRC raised to 'very high' as cases triple</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/2ef7792278e0afedb94ef56e9958ff512fdfd531/562_102_4362_3490/master/4362.jpg?width=140&quality=85&auto=format&fit=max&s=485f72c63ffb74503c3912da73e4006e" alt="Ebola risk in DRC raised to 'very high' as cases triple" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The World Health Organization has elevated its threat assessment for the Democratic Republic of Congo, with suspected Ebola cases tripling in a week and approaching 750. Aid cuts and community distrust are hampering responders, and health screening has intensified along the DRC–Uganda border. Survivors of the 2014 West African outbreak say speed, money and compassion are the only proven antidotes.</div>
+    <div class="why"><strong>Why it matters:</strong> A regional outbreak now threatens to become an international emergency precisely as global health aid is being slashed.</div>
+    <div class="sources"><a href="https://www.theguardian.com/global-development/2026/may/22/suspected-ebola-cases-triple-in-a-week-as-who-warns-of-rapid-spread-in-drc" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cr7p30m1dn1o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cj3p2rdx0l8o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Philippe emerges as France's anti-populist firewall</div>
+    
+    <div class="card-body">Polling for the French presidential race shows former prime minister Édouard Philippe as the only centre-right figure currently positioned to beat either Marine Le Pen or Jean-Luc Mélenchon in a run-off. With Macronism exhausted, the centre is consolidating around Philippe as a credible bulwark against the populist surge — though the campaign has barely begun.</div>
+    <div class="why"><strong>Why it matters:</strong> France's election will set the tone for the EU's response to a Trump-era Atlantic order.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c4g0410gnv5o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Trump wants a 'totally independent' Fed chair — really</div>
+    
+    <div class="card-body">Donald Trump declared he wants his next Federal Reserve chair to be 'totally independent', a striking reversal of tone after he spent months publicly hectoring Jerome Powell to cut rates. Frontrunner Kevin Warsh, a former Fed governor, is widely seen on Wall Street as more accommodative than Powell. Markets will read independence rhetoric against the reality of an administration that has visibly bent regulators to its will.</div>
+    <div class="why"><strong>Why it matters:</strong> Fed credibility is the bedrock of dollar primacy — and the bond market is watching.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cvgz311dq3ko" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">StanChart's Bill Winters apologises for 'lower-value human capital' jibe</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e594cdf26c42af843198701085d97b990d825fe4/767_356_1163_931/master/1163.jpg?width=140&quality=85&auto=format&fit=max&s=67afaeb865ea8a00f20850d125843b4e" alt="StanChart's Bill Winters apologises for 'lower-value human capital' jibe" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Standard Chartered chief executive Bill Winters has issued an apology after referring to some of the nearly 8,000 staff set to lose their jobs to AI as 'lower-value human capital'. The remark, delivered amid a major restructuring, drew a fierce backlash from unions and inside the bank. The episode crystallises a wider corporate communications problem as financial-services AI redundancies accelerate.</div>
+    <div class="why"><strong>Why it matters:</strong> Banks are now openly framing job cuts as AI-driven — expect more reputational landmines.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/may/22/standard-chartered-boss-apologises-for-lower-value-human-capital-comments-amid-job-cuts" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c98rqld1j3yo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Carney holds the line as Alberta inches toward separation vote</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/03e2b9770106342b9b2e875b1e7499adf0ddc7f7/332_0_3836_3070/master/3836.jpg?width=140&quality=85&auto=format&fit=max&s=acea3d7b1c0823003a19f9c082ceb5dc" alt="Carney holds the line as Alberta inches toward separation vote" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Canadian Prime Minister Mark Carney declared Alberta 'essential' to the country's future after Premier Danielle Smith moved closer to holding a referendum on secession from the oil-rich province. The wording of the proposed question has drawn criticism even from separatists who say it is not definitive enough. The political risk premium on Canadian assets is rising quietly.</div>
+    <div class="why"><strong>Why it matters:</strong> A fracturing Canada would reshape North American energy markets and Nato's northern flank.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/may/22/canada-mark-carney-alberta-secession" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cy42w778e72o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">UK borrowing hits post-Covid high as Reeves sweetens summer</div>
+    
+    <div class="card-body">Britain's April borrowing came in higher than expected — the worst figure since the pandemic — while retail sales slipped as fuel prices climbed. Chancellor Rachel Reeves responded with a grab-bag of cost-of-living measures including a temporary VAT cut for some attractions and cheaper children's meals. Morrisons, separately, will close around 100 stores, blaming 'government policy choices'.</div>
+    <div class="why"><strong>Why it matters:</strong> The fiscal arithmetic is tightening just as voters demand relief — Reeves's room for manoeuvre is shrinking.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ce9py7nx8j4o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cd7pzr88de1o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c3623ny298xo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">UK quietly pitched EU a single market for goods — and was rebuffed</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/aa0da2a7b804e7d413cd521a0ad89f444964ef7a/0_0_3991_3192/master/3991.jpg?width=140&quality=85&auto=format&fit=max&s=899e3a277867705e6e9686e068ed8f8a" alt="UK quietly pitched EU a single market for goods — and was rebuffed" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Senior British officials floated the idea of a UK–EU single market in goods during recent Brussels talks, in what would have been the most ambitious post-Brexit reintegration to date, according to people familiar with the discussions. Brussels rejected the pitch. The episode reveals Keir Starmer's government is more eager for re-entry than its public messaging suggests.</div>
+    <div class="why"><strong>Why it matters:</strong> A glimpse of the Labour government's true Brexit ambition — and Europe's continued caution.</div>
+    <div class="sources"><a href="https://www.theguardian.com/politics/2026/may/22/uk-pitched-single-market-for-goods-with-eu-as-it-pursues-trade-reintegration" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Waymo pulls robotaxis from five cities after cars drive into floodwater</div>
+    
+    <div class="card-body">Waymo has paused robotaxi operations in five US cities after vehicles drove into flooded roads, with the company citing 'an abundance of caution'. It is the most significant operational setback for the Alphabet-owned service since its rapid commercial expansion began, and a reminder that edge cases in autonomous driving remain stubbornly hard. Rivals Tesla and Zoox will be watching closely.</div>
+    <div class="why"><strong>Why it matters:</strong> Robotaxi economics depend on uptime — every pause delays the path to profitability.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ckgplyxxl75o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Spotify and Universal cut a deal to let listeners build AI remixes</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/7720a23fe78987213e79ec1cc44a07953edad891/0_398_4750_3801/master/4750.jpg?width=140&quality=85&auto=format&fit=max&s=2f9778f724918509b3b51f4e6ce4c03a" alt="Spotify and Universal cut a deal to let listeners build AI remixes" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Spotify and Universal Music Group have agreed a first-of-its-kind licensing arrangement that will let paying subscribers create AI-generated covers and remixes of catalogue songs on the platform. It is a significant pivot for a major label that until recently treated generative AI in music as an existential threat. Expect rivals Warner and Sony to follow.</div>
+    <div class="why"><strong>Why it matters:</strong> The major labels have decided to monetise generative AI rather than fight it — a watershed for the music industry.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/may/21/spotify-and-universal-music-agree-deal-to-let-subscribers-create-ai-remixes" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Sadiq Khan blocks £50m Palantir contract with the Met</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/4db7bfacb800f63f849445b5aa153c86c70e5b96/218_0_2917_2333/master/2917.jpg?width=140&quality=85&auto=format&fit=max&s=20da4ee9196dffac0dbcd49916bfec36" alt="Sadiq Khan blocks £50m Palantir contract with the Met" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">London Mayor Sadiq Khan has blocked a £50m contract that would have placed Palantir's AI-driven intelligence-analysis tools at the heart of the Metropolitan Police. Palantir accused the mayor of 'putting politics above public safety'. The decision is a rare municipal-level rebuff to the Peter Thiel-backed firm, which has won government contracts across the UK, US and Israel.</div>
+    <div class="why"><strong>Why it matters:</strong> A test case for how far democratic politics can rein in opaque police AI procurement.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/may/22/palantir-hits-back-sadiq-khan-contract-met-police-blocked" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Trump Mobile probes data leak; Meta settles social-media addiction case</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/70c74c12869e42640c3f680d891be8faf25a8ee3/6_26_580_464/master/580.jpg?width=140&quality=85&auto=format&fit=max&s=6aaf09661c994b2801b4ceda202391e0" alt="Trump Mobile probes data leak; Meta settles social-media addiction case" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The phone company launched by Donald Trump's family is investigating a potential security flaw that may have exposed would-be customers' names and contact details, though it says payment data is unaffected. In a separate development, Meta settled a closely watched social-media addiction lawsuit with a US school district that had been positioned as a test case for some 1,200 similar claims. Both stories underline how political and legal risk now define Big Tech's operating environment.</div>
+    <div class="why"><strong>Why it matters:</strong> Data breaches and addiction litigation are quietly reshaping platform liability — and presidential brand extensions.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/23/trump-mobile-investigating-potential-exposure-of-would-be-customers-personal-information" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cgepze483pqo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">UN climate vote signals shifting diplomatic ground</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/68c4a5c5da0d791d448c13550737b4561489b7d2/501_0_4383_3506/master/4383.jpg?width=140&quality=85&auto=format&fit=max&s=fe2cfcba3a9c55d3a883ea6948a9a751" alt="UN climate vote signals shifting diplomatic ground" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">An overwhelming UN General Assembly vote backing a landmark climate crisis resolution — supported by 141 states — is being hailed by experts as a 'new chapter' that could reshape climate litigation and diplomacy. Vanuatu's prime minister called the result the strongest signal yet that small-island demands are translating into political momentum. The non-binding vote is nevertheless expected to feed into national court cases worldwide.</div>
+    <div class="why"><strong>Why it matters:</strong> Climate diplomacy is shifting from negotiation to litigation — and from rich-country agenda-setting to a global majority.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/may/22/un-climate-crisis-vote-shows-political-momentum-growing-experts" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">California evacuates 40,000 over 'highly volatile' chemical leak</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/c04e56794abe6c55ef54d366d91a7087e7be753f/27_0_3161_2530/master/3161.jpg?width=140&quality=85&auto=format&fit=max&s=c00134993416f0823226d1ba7007497d" alt="California evacuates 40,000 over 'highly volatile' chemical leak" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Authorities in Orange County have ordered the evacuation of more than 40,000 residents after a tank containing methyl methacrylate became 'actively in crisis', with officials warning it could spill or explode. The incident comes amid a broader US debate over ageing industrial infrastructure. Separately, heavy rain has triggered flooding and landslides in central and southern China, killing at least twelve.</div>
+    <div class="why"><strong>Why it matters:</strong> Industrial accidents are colliding with extreme weather to expose the fragility of supposedly routine systems.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/22/california-orange-county-chemical-tank" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c3w2l249j8go" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/environment/2026/may/22/slow-moving-bands-heavy-rain-flooding-landslides-china" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Australia drew up secret fuel-rationing plans amid Iran-driven oil squeeze</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/68e48dbf6ff4a029f52fa286a4d9e3ec44e6cfb8/619_0_6188_4950/master/6188.jpg?width=140&quality=85&auto=format&fit=max&s=598b994229d7c5d32d9e89af609bff39" alt="Australia drew up secret fuel-rationing plans amid Iran-driven oil squeeze" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The Albanese government quietly considered powers to enforce daily fuel purchase limits for motorists, according to documents obtained by the Guardian, with internal warnings that world oil supplies could enter a 'red zone' by August. Australia is unusually exposed because of its thin domestic refining base and reliance on imported fuels. Public messaging has remained calm; planning has not.</div>
+    <div class="why"><strong>Why it matters:</strong> If a G20 economy is war-gaming rationing, the Hormuz crisis is more serious than markets are pricing.</div>
+    <div class="sources"><a href="https://www.theguardian.com/australia-news/2026/may/23/australia-planned-in-march-for-worst-case-scenario-fuel-rationing-documents-reveal" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Are India and Pakistan quietly inching back to dialogue?</div>
+    
+    <div class="card-body">Even as the public posture in Delhi and Islamabad remains entrenched after months of military tension, unofficial backchannels and second-track voices are pushing for renewed dialogue and restraint, according to Al Jazeera reporting. The opening — if it is one — coincides with Pakistan's army chief travelling to Tehran as part of Hormuz mediation efforts, raising the profile of Islamabad's diplomacy. Any thaw would be uneven and reversible.</div>
+    <div class="why"><strong>Why it matters:</strong> A serious India–Pakistan re-engagement would reshape South Asian risk premiums and US regional calculations.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/5/23/are-india-and-pakistan-quietly-preparing-to-restart-dialogue" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/22/pakistans-army-chief-in-iran-as-uss-rubio-says-slight-progress-in-talks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Over 1.6 million pilgrims arrive in Saudi Arabia for Hajj</div>
+    
+    <div class="card-body">More than 1.6 million Muslim pilgrims have arrived in Saudi Arabia for this year's Hajj, with Saudi authorities deploying expanded heat-management and crowd-control measures after fatal heatwaves in previous years. The pilgrimage takes place against a regional backdrop of war in Lebanon and Gaza — a 64-year-old woman in Gaza, whose story Al Jazeera profiled, is trapped behind the Israeli blockade and unable to make the trip she had planned with her husband for years.</div>
+    <div class="why"><strong>Why it matters:</strong> Hajj logistics are now a climate-adaptation test case at a scale unmatched in any other religious gathering.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/video/newsfeed/2026/5/23/over-1-6-million-pilgrims-arrive-in-saudi-arabia-for-hajj-pilgrimage" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/22/israeli-blockade-traps-would-be-hajj-pilgrim-in-gaza" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Judge tosses case against Kilmar Ábrego García, citing political motive</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/1d584f1b0c2aa2f70fd64f7ed4df9baeb1ca125a/219_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=392384b52770e94b952a873e2b079776" alt="Judge tosses case against Kilmar Ábrego García, citing political motive" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A federal judge has dismissed the criminal indictment against Kilmar Ábrego García, the Maryland man wrongfully deported last year, ruling that the Trump administration would not have prosecuted him had he not challenged his deportation in court. The decision is a rare judicial rebuke that the executive branch is bringing cases for political reasons. Separately, deported pro-Palestine campaigner Mahmoud Khalil is appealing his deportation case to the Supreme Court.</div>
+    <div class="why"><strong>Why it matters:</strong> Federal courts are slowly drawing lines around the administration's use of immigration tools for political ends.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/may/22/kilmar-abrego-garcia-case-dismissed" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cx21r04wg8qo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/5/22/mahmoud-khalil-to-appeal-us-deportation-case-to-supreme-court" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Stock trades linked to Trump raise conflict-of-interest concerns</div>
+    
+    <div class="card-body">Thousands of stock trades disclosed under Donald Trump's name are drawing scrutiny from ethics watchdogs and journalists, who note suspicious clustering around policy announcements. The disclosures, examined by the BBC, do not by themselves prove wrongdoing but rekindle long-running questions about presidential financial entanglements. Congressional Republicans have shown little appetite for investigation.</div>
+    <div class="why"><strong>Why it matters:</strong> Insider-style trading patterns at the presidential level test the limits of US disclosure law.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/videos/cd6pzg7z319o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Pep Guardiola to leave Manchester City after a decade of dominance</div>
+    
+    <div class="card-body">Pep Guardiola has announced he will step down as Manchester City manager at the end of his current contract, ending a ten-year reign that delivered six Premier League titles, a Champions League and a redefinition of how elite football is played. Guardiola, who has been a vocal advocate for Palestinian rights, departs as City confronts pending Premier League financial-rules charges. The Premier League's final week, meanwhile, decides European places, relegation and Mohamed Salah's future.</div>
+    <div class="why"><strong>Why it matters:</strong> The end of the Guardiola era reshapes football's tactical and managerial market — and City's identity.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/video/newsfeed/2026/5/22/man-city-boss-and-palestine-advocate-pep-guardiola-to-step-down" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/5/22/premier-league-finale-arsenal-relegation-champions-league-salah-and-pep" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Top players curtail French Open media duties in prize-money protest</div>
+    
+    <div class="card-body">Aryna Sabalenka, Coco Gauff and Jannik Sinner are among the leading players who have capped their French Open press conferences at fifteen minutes in a coordinated protest over Grand Slam prize-money distribution. The unusual show of unity across the men's and women's tours puts fresh pressure on tournament organisers, who have so far resisted matching player demands. Sabalenka cut a session short in front of bemused reporters.</div>
+    <div class="why"><strong>Why it matters:</strong> Tennis's biggest stars are organising more like a union — a structural shift in the sport's labour balance.</div>
+    <div class="sources"><a href="https://www.bbc.com/sport/tennis/articles/ce3pg95djdeo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Pentagon releases new UFO files: 'orbs swarming in all directions'</div>
+    
+    <div class="card-body">The US government has released a second batch of declassified UFO sighting reports spanning nearly 80 years, describing encounters with spheres, discs, fireballs and what one report called orbs 'swarming in all directions'. Officials insist the disclosures do not constitute evidence of extraterrestrial visitation but reflect a commitment to transparency over so-called Unidentified Anomalous Phenomena. Public fascination remains undiminished.</div>
+    <div class="why"><strong>Why it matters:</strong> Whatever the cause, sustained UAP disclosure is reshaping how militaries and publics think about airspace surveillance.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cn8pzzlyy66o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/5/23/trump-releases-new-batch-of-previously-classified-ufo-files" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">'Everest Man' Kami Rita Sherpa summits a 32nd time</div>
+    
+    <div class="card-body">Legendary Nepali mountaineer Kami Rita Sherpa has broken his own record by climbing Mount Everest for the 32nd time, extending an achievement that already had no rival in mountaineering history. Now in his mid-fifties, Sherpa continues to guide expeditions on a mountain increasingly crowded by commercial clients. The feat lands during another busy and contentious climbing season on the world's highest peak.</div>
+    <div class="why"><strong>Why it matters:</strong> Sherpa labour underpins Himalayan tourism economics — and Kami Rita is its global face.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/video/newsfeed/2026/5/22/everest-man-breaks-his-own-record-after-historic-32nd-climb" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Saturday, May 23, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7473.47</td>
+        <td class="up">▲ +0.54%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$50579.70</td>
+        <td class="up">▲ +1.14%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$26343.97</td>
+        <td class="up">▲ +0.28%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10466.26</td>
+        <td class="up">▲ +0.33%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>63339.07</td>
+        <td class="up">▲ +2.68%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4523.20</td>
+        <td class="down">▼ -0.37%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$96.60</td>
+        <td class="up">▲ +0.26%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>95.68</td>
+        <td class="down">▼ -0.88%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.02%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$75378.08</td>
+        <td class="down">▼ -0.09%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>The Ankara Nato summit in July, where Rubio has signalled Trump's 'disappointment' with allies will be aired in unusually direct terms.</li><li>Qatar's Tehran mediation: whether a deal emerges to reopen the Strait of Hormuz in exchange for sanctions relief and Iranian uranium handover.</li><li>Trump's pick for Director of National Intelligence following Gabbard's exit — and the Senate confirmation fight that follows.</li><li>The Alberta separation referendum process and whether Carney can hold the federation together as oil politics intensify.</li><li>SpaceX's IPO roadshow ahead of next month's planned $1.75 trillion debut — and how regulators react to its Musk-related risk disclosures.</li><li>Bolivia, where protests are escalating into demands for President Rodrigo Paz to resign — a potential new crisis in Latin America.</li><li>WHO updates from the DRC Ebola outbreak as case numbers triple weekly and aid responders struggle with cuts.</li></ul>
+</div>
+
+<div class="editors-note">A weekend where the Iran war's second-order effects — on Taiwan, India, Australian fuel pumps and even Nato cohesion — are becoming visible faster than the headlines from Tehran itself.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Saturday, May 23, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-05-23 06:18 UTC
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Monday, June 8, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Monday, June 8, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Israel and Iran resume direct strikes, defying Trump</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/06/08/multimedia/08mideast-promo-2am-ET-chzq/08mideast-promo-2am-ET-chzq-mediumSquareAt3X.jpg" alt="Israel and Iran resume direct strikes, defying Trump" loading="eager"/><div class="img-caption"> · NYT World</div></div>
+    <div class="lead-body">Israeli warplanes hit military sites and a petrochemical complex along Iran's Karun river early Monday, hours after Tehran fired waves of missiles in retaliation for Israel's weekend bombing of Beirut's southern suburbs. The IDF said it intercepted projectiles over East Jerusalem and the West Bank, with debris also reported in Jordan. Trump publicly urged Netanyahu not to retaliate and insisted he 'calls all the shots', but Israeli officials pressed ahead. Iranian state TV broadcast celebrations in Tehran even as analysts warned the regime is calibrating strikes to restore deterrence without triggering full-scale war.</div>
+    <div class="why"><strong>Why it matters:</strong> The collapse of the April ceasefire risks dragging the US into a Gulf conflict it had loudly declared finished.</div>
+    <div class="sources"><a href="https://www.nytimes.com/live/2026/06/08/world/iran-israel-lebanon-attacks" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/08/israel-netanyahu-airstrikes-iran-retaliation-defies-trump" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/8/iran-war-day-101-tensions-escalate-as-iran-and-israel-trade-air-attacks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Powerful 7.8 quake levels parts of southern Philippines</div>
+    <div class="card-body" style="font-size:12.5px;">A magnitude-7.8 earthquake struck off Mindanao early Monday, killing at least 15 people, injuring dozens and displacing tens of thousands. Buildings collapsed and bridges were damaged across coastal towns; authorities lifted an initial tsunami advisory but warned residents to stay clear of weakened structures amid continuing aftershocks. Relief operations are being complicated by the region's already strained infrastructure.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Another reminder of how exposed Southeast Asia's coastal cities remain to seismic shocks that can cascade into humanitarian crises within hours.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/08/philippines-earthquake-mindanao-tsunami-warnings" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/07/world/asia/hilippines-earthquake-tsunami-warning.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/8/tsunami-warnings-issued-after-8-2-magnitude-earthquake-off-philippines" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Zelensky pivots to Europe as Washington loses interest</div>
+    <div class="card-body" style="font-size:12.5px;">Volodymyr Zelensky met Keir Starmer, Emmanuel Macron and Friedrich Merz in London on Sunday to plead for scaled-up air defences and deeper-strike weapons, framing the trio as Ukraine's new mediators with Moscow. The visit followed a Russian Shahed drone strike on a spent-nuclear-fuel storage building near Chornobyl, which Zelensky called 'extremely vile' and deliberate. European allies set out five conditions for any future talks as Trump's attention drifts to the Middle East.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Europe is being pushed, faster than it wanted, into owning the diplomatic and military burden of the Ukraine war.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/07/world/europe/ukraine-europe-russia-us-peace-talks.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/07/zelenskyy-starmer-macron-merz-ukraine-talks-london" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/07/russian-drone-hits-building-spent-nuclear-fuel-chornobyl" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Trump walks out of NBC interview over election claims</div>
+    <div class="card-body" style="font-size:12.5px;">President Trump abruptly ended a 'Meet the Press' interview with Kristen Welker after she pressed him on his repeated, baseless claim that the 2020 election and the recent California governor's race were 'rigged'. He also bristled at suggestions he had broken a campaign pledge to keep America out of foreign wars, snapping that he never guaranteed peace. The walk-out comes as Trump heads to New York under Secret Service-level security to attend Game 3 of the NBA Finals.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The flare-up signals how thin the president's tolerance for scrutiny has become as wars abroad and political fights at home converge.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/07/trump-walks-out-meet-the-press-nbc-interview" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/ce8k1xx6yzjo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Xi visits Pyongyang as Kim cosies up to Moscow</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e2ba55eafec6e38e0d89b455f1a0cd1766e6172a/419_0_4193_3354/master/4193.jpg?width=140&quality=85&auto=format&fit=max&s=c485a6f7d08ec624b376b8a55a7aa823" alt="Xi visits Pyongyang as Kim cosies up to Moscow" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Xi Jinping arrived in North Korea on Monday for his first visit in nearly seven years, intent on reasserting Beijing's influence over a junior ally that has grown conspicuously close to Vladimir Putin. China-DPRK trade fell sharply during the pandemic, even as Kim Jong-un fortified his regime and leveraged Russia's war in Ukraine for arms deals and economic lifelines. State media images of Kim inspecting a munitions factory on the eve of the visit signalled he is negotiating from strength.</div>
+    <div class="why"><strong>Why it matters:</strong> A reset of the Beijing-Pyongyang axis would reshape the balance of pressure points facing Washington in Asia.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/08/xi-jinping-kim-jong-un-meeting-north-korea" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/08/world/asia/north-korea-kim-jong-un-pandemic-economy.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cdep497r256o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Armenia's pro-Europe ruling party wins, snubbing Moscow</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/a8d7259952c0f8c3fe17f9b3caab33c117bdd331/0_0_3669_2936/master/3669.jpg?width=140&quality=85&auto=format&fit=max&s=60804d53935fd72b76f176d5439391fd" alt="Armenia's pro-Europe ruling party wins, snubbing Moscow" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Nikol Pashinyan's party secured a fresh parliamentary majority, cementing Armenia's pivot away from Russia and towards the EU despite vocal Kremlin displeasure. The mandate also strengthens his hand in advancing the Trump-brokered peace track with Azerbaijan. It is a rare bright spot for Western-aligned democrats in the post-Soviet space.</div>
+    <div class="why"><strong>Why it matters:</strong> Another former Russian client edges out of Moscow's orbit, narrowing the Kremlin's southern flank.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/08/armenia-europe-party-wins-election-russia-nikol-pashinyan" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/08/world/europe/armenia-election-results.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Peru's runoff: a country exhausted by churn picks its ninth president in a decade</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/0ca42b11c3838c5571606b6d38461d5ef5db2787/479_0_4788_3830/master/4788.jpg?width=140&quality=85&auto=format&fit=max&s=b6f9eb1bf80ebb1a6d5d4c23b563713f" alt="Peru's runoff: a country exhausted by churn picks its ninth president in a decade" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Peruvians voted Sunday in a polarised runoff between rightwing veteran Keiko Fujimori and leftist congressman Roberto Sánchez, with both sides framing the race around crime, inequality and institutional collapse. Sánchez visited jailed former president Pedro Castillo as ballots were counted. Polls suggested a near dead heat, with many voters explicitly prioritising stability over ideology.</div>
+    <div class="why"><strong>Why it matters:</strong> Latin America's most chronically unstable democracy is a stress test for whether even competent technocrats can govern through institutional decay.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/07/peru-election-voters-face-straight-left-right-choice-keiko-fujimori" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/07/world/americas/peru-presidential-election.html" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c9d21184e7yo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Hundreds freed from Boko Haram mountain hideout</div>
+    
+    <div class="card-body">Nigerian forces have released hundreds of captives, mostly women and children, from a Boko Haram redoubt near the Cameroonian border. Many had been seized in March from villages along the frontier. The operation is a rare tactical win for Abuja against a movement that has proven stubbornly resilient over fifteen years.</div>
+    <div class="why"><strong>Why it matters:</strong> Sahel security gains are episodic; sustained pressure is what determines whether the militants reconstitute.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ce8j0jn4xjgo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Asian tech sells off as Middle East flares and rally cools</div>
+    
+    <div class="card-body">South Korean and Japanese equities slid on Monday, with semiconductor names leading the retreat after a furious multi-week rally in AI-exposed tech. Renewed Israel-Iran strikes added a geopolitical risk premium, pushing investors toward safer ground. The pullback hints at how concentrated this year's gains have been in a handful of names vulnerable to any sentiment shift.</div>
+    <div class="why"><strong>Why it matters:</strong> A jittery Asia open often previews the tone for European and US sessions to come.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c78yd5g9qx0o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">The AI boom in six charts: spending soars, returns lag</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/8d22cd46313024f00edf35714cd5a309b6ceb4d7/900_0_6248_4999/master/6248.jpg?width=140&quality=85&auto=format&fit=max&s=d8f4b6eb2179b7d354a38a020c5698b9" alt="The AI boom in six charts: spending soars, returns lag" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">A Guardian analysis lays bare the widening gap between AI capex and AI revenue, with SpaceX reportedly seeking a $1.77tn valuation while Anthropic and peers post consumer adoption faster than monetisation. Hyperscaler infrastructure outlays are now of macroeconomic significance, propping up US GDP prints. Sceptics warn the cycle has the hallmarks of past tech bubbles, but capex commitments are locked in for years.</div>
+    <div class="why"><strong>Why it matters:</strong> If AI revenue does not catch up to spend, the unwind will hit equity benchmarks far beyond tech itself.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/07/billions-spent-hypothetical-returns-the-ai-boom-explained-with-six-charts" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Carmakers press Brussels for second delay to Brexit EV tariffs</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/59c63f2a5b451b3833f990061630407d7cec52d4/986_0_3045_2436/master/3045.jpg?width=140&quality=85&auto=format&fit=max&s=e1363cad08e1f9d4f3ab0bded35314bd" alt="Carmakers press Brussels for second delay to Brexit EV tariffs" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">EU and UK auto industry groups are lobbying the European Commission to suspend Brexit-deal rules-of-origin tariffs on electric vehicles for a second time, arguing that European battery production still cannot meet local-content thresholds. The 2020 agreement was meant to spur a continental battery supply chain, but Chinese dominance and the collapse of Northvolt have undermined that ambition. A failure to extend relief could push prices up sharply on cross-Channel EV trade.</div>
+    <div class="why"><strong>Why it matters:</strong> Europe's industrial strategy is being rewritten in real time by its inability to build a competitive battery base.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/07/eu-uk-car-industry-lobbying-second-brexit-ev-tariff-delay" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Tata Steel flags delay to £1.25bn UK furnace</div>
+    
+    <div class="card-body">Tata Steel has warned that its flagship electric arc furnace project in Port Talbot may slip behind schedule due to an electrical connectivity problem with the grid. The plant is central to the UK government's bet on greening heavy industry while preserving jobs in south Wales. Any delay extends the awkward interim period during which Britain imports more steel than it makes.</div>
+    <div class="why"><strong>Why it matters:</strong> The episode underscores how grid bottlenecks are quietly becoming the binding constraint on industrial decarbonisation.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ckg0w0lw451o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Starmer to pledge AI will 'work for everyone' as Clegg accuses Big Tech of Maga turn</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/869c0d8fee3731f9ed58c6ec23f4db9b7d0d68bf/0_55_1431_1145/master/1431.jpg?width=140&quality=85&auto=format&fit=max&s=2ae1ca98b346a9fe42e12b76162a2020" alt="Starmer to pledge AI will 'work for everyone' as Clegg accuses Big Tech of Maga turn" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Keir Starmer will use a speech on Monday to argue that Britain's AI strategy must spread its benefits broadly, even as anxiety grows about online harms and labour displacement. The pitch arrives as Nick Clegg, Meta's former policy chief, publicly accuses Silicon Valley of embracing Maga politics, in some cases for 'rather more self-interested' reasons. Together, the interventions sharpen the political question of who AI is actually being built for.</div>
+    <div class="why"><strong>Why it matters:</strong> Whether democratic governments can shape AI - or merely react to it - will define the next decade of political economy.</div>
+    <div class="sources"><a href="https://www.theguardian.com/politics/live/2026/jun/08/keir-starmer-technology-ai-online-harms-labour-andy-burnham-makerfield-kemi-badenoch-uk-politics-latest-news-updates" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/politics/2026/jun/08/silicon-valley-meta-maga-politics-nick-clegg" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">AI scams arrive: fake crash photos and 'poisoned' ChatGPT shopping picks</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/52b0ce78b0f6c0a08883a024fa4dd1b788eff647/498_0_5020_4016/master/5020.jpg?width=140&quality=85&auto=format&fit=max&s=342051c8b15836bc3dc34320bcc04934" alt="AI scams arrive: fake crash photos and 'poisoned' ChatGPT shopping picks" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Aviva detected a record £230m in fraudulent insurance claims last year, with scammers increasingly using generative AI to fabricate crash scenes and supporting documents. Separately, investigators have documented 'poisoned' chatbot recommendations steering shoppers towards convincing but fraudulent websites styled to look like established retailers. The arms race between AI-enabled fraud and AI-enabled detection is now underway in earnest.</div>
+    <div class="why"><strong>Why it matters:</strong> Consumer trust in digital commerce - and in chatbots as intermediaries - is being tested faster than regulation can keep up.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/08/aviva-ai-bogus-insurance-claims-rocket" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/money/2026/jun/07/ai-chatgpt-shopping-scams-fake-websites" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">The anti-AI backlash turns violent</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/798cc9e3b726c997346f78594cc7af41466a8587/0_728_3600_2877/master/3600.jpg?width=140&quality=85&auto=format&fit=max&s=fd5537ea2110448f984c8c73baf20d41" alt="The anti-AI backlash turns violent" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">The arrest of a 20-year-old Texan accused of trying to torch OpenAI's headquarters and Sam Altman's house has crystallised concerns that opposition to AI is hardening into something darker. Investigators recovered an anti-AI manifesto echoing earlier eras of techno-pessimist militancy. Security teams at frontier labs are quietly reassessing their threat models.</div>
+    <div class="why"><strong>Why it matters:</strong> Political violence directed at AI firms would change the calculus of where - and how openly - the technology gets built.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/07/anti-ai-tech-extremism-violence" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Yemenis swelter as heatwave meets grid collapse</div>
+    
+    <div class="card-body">Millions of Yemenis are enduring a punishing heatwave amid near-total blackouts, with families describing homes 'turned into ovens'. Years of war have shredded what little generation capacity the country had. Aid groups warn of rising heat-related mortality, particularly among children and the elderly.</div>
+    <div class="why"><strong>Why it matters:</strong> Climate shocks layered onto war zones are producing some of the world's most acute - and least visible - humanitarian emergencies.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/features/2026/6/8/homes-turned-into-ovens-millions-of-yemenis-swelter-amid-heat-blackouts" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">125°F in Pakistan's Dadu, and getting hotter</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/06/08/multimedia/08int-pakistan-heat-dispatch-promo-bflc/08int-pakistan-heat-dispatch-promo-bflc-mediumSquareAt3X.jpg" alt="125°F in Pakistan's Dadu, and getting hotter" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Sindh's Dadu District is again enduring temperatures around 125°F, with residents cycling between drought, sandstorms and floods depending on the month. Outdoor labour is becoming physically impossible in peak hours, and shade is treated as a scarce resource. The pattern is a preview of climate adaptation challenges across South Asia's interior.</div>
+    <div class="why"><strong>Why it matters:</strong> These are the conditions under which mass internal migration in South Asia will begin to accelerate.</div>
+    <div class="sources"><a href="https://www.nytimes.com/2026/06/08/world/asia/pakistan-heat-wave.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Octopuses are swarming north as British seas warm</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/59e6c328672601c4bd648062ebbfb1f7773e3f2b/0_591_933_746/master/933.jpg?width=140&quality=85&auto=format&fit=max&s=ff438b0d3c656c7ea69aad64afe0ca39" alt="Octopuses are swarming north as British seas warm" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A study finds the unusual surge of octopuses observed off the south-west English coast last year has extended to Welsh and Scottish waters, reshaping fisheries economics on the fly. Shellfish catches are down sharply, but octopus landings are booming - a windfall for some fishers and a crisis for others. Scientists attribute the shift to warming seas.</div>
+    <div class="why"><strong>Why it matters:</strong> Quiet ecological reshuffles like this are the lived face of climate change for coastal economies.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/jun/08/octopus-invasion-spreads-up-uk-coast-as-far-scotland-study" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">One year on: the ground victims of the Air India crash</div>
+    
+    <div class="card-body">Twelve months after the Air India disaster, the BBC has chronicled the lives of people on the ground - a grandfather, a survivor, a witness - whose neighbourhoods were destroyed when the aircraft came down. Many say they no longer look at the sky. The investigation into causal factors continues to weigh on India's aviation regulator and on Tata-owned Air India's reform agenda.</div>
+    <div class="why"><strong>Why it matters:</strong> The crash remains a litmus test for whether India's fast-growing aviation sector can match its scale with safety culture.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwy2y9n11pyo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's 'Cockroach Janta' youth movement marches on Delhi</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/0e801845b13bd398ad130c79077090109d6945b8/722_0_6520_5216/master/6520.jpg?width=140&quality=85&auto=format&fit=max&s=7e4ab0a9d323684730159729c83ed68a" alt="India's 'Cockroach Janta' youth movement marches on Delhi" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A satirical online party calling itself Cockroach Janta has mobilised thousands of young Indians into peaceful street protests against the BJP government, framing dissent around employment, civil liberties and what its founders call elite indifference. What began as a meme is now drawing surprising political attention. Whether it survives the transition from joke to organisation is the open question.</div>
+    <div class="why"><strong>Why it matters:</strong> India's under-30s are the swing constituency of the 2029 cycle - and they are organising in ways traditional parties do not yet grasp.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/08/cockroach-janta-party-youth-movement-india-politics" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Five wounded in stabbing at New York's Penn Station</div>
+    
+    <div class="card-body">Five people were injured in a stabbing at Penn Station as New York layered Secret Service-grade security across midtown ahead of President Trump's attendance at Game 3 of the NBA Finals. Road closures, bag bans and watch-party restrictions are in place. The incident heightened nerves around what was already an unusually fortified visit.</div>
+    <div class="why"><strong>Why it matters:</strong> Securing a sitting president at major sporting events is becoming a routine - and revealing - test of US urban policing.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cj0g4425zmeo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/6/8/secret-service-level-security-for-nba-finals-with-trump-attending-game-3" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">World Cup fans say US visa regime is shutting them out</div>
+    
+    <div class="card-body">Supporters from countries on Trump-era travel bans and tightened visa lists say they feel deliberately excluded from the 2026 World Cup, despite FIFA's assurances. Some have already given up trying to attend. The complaints are awkward for a tournament being marketed as a global homecoming for football.</div>
+    <div class="why"><strong>Why it matters:</strong> A World Cup defined by who could not come will undermine the US's soft-power dividend from hosting.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cx212p8r28eo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Eriksen collapses again, but is conscious</div>
+    
+    <div class="card-body">Denmark midfielder Christian Eriksen collapsed during a friendly against Ukraine on Sunday, prompting an immediate medical response and a stunned silence in the stadium. The Danish Football Association confirmed he had regained consciousness and was being assessed in hospital. The incident is an eerie echo of his 2021 Euros cardiac arrest, raising fresh questions about the long shadow over his career.</div>
+    <div class="why"><strong>Why it matters:</strong> A second incident will reignite debate over cardiac screening protocols across elite European football.</div>
+    <div class="sources"><a href="https://www.bbc.com/sport/football/articles/czrxgd2nljno" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Spain to have Yamal and Williams for World Cup opener</div>
+    
+    <div class="card-body">Spain head into the World Cup with star forward Lamine Yamal cleared to play their opening fixture, despite a groin issue that kept him out of a pre-tournament friendly. Nico Williams is also available. The defending European champions arrive as one of the tournament's most balanced sides.</div>
+    <div class="why"><strong>Why it matters:</strong> Spain's title bid hinges on whether their young attacking core stays fit through a brutal calendar.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/8/yamal-williams-to-be-available-for-spains-opening-world-cup-match" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">'Death of a Salesman' sweeps the Tonys</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/d774a64ae48212712b195148e6075bb542517bec/854_595_3979_3185/master/3979.jpg?width=140&quality=85&auto=format&fit=max&s=4924e73d006723aa4bd1d1836fc837a7" alt="'Death of a Salesman' sweeps the Tonys" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Joe Mantello's stripped-back revival of Arthur Miller's classic took six Tony awards on Sunday night, including wins for Lesley Manville and John Lithgow. The musical categories were split between 'Ragtime' and 'Schmigadoon!'. The evening leaned into prestige drama at a moment when Broadway is still navigating uneven post-pandemic economics.</div>
+    <div class="why"><strong>Why it matters:</strong> A great American play, restaged for an anxious America, is the kind of cultural signal worth noticing.</div>
+    <div class="sources"><a href="https://www.theguardian.com/stage/2026/jun/08/tony-awards-2026-death-of-a-salesman-lesley-manville-john-lithgow-win" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Spain tops tourism charts as the Middle East empties out</div>
+    <div class="img-wrap"><img src="https://static01.nyt.com/images/2026/06/08/multimedia/08pope-sanchez-01-qlzt/08pope-sanchez-01-qlzt-mediumSquareAt3X.jpg" alt="Spain tops tourism charts as the Middle East empties out" loading="lazy"/><div class="img-caption"> · NYT World</div></div>
+    <div class="card-body">Spain welcomed a record 9.1 million international visitors in April, its strongest-ever showing for the month, as travellers reroute away from a volatile Middle East. Pope Leo XIV will meet Prime Minister Pedro Sánchez in Madrid on Monday, in a separate but symbolically loud pairing of two figures who have publicly clashed with President Trump. Spain is having a remarkable geopolitical and economic moment.</div>
+    <div class="why"><strong>Why it matters:</strong> Tourism diversion is quietly redrawing the economic map of the Mediterranean.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c4gvndd2qelo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.nytimes.com/2026/06/08/world/europe/pope-leo-sanchez-trump.html" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Monday, June 8, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7383.74</td>
+        <td class="down">▼ -2.25%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$50866.78</td>
+        <td class="up">▲ +0.35%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$25709.43</td>
+        <td class="down">▼ -4.26%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10336.90</td>
+        <td class="down">▼ -0.23%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>64024.60</td>
+        <td class="down">▼ -3.85%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4320.50</td>
+        <td class="down">▼ -1.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$94.72</td>
+        <td class="up">▲ +4.62%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>95.67</td>
+        <td class="down">▼ -0.13%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$63130.10</td>
+        <td class="down">▼ -0.17%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Whether Israel's Monday strikes draw a second wave of Iranian missiles - or quiet US pressure on Netanyahu to pause.</li><li>Peru's runoff result and whether the loser concedes or contests, given the dead-heat polling.</li><li>Xi Jinping's communique from Pyongyang: any mention of joint economic projects would signal a real reset.</li><li>Asia-Pacific tech earnings sentiment after Monday's selloff, with Nasdaq futures the tell.</li><li>Aftershocks and damage assessments in Mindanao through the week.</li><li>Keir Starmer's AI speech: look for whether 'safety' or 'growth' is the dominant verb.</li><li>Trump's posture at Game 3 of the NBA Finals - and any further off-script remarks on Iran or 2020.</li></ul>
+</div>
+
+<div class="editors-note">A heavy news day, Urvil - the Middle East dominates, but the quieter pivots in Yerevan, Pyongyang and Delhi are the ones likely to matter most in a year's time.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Monday, June 8, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-06-08 08:16 UTC
+</footer>
+</div>
+</body>
+</html>

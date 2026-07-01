@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Wednesday, June 3, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Wednesday, June 3, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">Kuwait airport crippled as US and Iran trade fresh strikes</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/b7374420d08f7cb5f8b5c6c8815d748830e310c1/260_0_1114_891/master/1114.jpg?width=140&quality=85&auto=format&fit=max&s=79f07c8f3bbf9e9a678eb0643f5e614a" alt="Kuwait airport crippled as US and Iran trade fresh strikes" loading="eager"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="lead-body">Kuwait says its main international airport has been badly damaged by Iranian drones, suspending all traffic, while US forces struck a tanker and sites on Iran's Qeshm Island and intercepted missiles bound for Bahrain. Secretary of State Marco Rubio has tied any sanctions relief to Iran abandoning enriched uranium and reopening the Strait of Hormuz, conditions Tehran flatly rejects. The escalation comes as Donald Trump pushes publicly for a deal, with Gulf allies increasingly nervous. For the 20,000 seafarers still trapped in the war zone, the diplomatic stalemate is becoming a humanitarian one.</div>
+    <div class="why"><strong>Why it matters:</strong> A direct strike on a Gulf capital's civilian airport marks a dangerous new threshold in a war that is now visibly destabilising the wider region.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c5yx135yg53o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/03/us-fires-missile-tanker-strait-of-hormuz" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/3/whats-happening-on-day-96-of-iran-war-as-us-iran-engage-in-new-attacks" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Israel hammers southern Lebanon as Netanyahu emerges as obstacle to peace</div>
+    <div class="card-body" style="font-size:12.5px;">Israeli warplanes carried out dozens of airstrikes around Nabatiyeh and issued fresh evacuation orders, even as a Trump-brokered ceasefire was supposedly being shored up. Beirut has so far been spared, prompting hawks at home to accuse Benjamin Netanyahu of holding back. With elections looming and his political survival at stake, the Israeli prime minister is increasingly seen in Washington as the principal block on any US-Iran settlement.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Israeli domestic politics are now actively constraining American diplomacy across the Middle East.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/02/israel-strikes-southern-lebanon-despite-trump-ceasefire" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/02/benjamin-netanyahu-us-iran-war" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cedp3lee059o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Zelensky pleads for Patriots after Russia's deadliest strike in weeks</div>
+    <div class="card-body" style="font-size:12.5px;">Russia launched a coordinated assault on five Ukrainian cities overnight, killing at least 18 people, injuring dozens and trapping others under rubble. Volodymyr Zelensky has publicly asked Donald Trump for additional Patriot missile batteries, while a separate drone strike on a passenger bus in Russian-occupied Crimea killed seven. Inside Russia, BBC reporting suggests unease about the war is now spreading even within Putin's loyalist base.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> More than four years in, Moscow is escalating and Kyiv's air defences are visibly thinning — the case for fresh Western kit is becoming urgent.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/02/ukraine-war-russia-air-raids-strike-kyiv-dnipro-kharkiv" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cy82339793go" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cp3peyykxd5o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Alphabet's $80bn raise underlines a no-limits AI arms race</div>
+    <div class="card-body" style="font-size:12.5px;">Google's parent has filed to raise up to $80bn in equity to fund its AI build-out, a sum larger than the three biggest IPOs in history combined. Shares dipped on the dilution, but the message to rivals is unambiguous. Anthropic, meanwhile, has confidentially filed for a US listing at a valuation approaching $1 trillion, even as OpenAI faces a Florida lawsuit alleging it concealed child-safety risks in ChatGPT.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The capital intensity of frontier AI is rewriting the rules of corporate finance — and concentrating power in a handful of names.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/02/google-alphabet-sell-stock-ai-share-sale-berkshire-hathaway" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c0k203kzp10o" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/jun/01/florida-lawsuit-openai-sam-altman" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Mette Frederiksen secures third term at head of Danish four-party coalition</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/ffc414a2bb0a762f82ec4b2b0d0abc4c2bbb02ef/1072_321_2406_1925/master/2406.jpg?width=140&quality=85&auto=format&fit=max&s=4a9bb38cbfe7ffb5b9de02bf1bc31fd6" alt="Mette Frederiksen secures third term at head of Danish four-party coalition" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">After months of fraught negotiations, Denmark's Social Democrat leader Mette Frederiksen has assembled a centre-left minority government spanning four parties. She is expected to set out the new programme by the end of the day. Her continuity in Copenhagen is a rare point of stability in an otherwise volatile European political landscape.</div>
+    <div class="why"><strong>Why it matters:</strong> Frederiksen remains one of the EU's most influential centre-left voices on migration and defence, both increasingly contested files.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/01/denmarks-mette-frederiksen-agrees-centre-left-coalition-after-months-of-uncertainty" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cn7p3e34x5no" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">EU's new deportation regime draws comparisons with Trump's ICE</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/1cc02e0c9063e2a7833937ae1c41bd9ad63f42c7/1565_162_6627_5302/master/6627.jpg?width=140&quality=85&auto=format&fit=max&s=996a8960ee30f1e0f4741443fa30df2c" alt="EU's new deportation regime draws comparisons with Trump's ICE" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Brussels has finalised legislation that promises faster deportations of undocumented migrants, including expanded detention powers and third-country return hubs. Civil-society groups say the framework borrows heavily from the Trump administration's enforcement playbook. The shift codifies a rightward drift across European capitals that has been building since the last election cycle.</div>
+    <div class="why"><strong>Why it matters:</strong> Europe's liberal asylum consensus is being formally dismantled, with consequences for the bloc's self-image and its trade partners.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/02/eu-accused-creating-ice-style-immigration-enforcement-system" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Tunisia jails Ennahdha's Ghannouchi for life as democratic backsliding hardens</div>
+    
+    <div class="card-body">A Tunisian court has sentenced opposition leader Rached Ghannouchi to life imprisonment, along with lengthy terms for dozens of co-defendants, on charges of forming a terrorist alliance. The ruling effectively closes the door on the Islamist movement that once symbolised the Arab Spring's most promising transition. Critics see it as the final act in President Kais Saied's consolidation of power.</div>
+    <div class="why"><strong>Why it matters:</strong> A decade after the Jasmine Revolution, Tunisia's authoritarian turn is now beyond doubt — and largely unopposed internationally.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/3/tunisian-court-sentences-ennahdha-leader-rached-ghannouchi-to-life-in-prison" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Mozambique says five citizens killed in South African xenophobic violence</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/c2ff4a7bdc4646baefbd933e56be3ff85dcd3234/344_0_3750_3000/master/3750.jpg?width=140&quality=85&auto=format&fit=max&s=941edf73c0dd8ec2896942b90862e1eb" alt="Mozambique says five citizens killed in South African xenophobic violence" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Maputo says five of its nationals were murdered over the weekend in South Africa, with police in Mossel Bay confirming two of the deaths after a day of anti-migration riots. Hundreds more Mozambicans are being repatriated. The episode is the latest flashpoint in a wave of nativist violence sweeping the country.</div>
+    <div class="why"><strong>Why it matters:</strong> Southern Africa's most important economic relationship is fraying under the strain of unemployment and political opportunism.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/02/mozambique-citizens-killed-xenophobic-attacks-south-africa" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/clyp4e87dq6o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Canada and Mexico move to lock in USMCA for another 16 years</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e66b9330d6fbffa358a896f81ebbda7969d0ac58/643_0_3893_3114/master/3893.jpg?width=140&quality=85&auto=format&fit=max&s=4a5db28e27b23bf8837c07a98ea7b5a3" alt="Canada and Mexico move to lock in USMCA for another 16 years" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Ottawa has formally written to its North American partners requesting a 16-year renewal of the USMCA pact, with Mexico backing the push. The early move is designed to insulate continental trade from the Trump administration's unpredictability ahead of next year's mandatory review. Meanwhile, the White House has proposed 25% tariffs on Brazilian imports despite running a trade surplus with Brasília.</div>
+    <div class="why"><strong>Why it matters:</strong> America's neighbours are trying to bind Washington to rules-based trade before the next round of tariff politics arrives.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cn9prr3w9nlo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/jun/02/trump-administration-brazil-tariffs" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/video/newsfeed/2026/6/3/mexico-and-canada-push-to-extend-usmca-trade-pact" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Hungary's new PM readies a wealth tax aimed squarely at Orbán's oligarchs</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/b3d60048d573fdc5f71850b8ac4457e33099a146/245_0_4169_3335/master/4169.jpg?width=140&quality=85&auto=format&fit=max&s=1f89357ca9bc5509c319604e94708cad" alt="Hungary's new PM readies a wealth tax aimed squarely at Orbán's oligarchs" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">Péter Magyar, who toppled Viktor Orbán in April's election, is preparing to launch a wealth tax that his government calls a restoration of social justice. The targets are the small coterie of businessmen who grew rich on government contracts during Orbán's 15-year rule. Several are reportedly already weighing exits or asset transfers.</div>
+    <div class="why"><strong>Why it matters:</strong> It is the first serious attempt anywhere in the EU to claw back the gains of state-captured capitalism, and a template others may study.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/02/orban-oligarchs-on-edge-hungary-wealth-tax-peter-magyar" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Gold overtakes US Treasuries as the world's top reserve asset</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/48c2f1158b35ff75cb2edcbb613c747af1215f74/0_0_3333_2666/master/3333.jpg?width=140&quality=85&auto=format&fit=max&s=813fec0e09dd392ef8ac6542da1d373c" alt="Gold overtakes US Treasuries as the world's top reserve asset" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">The European Central Bank has confirmed that gold has surpassed US government bonds as the largest share of global central-bank reserves — a striking marker of de-dollarisation. The shift coincides with Alphabet's mega raise, Japan's Nikkei breaking through 68,000, and South Korea's Kospi vaulting past India to become the world's sixth-largest equity market. The risk-on AI trade and a flight from sovereign credit are, unusually, happening at the same time.</div>
+    <div class="why"><strong>Why it matters:</strong> A structural reordering of safe-haven assets is underway, with implications for US borrowing costs and the dollar's privileges.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/live/2026/jun/02/alphabet-80bn-share-sales-ai-spending-berkshire-hathaway-stock-markets-oil-interest-rates-inflation-latest-news-updates" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/economy/2026/6/3/japans-stock-market-hits-new-record-as-ai-boom-gathers-steam" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/03/south-korea-ai-boom-tech-companies-trillion-dollar-club-kospi-" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Trump signs executive order for early federal vetting of frontier AI models</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/c5cba33af1567905ced9113cb0b1db454b271b04/287_0_3334_2667/master/3334.jpg?width=140&quality=85&auto=format&fit=max&s=36aa842ef8d8f07b4858f8f826a21968" alt="Trump signs executive order for early federal vetting of frontier AI models" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Donald Trump has signed an executive order creating a voluntary framework under which leading AI labs would share new models with the federal government for review before public release. Critics note that compliance is optional and the order lacks enforcement teeth. The move comes as Anthropic files for an IPO and Florida sues OpenAI over alleged child-safety failures.</div>
+    <div class="why"><strong>Why it matters:</strong> Washington is finally building AI oversight machinery — but on terms that the labs themselves can largely set.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/02/trump-executive-order-ai-voluntary-review" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/technology/2026/jun/01/anthropic-openai-techscape" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Meta's AI support bot tricked into hijacking Obama-era Instagram accounts</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/0a1521f6c70403081189e0e46a7e802e2737a669/567_0_5665_4534/master/5665.jpg?width=140&quality=85&auto=format&fit=max&s=812ce3e99be538a6f8a37be6de0c82d3" alt="Meta's AI support bot tricked into hijacking Obama-era Instagram accounts" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Hackers manipulated Meta's AI-powered support chatbot to seize control of high-profile Instagram accounts, including one previously linked to the Obama White House. Meta says the flaw has been patched, but security researchers warn the incident exposes the fragility of using LLMs in account-recovery flows. It dovetails with a separate breach involving an Instagram AI chatbot.</div>
+    <div class="why"><strong>Why it matters:</strong> AI is being bolted onto critical security plumbing faster than its failure modes are being understood.</div>
+    <div class="sources"><a href="https://www.theguardian.com/technology/2026/jun/01/meta-ai-hack-obama-sephora-instagram" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c98rzr72dpyo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">UK publishers win right to opt out of Google's AI search summaries</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/00a01998a2b139d66a16715dcdb04af4b4581ff8/925_0_4623_3699/master/4623.jpg?width=140&quality=85&auto=format&fit=max&s=5ff8f9d1a64b57f481bb36f59e869bc2" alt="UK publishers win right to opt out of Google's AI search summaries" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The Competition and Markets Authority has granted British media groups the power to prevent Google from using their content to train AI models or generate search summaries. The regulator says publishers will now have effective tools to negotiate content deals. It is one of the first concrete wins for news organisations in the AI-versus-journalism standoff.</div>
+    <div class="why"><strong>Why it matters:</strong> Britain has set a precedent other regulators are likely to copy, potentially reshaping the economics of generative search globally.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/03/uk-media-groups-power-opt-out-google-ai-search-summaries" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/c775pp26yz5o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Great Nicobar: India's bet on a Hormuz-style chokepoint against China</div>
+    
+    <div class="card-body">New Delhi is pouring billions into developing the remote Great Nicobar Island into a deep-water port, military base and transhipment hub straddling the entrance to the Malacca Strait. Supporters call it a strategic counter to Chinese maritime expansion; environmentalists and tribal-rights groups say it will devastate one of the world's most fragile ecosystems. Myanmar's president is also visiting India this week, signalling a wider Bay of Bengal recalibration.</div>
+    <div class="why"><strong>Why it matters:</strong> If the project succeeds, India gains a genuine ability to interdict Chinese shipping — a structural shift in Indo-Pacific power.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/features/2026/6/3/is-the-great-nicobar-island-indias-hormuz-like-chokepoint-against-china" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/ckgplnj1wexo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">California governor's race too close to call as Karen Bass forced into LA runoff</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/2c928d6f761f1cdf07f439609b073fa5408708f6/397_0_3649_2922/master/3649.jpg?width=140&quality=85&auto=format&fit=max&s=9dc66e873842a43de12be5f6467ccce7" alt="California governor's race too close to call as Karen Bass forced into LA runoff" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Tuesday's primaries saw Steve Hilton, Xavier Becerra and Tom Steyer cluster at the top of California's wide-open gubernatorial race, with the result still uncalled. In Los Angeles, incumbent mayor Karen Bass finished first but below the 50% threshold and will face a November runoff. In New Jersey, Democrat Rebecca Bennett, a former Navy commander, won the right to challenge Trump-endorsed Tom Kean Jr.</div>
+    <div class="why"><strong>Why it matters:</strong> These contests are early bellwethers for whether Democratic energy is recovering ahead of the November midterms.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/03/california-governor-election" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/02/karen-bass-los-angeles-mayoral-primary" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/3/rebecca-bennett-wins-new-jersey-democratic-primary-to-face-trump-ally-kean" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">Trump names housing chief Bill Pulte as acting spymaster</div>
+    
+    <div class="card-body">The president has tapped Bill Pulte, head of the Federal Housing Finance Agency, to serve as acting Director of National Intelligence. Pulte has openly pushed for criminal charges against Trump's political opponents and has no intelligence background. Separately, the Justice Department has scrapped a $1.8 billion 'anti-weaponisation' fund despite pushback from senior Republicans.</div>
+    <div class="why"><strong>Why it matters:</strong> The politicisation of America's intelligence apparatus is no longer a slow drift but an explicit appointment.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cyv2dpyz3dpo" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/crkpyj41m15o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">'Mornings and nights no longer exist': life at 47C in India's hottest district</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/054882b517fef67baa07df376554766a210b1730/479_496_6053_4842/master/6053.jpg?width=140&quality=85&auto=format&fit=max&s=b8d1959860e91e54f974c16dd74bf0c9" alt="'Mornings and nights no longer exist': life at 47C in India's hottest district" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">BBC reporting from India's hottest district documents a daily routine reorganised entirely around survival, with outdoor work confined to brief windows and water deliveries failing to keep pace. The OECD has separately warned that rural Britain faces diesel shortages if the Iran conflict drags on, and is pressing Australia to accelerate EV and renewables adoption amid the fuel crunch. The climate emergency and the energy security emergency are now firmly entwined.</div>
+    <div class="why"><strong>Why it matters:</strong> Extreme heat is reshaping economic activity and labour productivity in real time, well ahead of policy.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/crmp0krp98ro" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/jun/03/rural-uk-particularly-at-risk-of-diesel-shortages-if-iran-war-continues" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Shell knew its Nigeria pipeline was leaking for years, documents suggest</div>
+    
+    <div class="card-body">Internal documents reviewed by the BBC indicate Shell continued pumping oil through a Nigerian pipeline for years despite evidence of pollution affecting local communities. The company says the records ignore the complex operating environment of the time. The disclosures will sharpen long-running litigation over Niger Delta contamination.</div>
+    <div class="why"><strong>Why it matters:</strong> Another data point in the slow legal reckoning between Big Oil and the communities its operations have damaged.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cdrp8v7407ro" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Messi trains alone as Argentina open World Cup camp</div>
+    
+    <div class="card-body">Lionel Messi worked through individual exercises as Argentina opened their 2026 World Cup preparations, nursing fatigue in his left hamstring. Brazil, meanwhile, are publicly framing themselves as outsiders, with Casemiro insisting the five-time champions are not favourites. The tournament, hosted across North America, will see Mexico become the first country to host or co-host three World Cups.</div>
+    <div class="why"><strong>Why it matters:</strong> Messi's fitness will likely define Argentina's defence of the trophy — and the commercial arc of the tournament.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/3/messi-trains-alone-as-argentina-hold-first-world-cup-practice-session" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/6/3/casemiro-brazil-not-fifa-world-cup-2026-favourites-football" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">Cricket Canada suspended by ICC amid gang-influence allegations</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/3e30c34aa7daec1ffffd82cca04c01e78dc05bae/871_385_4520_3615/master/4520.jpg?width=140&quality=85&auto=format&fit=max&s=5523066a988c69dae839b0a504cc80cf" alt="Cricket Canada suspended by ICC amid gang-influence allegations" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The International Cricket Council has suspended Cricket Canada over what it called serious breaches of membership obligations, amid reporting that the team has come under the influence of a notorious gang based in India. The decision is a serious blow to one of the sport's growth markets. Steph Curry's new endorsement deal with a Chinese sportswear brand, meanwhile, marks another front in Asia's push for global sporting reach.</div>
+    <div class="why"><strong>Why it matters:</strong> Cricket's globalisation strategy is colliding with the seamier side of cross-border sports economics.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/02/cricket-canada-suspension" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cj9pky3ldddo" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">'Dreams of Violets': the first AI-made feature to screen at a major festival</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/cbf5bf6cb7a57a198a144342ac4658d6ba2d71c4/801_0_2698_2160/master/2698.jpg?width=140&quality=85&auto=format&fit=max&s=05ae9ba7b44de7be4a2b4b845c838250" alt="'Dreams of Violets': the first AI-made feature to screen at a major festival" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Director Ash Koosha's 75-minute drama about Iran's anti-government protests, made for around $2,000 using generative AI tools, will premiere at Tribeca next week. He argues the technology could democratise independent film-making; sceptics call it polished slop. Either way, the festival circuit's gatekeeping around AI-generated cinema has now formally cracked.</div>
+    <div class="why"><strong>Why it matters:</strong> The economics of independent storytelling are about to be rewritten — and the cultural debate over authorship with them.</div>
+    <div class="sources"><a href="https://www.theguardian.com/film/2026/jun/03/dreams-of-violets-ash-koosha-iran-tribeca-film-festival" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Muhammad Ali, ten years on: 'Service is the rent we pay'</div>
+    
+    <div class="card-body">A decade after the boxer's death, his widow Lonnie Ali has called for a day of compassion amid deepening American division. Tributes across the US dwell less on his ring record and more on his moral architecture. The anniversary lands in a country whose civic rituals — including the long-delayed White House Correspondents' Dinner — increasingly serve as partisan flashpoints.</div>
+    <div class="why"><strong>Why it matters:</strong> A reminder that public figures can still be metaphors for what a country once aspired to be.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/gallery/2026/6/3/service-is-the-rent-we-pay-muhammad-ali-remembered-10-years-on" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/clypkj2e349o" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Wednesday, June 3, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7609.78</td>
+        <td class="up">▲ +0.39%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$51307.79</td>
+        <td class="up">▲ +0.54%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$27093.90</td>
+        <td class="up">▲ +0.45%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10342.68</td>
+        <td class="up">▲ +0.04%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>68402.13</td>
+        <td class="up">▲ +2.50%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4485.40</td>
+        <td class="down">▼ -0.08%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$95.74</td>
+        <td class="up">▲ +2.11%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>95.78</td>
+        <td class="up">▲ +0.24%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$66982.45</td>
+        <td class="up">▲ +0.42%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Whether the Trump-Rubio demand that Iran abandon enriched uranium and reopen Hormuz produces any movement, or hardens Tehran's position further.</li><li>Alphabet's pricing and demand for its $80bn equity raise — a real-time read on investor appetite for the AI capex super-cycle.</li><li>Final California gubernatorial primary results and whether the eventual nominee reshapes the Democratic 2028 conversation.</li><li>Denmark's new coalition programme launch and the policy concessions Frederiksen made to secure her third term.</li><li>Myanmar's president in New Delhi: any deliverables on Bay of Bengal connectivity or rebel border management.</li><li>Ebola containment in DR Congo and whether more international fixtures and travel routes follow Spain's cancellation of the Chile friendly.</li></ul>
+</div>
+
+<div class="editors-note">A morning where the war economy, the AI economy and the electoral calendar are increasingly the same story — read accordingly.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Wednesday, June 3, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-06-03 08:25 UTC
+</footer>
+</div>
+</body>
+</html>

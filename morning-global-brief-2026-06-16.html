@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<title>Morning Global Brief · Tuesday, June 16, 2026</title>
+<style>
+:root {
+  --ink:     #111;
+  --muted:   #666;
+  --rule:    #b8972a;
+  --accent:  #8b1c1c;
+  --bg:      #f7f4ef;
+  --card:    #fff;
+  --border:  #e0d9cd;
+  --up:      #1a7340;
+  --down:    #9b1c1c;
+  --serif:   Georgia, 'Times New Roman', serif;
+  --sans:    -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; text-decoration: none; }
+.page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+.masthead { background: var(--ink); color: #f0ebe2; text-align: center; padding: 28px 24px 20px; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--rule); }
+.masthead-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); margin-bottom: 6px; }
+.masthead-title { font-size: clamp(26px, 6vw, 40px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.05; }
+.masthead-title em { font-style: italic; color: var(--rule); }
+.masthead-dateline { margin-top: 6px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.nav { background: var(--ink); padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; padding: 4px 10px; border-radius: 100px; border: 1px solid #333; }
+.nav a:active { background: #333; color: #ccc; }
+.section-hd { display: flex; align-items: center; gap: 12px; padding: 28px 16px 14px; }
+.section-label { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule) 0%, transparent 100%); }
+.lead { margin: 0 16px 4px; padding: 20px 0 20px; border-top: 3px solid var(--ink); }
+.lead-hed { font-size: clamp(22px, 5.5vw, 32px); font-weight: 900; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 12px; }
+.lead-body { font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 12px; }
+.why { border-left: 3px solid var(--rule); padding: 8px 12px; margin: 12px 0; font-family: var(--sans); font-size: 12px; color: var(--muted); background: rgba(184,151,42,0.06); border-radius: 0 4px 4px 0; }
+.why strong { color: var(--accent); }
+.sources { font-family: var(--sans); font-size: 10px; color: #999; display: flex; flex-wrap: wrap; gap: 6px; }
+.sources a { color: var(--accent); border-bottom: 1px solid rgba(139,28,28,0.3); padding-bottom: 1px; }
+.card { background: var(--card); border-radius: 8px; margin: 0 12px 12px; padding: 18px 16px 14px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-meta { font-family: var(--sans); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.card-hed { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+.card-body { font-size: 13.5px; line-height: 1.65; color: #333; margin-bottom: 10px; }
+.img-wrap { border-radius: 6px; overflow: hidden; margin: 12px 0; border: 1px solid var(--border); }
+.img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.img-caption { font-family: var(--sans); font-size: 10px; color: var(--muted); padding: 6px 10px; background: #f5f2ed; line-height: 1.4; }
+@media (min-width: 520px) {
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; margin-bottom: 12px; }
+  .grid-2 .card { margin: 0; }
+}
+.markets { background: var(--ink); color: #e0dbd0; margin: 0 12px; border-radius: 8px; padding: 20px 16px; }
+.markets-title { font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rule); text-align: center; margin-bottom: 14px; }
+.markets-table { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+.markets-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; text-align: left; }
+.markets-table th:nth-child(2), .markets-table th:nth-child(3), .markets-table td:nth-child(2), .markets-table td:nth-child(3) { text-align: right; }
+.markets-table td { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e1e; color: #b0a898; }
+.markets-table td:first-child { font-size: 11px; color: #777; }
+.up { color: #4ade80 !important; font-weight: 600; }
+.down { color: #f87171 !important; font-weight: 600; }
+.flat { color: #666 !important; }
+.markets-note { margin-top: 10px; font-size: 9px; color: #444; text-align: right; font-family: var(--sans); }
+.watch-list { padding: 0 12px; list-style: none; }
+.watch-list li { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; align-items: flex-start; }
+.watch-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+.editors-note { margin: 28px 16px; padding: 16px 20px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); font-size: 16px; font-style: italic; text-align: center; color: var(--accent); line-height: 1.5; }
+.footer { padding: 24px 16px; font-family: var(--sans); font-size: 10px; color: #aaa; text-align: center; line-height: 1.7; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <div class="masthead-eyebrow">Private Edition · Urvil</div>
+  <div class="masthead-title">The Morning <em>Global</em> Brief</div>
+  <div class="masthead-dateline">Tuesday, June 16, 2026</div>
+</header>
+<nav class="nav">
+  
+  <a href="#front-page">Front Page</a>
+  
+  <a href="#world-&-geopolitics">World & Geopolitics</a>
+  
+  <a href="#business-&-markets">Business & Markets</a>
+  
+  <a href="#technology-&-ai">Technology & AI</a>
+  
+  <a href="#climate-&-energy">Climate & Energy</a>
+  
+  <a href="#india---uae---us-watch">India / UAE / US Watch</a>
+  
+  <a href="#sport">Sport</a>
+  
+  <a href="#culture-&-lifestyle">Culture & Lifestyle</a>
+  
+</nav>
+
+<div id="front-page">
+  <div class="section-hd"><span class="section-label">Front Page</span><div class="section-rule"></div></div>
+  
+  <div class="lead">
+    <div class="lead-hed">US-Iran framework signed electronically as markets rally, sceptics multiply</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c3f0/live/f7f57fb0-6944-11f1-b8da-53bba3cad46c.jpg" alt="US-Iran framework signed electronically as markets rally, sceptics multiply" loading="eager"/><div class="img-caption"> · BBC World</div></div>
+    <div class="lead-body">Tehran and Washington signed a memorandum of understanding ending 109 days of fighting, reopening the Strait of Hormuz and committing Iran to never pursue a nuclear weapon, according to President Trump. Vice-President JD Vance conceded the text runs only "about a page and a half" and is "very general", with nuclear talks, sanctions relief and Lebanon's status all still to be negotiated. Senate Republicans are already balking at proposed funds for Iran, and few Middle East analysts believe a durable settlement is achievable in the 60-day window. The IAEA is expected to return to Iranian sites; US naval tolls in Hormuz have been lifted.</div>
+    <div class="why"><strong>Why it matters:</strong> The biggest geopolitical pivot of 2026 is also its most precarious — and global oil, equities and inflation paths now hinge on a document barely longer than a memo.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/ce8mv6l6eezo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/16/iran-war-day-109-tehran-washington-sign-mou-electronically?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/world/2026/jun/16/jd-vance-details-us-iran-agreement-scepticism-republicans" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Netanyahu boxed in: 'security zones' to stay in Lebanon, Syria and Gaza</div>
+    <div class="card-body" style="font-size:12.5px;">Benjamin Netanyahu told Israelis that the IDF will retain a "security zone" inside Lebanon and remain deployed in Syria and Gaza, in apparent defiance of Pakistani and Iranian readings that the US deal halts fighting on all fronts. The stance leaves the prime minister politically trapped between a restive coalition that opposes any concession and an American patron eager to bank a diplomatic win. BBC analysis suggests the war exposed the limits of US dominance even as Washington brokered its end.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> Whether the Trump deal becomes peace or pause will be decided largely in Jerusalem, not Tehran or Washington.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/video/newsfeed/2026/6/16/netanyahu-says-israel-will-remain-in-lebanon-syria-and-gaza?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cj4gnqw8j52o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cdr4x3vg347o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Eight killed as B-52 bomber goes down at Edwards Air Force Base</div>
+    <div class="card-body" style="font-size:12.5px;">A US Air Force B-52 Stratofortress crashed shortly after takeoff from Edwards Air Force Base in California's Mojave Desert on Monday morning, killing all eight people on board. The aircraft was on a routine test mission. An investigation has been opened, with no immediate indication of cause.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> The loss of a strategic bomber and its crew on home soil is a rare and bruising blow to a US Air Force already stretched by Middle East operations.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cqx10yql319o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/2026/jun/15/b52-bomber-crash-california-military-base" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-hed" style="font-size:15px;">Newsom claims Trump is using DoJ against him, his wife and former staff</div>
+    <div class="card-body" style="font-size:12.5px;">California Governor Gavin Newsom has publicly alleged that President Trump has directed the Department of Justice to investigate him, his wife Jennifer Siebel Newsom and several former aides. A source familiar with the inquiries told reporters they had been running for roughly a year. The accusation, from the Democrats' most prominent 2028 contender, sharply escalates the politicisation of federal law enforcement.</div>
+    <div class="why" style="font-size:11px;"><strong>Why it matters:</strong> If substantiated, it is the most overt weaponisation of the DoJ against a sitting governor in living memory — and a preview of the 2028 campaign's tenor.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c3vyw7021r0o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/us-news/live/2026/jun/15/donald-trump-ufc-white-house-michelle-obama-g7-iran-peace-deal-us-politics-latest-news-updates" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="world-&-geopolitics">
+  <div class="section-hd"><span class="section-label">World & Geopolitics</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">G7 turns to Ukraine as Zelenskyy joins leaders trying to keep Trump onside</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/231e0bbbcf9010e4a5f543991cda65d4d51e3173/440_0_2508_2007/master/2508.jpg?width=140&quality=85&auto=format&fit=max&s=e96c5ae84790b5aff3b2076a2de92ddf" alt="G7 turns to Ukraine as Zelenskyy joins leaders trying to keep Trump onside" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">G7 leaders began their first full day of talks with the Russia-Ukraine war atop the agenda, with President Volodymyr Zelenskyy in attendance. German Chancellor Friedrich Merz presented Trump with a national team football shirt bearing the number 47, a small piece of choreography aimed at sustaining transatlantic goodwill. Separately, the EU formally opened accession negotiations with Ukraine and Moldova — Kyiv's most concrete reward yet for three years of resistance.</div>
+    <div class="why"><strong>Why it matters:</strong> With Iran nominally settled, Ukraine reclaims its place as the test of whether Trump can be kept inside the Western consensus.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/live/2026/jun/16/g7-world-leaders-ukraine-russia-war-iran-trump-zelenskyy-putin-eu-france-eu-europe-latest-news-updates" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/news/2026/6/15/eu-officially-launches-ukraine-and-moldova-accession-processes?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Royal Marines board Russian 'shadow fleet' tanker in the Channel</div>
+    
+    <div class="card-body">UK Royal Marines have seized a Russian sanctions-evading tanker in the English Channel in a first-of-its-kind operation, prompting other vessels in the so-called shadow fleet to reverse course. London is signalling that the murky maritime infrastructure underpinning Russia's oil revenues is now fair game, even in European waters.</div>
+    <div class="why"><strong>Why it matters:</strong> It marks a step-change in Western enforcement of Russia sanctions and raises the operational cost of Moscow's oil exports.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/16/uk-seizes-russian-shadow-fleet-tanker-what-that-means?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Russian missiles kill 11 in Kyiv, set historic cathedral ablaze</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b2e3/live/e63b3f40-689e-11f1-b1db-af71d47507d6.jpg" alt="Russian missiles kill 11 in Kyiv, set historic cathedral ablaze" loading="lazy"/><div class="img-caption"> · BBC World</div></div>
+    <div class="card-body">Russian strikes on the Ukrainian capital killed at least 11 people and ignited a historic cathedral, while a Ukrainian drone attack on the Russian city of Tula left three dead. The escalation comes even as European leaders push for renewed peace momentum off the back of the Iran deal.</div>
+    <div class="why"><strong>Why it matters:</strong> Moscow is reminding G7 capitals that no diplomatic windfall in the Gulf will pacify its war in Europe.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c4gy037gjz3o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">World & Geopolitics</div>
+    <div class="card-hed">Sweden tightens immigration regime with 'good behaviour' permit law</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/0f56f5f76b533df08dbc68513a4ed657d9d01775/1280_0_6400_5120/master/6400.jpg?width=140&quality=85&auto=format&fit=max&s=e0a686a89d4567ea95031e85e2063195" alt="Sweden tightens immigration regime with 'good behaviour' permit law" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Sweden's parliament has passed legislation allowing authorities to revoke residency on vaguely defined behavioural grounds, sharpening one of Europe's harder-line migration regimes. Opposition parties and rights groups warn of arbitrary enforcement and chilling effects on integration. The vote underlines how thoroughly Sweden's once-liberal consensus has shifted.</div>
+    <div class="why"><strong>Why it matters:</strong> Stockholm's pivot will embolden similar moves across an EU already drifting rightwards on migration.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/16/sweden-votes-to-back-laws-reinforcing-its-immigration-crackdown" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="business-&-markets">
+  <div class="section-hd"><span class="section-label">Business & Markets</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Bank of Japan lifts rate to 1%, highest since 1995</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a76/live/d7e33c30-6872-11f1-8d7f-231b457c3604.jpg" alt="Bank of Japan lifts rate to 1%, highest since 1995" loading="lazy"/><div class="img-caption"> · BBC World</div></div>
+    <div class="card-body">The Bank of Japan raised its benchmark policy rate to 1%, the highest level in 31 years, marking the clearest break yet with the ultra-loose monetary regime that defined Japan since the 1990s. The hike continues a tightening cycle quietly underway since 2024 and reflects growing confidence that inflation and wage growth are durable. The yen, JGB yields and Asian carry trades will all need to recalibrate.</div>
+    <div class="why"><strong>Why it matters:</strong> A generation of global investors has built portfolios around free yen — that era is now demonstrably over.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/economy/2026/6/16/japans-central-bank-raises-interest-rates-to-highest-level-since-1995?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cjdgl213dpzo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Oil slumps to three-month low, equities hit records on Iran breakthrough</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/d8390a69919bf424e2aa22b7f89df6640337ce1f/469_0_2879_2304/master/2879.jpg?width=140&quality=85&auto=format&fit=max&s=ea45a169a7d02e1ba1b21c931e96fcaa" alt="Oil slumps to three-month low, equities hit records on Iran breakthrough" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Brent crude tumbled to a three-month low and the S&P 500 rose 1.7% while the Nasdaq jumped 3.1% after Trump posted "Let the oil flow" following the US-Iran framework. Analysts caution that fuel prices are unlikely to revisit pre-war levels for months as buyers scramble to refill depleted strategic stockpiles and port and refining bottlenecks persist. UK petrol and US pump prices may ease only gradually through the summer.</div>
+    <div class="why"><strong>Why it matters:</strong> The deal removes the war premium from risk assets — but the inflation dividend for households will be slower and stingier than headlines suggest.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/15/oil-prices-fall-strait-of-hormuz-reopening-hopes-iran-us-peace-deal" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/economy/2026/6/16/us-fuel-prices-to-take-months-to-normalise-after-us-iran-deal-to-end-war?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/business/2026/jun/15/return-pre-crisis-oil-gas-supplies-months-away-iran-strait-of-hormuz" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">SpaceX IPO raises $87.5bn, smashing initial estimate</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/62fc/live/fe9e1080-68e4-11f1-a322-77bd30adf518.jpg" alt="SpaceX IPO raises $87.5bn, smashing initial estimate" loading="lazy"/><div class="img-caption"> · BBC Business</div></div>
+    <div class="card-body">SpaceX's blockbuster listing raised $87.5bn, some $12.5bn above the figure initially reported and well past the $75bn first floated. The result confirms Elon Musk's rocket and Starlink business as one of the most valuable public companies on debut in history and reopens the door for other large private tech IPOs.</div>
+    <div class="why"><strong>Why it matters:</strong> The number resets expectations for what private-to-public transitions can extract in a recovering risk-on market.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cgrk21wnvy9o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Fox bids $22bn for Roku in streaming consolidation play</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2fb5/live/85918ab0-68c5-11f1-999b-3141618c3232.jpg" alt="Fox bids $22bn for Roku in streaming consolidation play" loading="lazy"/><div class="img-caption"> · BBC Business</div></div>
+    <div class="card-body">Fox has agreed to acquire streaming platform Roku in a $22bn deal designed to fuse its news and sports content with a direct-to-consumer distribution layer as linear TV audiences erode. The combination would create a more credible challenger to the streaming giants and give advertisers a unified premium inventory.</div>
+    <div class="why"><strong>Why it matters:</strong> Legacy broadcasters are running out of time to own their own pipes — Fox just bought one.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cql1yew3vezo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Business & Markets</div>
+    <div class="card-hed">Thames Water lurches closer to nationalisation</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/701b16c64b62c73d63238cd2ab586e61606e5a2d/245_0_2609_2089/master/2609.jpg?width=140&quality=85&auto=format&fit=max&s=ba7d5f1dd6348b6b28a31bd696a4a0ae" alt="Thames Water lurches closer to nationalisation" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">The UK environment secretary has formally objected to a £10bn private rescue plan for Thames Water, arguing it places an "undue burden" on customers and fails the environment. The intervention pushes Britain's largest water utility, with 16 million customers, closer to special administration and effective nationalisation. Andy Burnham has openly called for the company to be taken public.</div>
+    <div class="why"><strong>Why it matters:</strong> A Thames collapse would set the template — and the bill — for how Britain unwinds the failures of privatised utilities.</div>
+    <div class="sources"><a href="https://www.theguardian.com/business/2026/jun/16/thames-water-nationalisation-rescue-deal-ofwat" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cly089d0wl7o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="technology-&-ai">
+  <div class="section-hd"><span class="section-label">Technology & AI</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">UK to ban under-16s from social media; ministers lobby Trump to avert backlash</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/894c/live/4e1b94c0-68d1-11f1-a53d-a3fd187200ab.jpg" alt="UK to ban under-16s from social media; ministers lobby Trump to avert backlash" loading="lazy"/><div class="img-caption"> · BBC Technology</div></div>
+    <div class="card-body">Prime Minister Keir Starmer has confirmed that under-16s will be locked out of Instagram, TikTok, Snapchat and YouTube from early 2027, in one of the world's most far-reaching social media restrictions. Downing Street has spent weeks lobbying the Trump administration to head off retaliation on behalf of US-domiciled platforms. The BBC's tech editor calls the move "bold and blunt" but warns it is no silver bullet for online harms.</div>
+    <div class="why"><strong>Why it matters:</strong> Britain is testing whether democracies can actually wall children off from the attention economy — and whether Washington will let them.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c2kydl0zqeko?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/media/2026/jun/15/uk-ministers-lobby-trump-backlash-social-media-ban" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cddl65dp0rdo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Anthropic summoned to White House after blocking users from new models</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/12c8/live/d654aa50-68dd-11f1-b1db-af71d47507d6.jpg" alt="Anthropic summoned to White House after blocking users from new models" loading="lazy"/><div class="img-caption"> · BBC Business</div></div>
+    <div class="card-body">Anthropic has been called in for an urgent White House meeting after it had to suspend access to just-released AI tools for some users. Details of the suspension remain murky, but the speed of the political response underscores how central frontier-model access has become to US industrial and national security policy.</div>
+    <div class="why"><strong>Why it matters:</strong> AI governance is no longer a regulatory afterthought — it is now resolved in person, at pace, between CEOs and the executive branch.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c9w2p7ykp8yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">AI-powered scams push UK fraud losses to £1.3bn a year</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5333/live/5995e9a0-6597-11f1-99b8-5530f29d65f4.jpg" alt="AI-powered scams push UK fraud losses to £1.3bn a year" loading="lazy"/><div class="img-caption"> · BBC Business</div></div>
+    <div class="card-body">Britons are losing £1.3bn annually to fraud, with nearly eight money-stealing scams reported every minute, as criminals deploy generative AI to craft more convincing impersonations, voices and documents. Banks, telcos and regulators are struggling to keep pace, even as the new social tariffs offer some respite on bills for vulnerable households.</div>
+    <div class="why"><strong>Why it matters:</strong> AI's first mass-market killer app for criminals has arrived — and consumer protections are visibly lagging.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cwykp9ygxlvo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Technology & AI</div>
+    <div class="card-hed">Florida sues TikTok for breaching state's teen social media law</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/f521f5b5ad50549d991f496b9dbbe74915c60395/207_0_3334_2667/master/3334.jpg?width=140&quality=85&auto=format&fit=max&s=9a196f23f5b726ecabdaf28203926d52" alt="Florida sues TikTok for breaching state's teen social media law" loading="lazy"/><div class="img-caption"> · Guardian Tech</div></div>
+    <div class="card-body">Florida's attorney general has filed suit against TikTok, alleging the platform violated state restrictions on teen access and exposed children to harmful sexual content and addictive features. The case adds Florida to a growing roster of US states using courts to enforce age-gating where Washington has not.</div>
+    <div class="why"><strong>Why it matters:</strong> State-by-state litigation is becoming the de facto US framework for child safety online, raising the compliance burden on every platform.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/15/florida-sues-tiktok-teen-social-media-access-law" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="climate-&-energy">
+  <div class="section-hd"><span class="section-label">Climate & Energy</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Half the world's children now face three or more climate hazards: Unicef</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/beafeb716a014c53afc8aeb7b643843285fea886/528_0_4213_3371/master/4213.jpg?width=140&quality=85&auto=format&fit=max&s=40dcd351c38b12b8af66cc9944fcab62" alt="Half the world's children now face three or more climate hazards: Unicef" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A new Unicef report finds that half of the world's children are exposed to at least three overlapping climate hazards — heat, flooding, drought, disease vectors and air pollution among them — with nearly every child globally facing at least one. Children in high-income countries are no longer spared. The agency calls for far more aggressive integration of climate risk into education, health and welfare systems.</div>
+    <div class="why"><strong>Why it matters:</strong> The climate crisis has quietly become the defining public-health condition of the next generation.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/jun/16/half-of-worlds-children-exposed-to-at-least-three-climate-hazards-unicef-says" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Strong El Niño confirmed; Australia braces for fire and reef damage</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/dce55012754c002dae70a455e2657bfef6b84896/186_0_2500_2000/master/2500.jpg?width=140&quality=85&auto=format&fit=max&s=25d10ee94feecd71b2952ed79cdec158" alt="Strong El Niño confirmed; Australia braces for fire and reef damage" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Australia's Bureau of Meteorology has officially declared a strong El Niño, warning that climate change will amplify its effects across the continent. The pattern raises the risk of bushfires, drought and a fresh round of mass bleaching on the Great Barrier Reef, while also disrupting weather from South America to South-East Asia.</div>
+    <div class="why"><strong>Why it matters:</strong> An El Niño layered onto a warmer baseline turns familiar hazards into record-setting ones.</div>
+    <div class="sources"><a href="https://www.theguardian.com/environment/2026/jun/16/australia-el-nino-bom-bureau-of-meteorology-dry-hot-weather" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Climate & Energy</div>
+    <div class="card-hed">Spanish households save €10 a month thanks to renewables build-out</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/12cc622b72243227a583bfa8c7ae6c1f62f88478/342_0_3329_2662/master/3329.jpg?width=140&quality=85&auto=format&fit=max&s=bd31b95e8d2682958436a4eadee63862" alt="Spanish households save €10 a month thanks to renewables build-out" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">A thinktank study finds that wind and solar capacity added over the last five years is saving Spanish households around €10 a month on electricity bills, with typical bills 19% lower than they otherwise would have been. Decoupling power prices from gas has also insulated Spain from the worst of the Iran war's energy shock.</div>
+    <div class="why"><strong>Why it matters:</strong> Madrid is providing one of the cleanest empirical cases that the energy transition is now a cost-of-living policy, not just a climate policy.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/16/spanish-households-save-renewables-expansion-electricity-gas-prices-iran-war" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="india---uae---us-watch">
+  <div class="section-hd"><span class="section-label">India / UAE / US Watch</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's fury over US killing of sailors casts shadow over G7</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/aefa455070e293def7361979441ac9b1870d8721/485_0_2835_2268/master/2835.jpg?width=140&quality=85&auto=format&fit=max&s=295884c79a458c96288cf27d2ab9aefa" alt="India's fury over US killing of sailors casts shadow over G7" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Outrage continues to mount in India over Washington's refusal to apologise for the deaths of Indian sailors in US strikes in the Strait of Hormuz, with Delhi's relations with Washington at their lowest ebb in years. The dispute is overshadowing Indian engagement at the G7 and complicating the celebratory tone Trump hoped to set around the Iran deal. Domestic political pressure on Prime Minister Modi to extract a public concession is intensifying.</div>
+    <div class="why"><strong>Why it matters:</strong> The strongest US-India partnership in a decade is being tested by a single, unaddressed incident at sea.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/15/indian-outrage-over-us-killing-of-sailors-mounts-as-leaders-attend-g7-summit" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">India's 'Cockroach Janta Party' becomes Gen Z protest vehicle</div>
+    
+    <div class="card-body">A satirical outfit calling itself the Cockroach Janta Party has, in a single month, turned into a nationwide Gen Z protest movement demanding the resignation of India's federal education minister over repeated exam paper leaks. Organisers say the format — half meme, half political party — is the only way to be heard above the country's polarised mainstream discourse. Authorities are watching nervously as student turnout grows.</div>
+    <div class="why"><strong>Why it matters:</strong> India's young, exam-pressured middle class is finding new political vocabularies that bypass both BJP and Congress.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/news/2026/6/16/my-voice-is-being-heard-a-month-of-indias-cockroach-janta-party?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">A year on, the Air India crash inquiry's biggest questions remain unanswered</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a0a/live/fbecc040-4b4c-11f0-8bdb-73c0815c1d31.jpg" alt="A year on, the Air India crash inquiry's biggest questions remain unanswered" loading="lazy"/><div class="img-caption"> · BBC World</div></div>
+    <div class="card-body">Twelve months after the Air India disaster, BBC investigators identify six core mysteries still unresolved by the official inquiry, from anomalies in fuel-switch positions to unexplained engine performance. Families of victims and aviation experts are pressing for fuller disclosure as the anniversary refocuses attention on India's air-safety governance.</div>
+    <div class="why"><strong>Why it matters:</strong> How candidly India answers these questions will shape global confidence in the world's fastest-growing aviation market.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/c6214prydklo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">India / UAE / US Watch</div>
+    <div class="card-hed">'Dreamers' lose jobs as Daca renewals stall under Trump</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/3c01a7457fef34a8b8a2559b24a6768d95301955/231_0_2538_2030/master/2538.jpg?width=140&quality=85&auto=format&fit=max&s=c3669cd54ad36b88b3c140089057b582" alt="'Dreamers' lose jobs as Daca renewals stall under Trump" loading="lazy"/><div class="img-caption"> · Guardian Business</div></div>
+    <div class="card-body">Daca recipients in the US say renewals that once took weeks are now stretching to six months or more, costing them jobs, driver's licences and healthcare. Immigration lawyers describe the slowdown as a de facto rollback of the programme without formal repeal. The administration has offered no explanation for the processing delays.</div>
+    <div class="why"><strong>Why it matters:</strong> Roughly half a million long-settled young Americans are being pushed out of the formal economy by bureaucratic attrition.</div>
+    <div class="sources"><a href="https://www.theguardian.com/us-news/2026/jun/15/dreamers-losing-jobs-daca-renewals-trump" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="sport">
+  <div class="section-hd"><span class="section-label">Sport</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">World Cup upsets: Cape Verde hold Spain, Iran share spoils with New Zealand</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/830b/live/fa8d8a20-690c-11f1-9db7-8df355e9939d.jpg" alt="World Cup upsets: Cape Verde hold Spain, Iran share spoils with New Zealand" loading="lazy"/><div class="img-caption"> · BBC World</div></div>
+    <div class="card-body">Tiny Cape Verde stunned Spain to a 0-0 draw, sending the capital Praia into delirious celebration and turning goalkeeper Vozinha into an instant global icon. In Los Angeles, Iran drew 2-2 with New Zealand in a politically charged opener as Iranian-Americans protested outside the stadium against Tehran's clerical regime. Saudi Arabia held Uruguay 1-1, and Egypt drew with Belgium thanks to a Lukaku own goal.</div>
+    <div class="why"><strong>Why it matters:</strong> The expanded World Cup is delivering on its promise: minnows competing, geopolitics intruding, and the football still mostly winning.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/clyer09rd1ro?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/6/16/iran-draw-2-2-with-new-zealand-in-politically-charged-world-cup-match?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.aljazeera.com/sports/2026/6/16/saudi-arabia-draw-1-1-against-uruguay-in-world-cup-opening?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Sport</div>
+    <div class="card-hed">FIFA clears VAR official over gesture amid 'subconscious twitch' defence</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8f73/live/314f8770-6903-11f1-9f9e-71137dc50e9c.jpg" alt="FIFA clears VAR official over gesture amid 'subconscious twitch' defence" loading="lazy"/><div class="img-caption"> · BBC World</div></div>
+    <div class="card-body">FIFA has cleared Australian VAR official Shaun Evans of misconduct after he was accused of making a white-supremacist hand gesture during a World Cup match. Evans called it "an involuntary, subconscious twitch" he was unaware of, and denied intending to communicate any affiliation. The episode has reopened debate about the symbolism circulating around officials at high-profile global events.</div>
+    <div class="why"><strong>Why it matters:</strong> The world's most-watched tournament now polices not only players' conduct but the body language of its referees.</div>
+    <div class="sources"><a href="https://www.aljazeera.com/sports/2026/6/15/fifa-clears-world-cup-referee-accused-of-making-white-supremacist-gesture?traffic_source=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/sport/football/articles/c0ryzjl1jlyo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+<div id="culture-&-lifestyle">
+  <div class="section-hd"><span class="section-label">Culture & Lifestyle</span><div class="section-rule"></div></div>
+  <div class="grid-2">
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Abdullah Ibrahim, the pianist who scored South Africa's freedom, dies at 91</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/e0b90e442639d06b13d065aea5ae44a671c0f5fc/0_0_2503_2003/master/2503.jpg?width=140&quality=85&auto=format&fit=max&s=2615715cc8dfdf29579e4d2be9959154" alt="Abdullah Ibrahim, the pianist who scored South Africa's freedom, dies at 91" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Abdullah Ibrahim, the South African composer and pianist whose Mannenberg became an anthem of the anti-apartheid struggle, has died peacefully in Germany at 91 after a short illness. Across more than 70 albums and an eight-decade career, he fused Cape jazz, gospel and Sufi influences into a sound instantly recognisable as his own. Tributes have poured in from musicians and political figures across the continent.</div>
+    <div class="why"><strong>Why it matters:</strong> South Africa loses one of the last living artists whose music both narrated and helped achieve its liberation.</div>
+    <div class="sources"><a href="https://www.theguardian.com/music/2026/jun/15/pianist-abdullah-ibrahim-dies" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/cy5vngrq3q5o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Trust in news hits a record low, Reuters Institute finds</div>
+    <div class="img-wrap"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7b6e/live/317c5140-695a-11f1-b1db-af71d47507d6.jpg" alt="Trust in news hits a record low, Reuters Institute finds" loading="lazy"/><div class="img-caption"> · BBC World</div></div>
+    <div class="card-body">The Reuters Institute's annual digital news report records the lowest level of public trust in news since the survey began in 2015. Audiences cite political polarisation, AI-generated content and platform algorithms as eroding their confidence — even as appetite for reliable information arguably grows. A separate Social Market Foundation study found nearly one in six pieces of news shared in local UK Facebook groups during a recent by-election was false.</div>
+    <div class="why"><strong>Why it matters:</strong> The information environment underpinning every democratic decision is degrading faster than newsrooms can adapt.</div>
+    <div class="sources"><a href="https://www.bbc.com/news/articles/cvgq1py92eko?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a><a href="https://www.theguardian.com/politics/live/2026/jun/16/andy-burnham-makerfield-labour-reform-keir-starmer-uk-politics-latest-news-updates" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-meta">Culture & Lifestyle</div>
+    <div class="card-hed">Starbucks Korea closes every store for a history lesson</div>
+    <div class="img-wrap"><img src="https://i.guim.co.uk/img/media/632e63328dd9af17698090e0e169ebe129533522/622_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=2e5f34fb50ace17ab9a72ee5e9592f04" alt="Starbucks Korea closes every store for a history lesson" loading="lazy"/><div class="img-caption"> · Guardian World</div></div>
+    <div class="card-body">Starbucks Korea will shut all of its outlets simultaneously to make staff watch a recorded history lecture, after a "Tank Day" marketing promotion ran on the anniversary of a pro-democracy massacre and triggered public fury. The closure is expected to cost the chain around 2.1bn won ($1.4m) in lost sales. It is a striking corporate mea culpa in a market famously unforgiving of historical missteps.</div>
+    <div class="why"><strong>Why it matters:</strong> Global brands keep learning, expensively, that local memory beats global brand guidelines.</div>
+    <div class="sources"><a href="https://www.theguardian.com/world/2026/jun/16/starbucks-korea-shut-all-stores-tank-day-promotion" target="_blank" rel="noopener">Source ↗</a><a href="https://www.bbc.com/news/articles/ckg4n3pyjg9o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Source ↗</a></div>
+  </div>
+  
+  </div>
+</div>
+
+
+<div id="markets-at-a-glance">
+  <div class="section-hd"><span class="section-label">Markets at a Glance</span><div class="section-rule"></div></div>
+  <div class="markets">
+    <div class="markets-title">Global Snapshot · Tuesday, June 16, 2026</div>
+    <table class="markets-table">
+      <thead><tr><th>Asset</th><th>Price</th><th>Chg</th></tr></thead>
+      <tbody>
+      
+      <tr>
+        <td>S&P 500</td>
+        <td>$7554.29</td>
+        <td class="up">▲ +2.16%</td>
+      </tr>
+      
+      <tr>
+        <td>Dow Jones</td>
+        <td>$51671.03</td>
+        <td class="up">▲ +1.62%</td>
+      </tr>
+      
+      <tr>
+        <td>NASDAQ</td>
+        <td>$26683.94</td>
+        <td class="up">▲ +3.39%</td>
+      </tr>
+      
+      <tr>
+        <td>FTSE 100</td>
+        <td>10494.99</td>
+        <td class="up">▲ +0.22%</td>
+      </tr>
+      
+      <tr>
+        <td>Nikkei 225</td>
+        <td>69404.50</td>
+        <td class="up">▲ +0.13%</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td>$4361.90</td>
+        <td class="up">▲ +0.78%</td>
+      </tr>
+      
+      <tr>
+        <td>Oil (WTI)</td>
+        <td>$77.60</td>
+        <td class="down">▼ -3.90%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/INR</td>
+        <td>94.56</td>
+        <td class="down">▼ -0.58%</td>
+      </tr>
+      
+      <tr>
+        <td>USD/AED</td>
+        <td>3.67</td>
+        <td class="up">▲ +0.03%</td>
+      </tr>
+      
+      <tr>
+        <td>Bitcoin</td>
+        <td>$66599.79</td>
+        <td class="up">▲ +0.47%</td>
+      </tr>
+      
+      </tbody>
+    </table>
+    <div class="markets-note">Prices indicative · Yahoo Finance · 15–20 min delay</div>
+  </div>
+</div>
+
+
+<div id="what-to-watch-next">
+  <div class="section-hd"><span class="section-label">What to Watch Next</span><div class="section-rule"></div></div>
+  <ul class="watch-list"><li>Friday: Trump has signalled he may release the full text of the US-Iran agreement — watch for what is and isn't actually in the page-and-a-half document.</li><li>60-day window: the US and Iran are meant to negotiate detailed nuclear, sanctions and regional terms; failure could reopen the war as quickly as it closed.</li><li>Israel's next move on Lebanon and Gaza will determine whether the Iran deal becomes a true regional ceasefire or a bilateral truce.</li><li>Bank of Japan's path from here: a second 2026 hike would accelerate yen carry-trade unwinds across emerging Asia.</li><li>G7 communiqué wording on Ukraine — and whether Trump signs it without caveats.</li><li>Delhi-Washington diplomacy over the Hormuz sailors: any US statement of regret could defuse what is now the bilateral relationship's biggest irritant in years.</li><li>Thames Water special administration decision and the political fight over who pays for it.</li><li>Anthropic-White House meeting readouts: a possible template for how Washington handles future frontier-model incidents.</li></ul>
+</div>
+
+<div class="editors-note">An unusually consequential 24 hours: a war ends on paper, Japan exits its zero-rate era, and Britain prepares to wall its teenagers off from the world's biggest platforms — three structural shifts hiding inside one news cycle.</div>
+<footer class="footer">
+  <strong>The Morning Global Brief</strong> · Tuesday, June 16, 2026<br/>
+  Private edition for Urvil · Not for redistribution<br/>
+  Sources: Reuters · BBC · AP · Guardian · Al Jazeera · NYT · Bloomberg · FT · CNN · Economist · Nikkei · TOI · Gulf News<br/>
+  All summaries paraphrased from original reporting · Images credited individually<br/>
+  Generated 2026-06-16 08:52 UTC
+</footer>
+</div>
+</body>
+</html>
